@@ -1,0 +1,133 @@
+	"Instance methods for Object"
+			
+	protocol: #accessing method: 
+	[## class
+
+		"Answer the class of the receiver"
+		
+		<primitive: class domain: Object>
+	];
+
+	protocol: #accessing method: 
+	[## yourself 
+
+		"Answer the receiver"
+		
+		^self
+	];
+		
+	protocol: #binding method:
+	[## valueIf: aCollection else: absentBlock
+			"#green  
+				valueIf: 
+					{#red -> [3 + 4]. 
+					#green -> [DateAndTime now]. 
+					#blue -> ['Hello, world']} 
+				else: ['Nobody here but us Smalltalkers']"
+	
+			"2
+				valueIf: 
+					{[3 + 4]. 
+					[DateAndTime now]. 
+					['Hello, world']} 
+				else: ['Nobody here but us Smalltalkers']"
+
+	
+			"| dict | dict := Dictionary new. dict at: #red put: [3 + 4]. dict at: #green put: [DateAndTime now]. dict at: #blue put: ['Hello, world'].
+			#green 
+				valueIf: dict 
+				else:  ['Nobody here but us Smalltalkers']"
+	
+			^aCollection metaValueAt: self ifAbsent: absentBlock
+	];
+	
+	protocol: #'control flow' method: 
+	[## ifNil: nilAction
+
+		"If the receiver is nil, answer the result of evaluating <nilAction>. 
+		Otherwise, answer the receiver."
+		
+		^self
+	];
+			
+	protocol: #'control flow' method: 
+	[## ifNotNil: notNilAction
+
+		"If the receiver is not nil, answer the result of evaluating <notNilAction>. 
+		Otherwise, answer nil."
+		
+		<primitive: #ifNotNil: domain: Object>
+	];
+
+		
+	protocol: #'control flow' method: 
+	[## ifNil: nilAction ifNotNil: notNilAction
+
+		"If the receiver is nil, answer the result of evaluating <nilAction>. 
+		Otherwise, answer the result of evaluating <notNilAction>."
+		
+		<primitive: #ifNil:ifNotNil: domain: Object>
+	];
+
+	protocol: #'initialize-release' method:
+	[## initialize
+
+		"Initialize the receiver's state"
+
+		^self
+	];
+
+	protocol: #'object creation' method: 
+	[## -> aValue
+
+		"Answer a new Association whose key is the receiver and whose value is <aValue>"
+		
+		<primitive: #-> domain: Object>
+	];
+		
+	protocol: #'system testing' method: 
+	[## showCr: aValue
+
+		aValue showCr
+	];
+
+	protocol: #'system testing' method: 
+	[## reportToConsole
+
+		('This is a Smalltalk.Object: class = ', self class name) showCr
+	];
+			
+	protocol: #testing method:
+	[## isNil
+
+		"Answer whether the receiver is nil"
+		
+		^false
+	];
+			
+	protocol: #testing method:
+	[## notNil
+
+		"Answer whether the receiver is not nil"
+		
+		^true
+	];
+
+	protocol: #testing method:
+	[## isTrue
+
+		"Answer whether the receiver is true."
+
+		^false
+	];
+
+	protocol: #testing method:
+	[## isFalse
+
+		"Answer whether the receiver is false."
+
+		^false
+	]
+
+
+		

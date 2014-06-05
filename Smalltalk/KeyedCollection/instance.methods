@@ -1,0 +1,11 @@
+	"Instance methods for KeyedCollection"
+	
+	protocol: #binding method: 
+	[## metaValueAt: key ifAbsent: absentBlock
+			^(self at: key ifAbsent: absentBlock) value
+	];
+	
+	protocol: #binding method:
+	[## metaValueAtIndex: index ifAbsent: absentBlock
+			^(self at: index ifAbsent: absentBlock) value
+	]

@@ -1,0 +1,7 @@
+	"Class methods of System.Console"
+	
+	"protocol: #writing method: 
+	[## writeLine: aString
+	
+		<invokeMethod: #WriteLine>
+	]"

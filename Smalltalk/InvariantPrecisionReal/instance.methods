@@ -1,0 +1,10 @@
+	"Instance methods for InvariantPrecisionReal"
+	
+	protocol: #converting method:
+	[## asReal
+		
+		^self
+	]
+	
+	
+	

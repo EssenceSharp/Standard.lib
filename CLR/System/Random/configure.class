@@ -1,0 +1,4 @@
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Random." 
+
+	superclass: Root.CLR.System.Object;
+	instanceArchitecture: #HostSystemObject

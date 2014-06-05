@@ -1,0 +1,7 @@
+	"Instance methods for System.Collection"
+	
+	protocol: #'system testing' method:
+	[## hello
+	
+		^'Hello, world' showCr
+	]

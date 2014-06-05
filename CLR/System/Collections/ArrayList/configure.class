@@ -1,0 +1,4 @@
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.ArrayList" 
+	
+	superclass: System.SequenceableCollection;
+	instanceArchitecture: #HostSystemObject

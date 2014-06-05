@@ -1,0 +1,7 @@
+	"Instance methods of System.KeyedCollection."
+	
+	protocol: #accessing method:
+	[## at: key put: value
+	
+		<invokeMethod: #Add>
+	]

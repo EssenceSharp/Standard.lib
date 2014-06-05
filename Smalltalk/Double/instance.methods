@@ -1,0 +1,187 @@
+	"Instance methods for Double"
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## sumWithSmallInteger: operand
+	
+		^operand asDouble + self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## differenceFromSmallInteger: operand
+	
+		^operand asDouble - self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## productWithSmallInteger: operand
+	
+		^operand asDouble * self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## ratioToSmallInteger: operand
+	
+		^operand asDouble / self
+	];		
+		
+	protocol: #'arithmetic-double dispatching' method:
+	[## integerRatioToSmallInteger: operand
+	
+		^operand asDouble quo: self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## flooredToIntegerRatioToSmallInteger: operand
+	
+		^operand asDouble // self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## remainderFromDividingSmallInteger: operand
+	
+		^operand asDouble rem: self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## residueFromDividingSmallInteger: operand
+	
+		^operand asDouble \\ self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## valueAsExponentToSmallInteger: operand
+	
+		^operand asDouble ** self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## valueAsLogBaseToSmallInteger: operand
+	
+		^operand asDouble log: self
+	];
+			
+	protocol: #'arithmetic-double dispatching' method:
+	[## sumWithFloat: operand
+	
+		^operand asDouble + self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## differenceFromFloat: operand
+	
+		^operand asDouble - self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## productWithFloat: operand
+	
+		^operand asDouble * self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## ratioToFloat: operand
+	
+		^operand asDouble / self
+	];		
+		
+	protocol: #'arithmetic-double dispatching' method:
+	[## integerRatioToFloat: operand
+	
+		^operand asDouble quo: self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## flooredToIntegerRatioToFloat: operand
+	
+		^operand asDouble // self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## remainderFromDividingFloat: operand
+	
+		^operand asDouble rem: self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## residueFromDividingFloat: operand
+	
+		^operand asDouble \\ self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## valueAsExponentToFloat: operand
+	
+		^operand asDouble ** self
+	];
+
+	protocol: #'arithmetic-double dispatching' method:
+	[## valueAsLogBaseToFloat: operand
+	
+		^operand asDouble log: self
+	];
+			
+	protocol: #'comparing-double dispatch' method:
+	[## inverseCompareToSmallInteger: aSmallInteger
+	
+		^(aSmallInteger asDouble - self) sign
+	];
+			
+	protocol: #'comparing-double dispatch' method:
+	[## inverseCompareToCharacter: aCharacter
+	
+		^(aCharacter asDouble - self) sign
+	];
+			
+	protocol: #'comparing-double dispatch' method:
+	[## inverseCompareToDouble: aFloat
+	
+		^(aFloat asDouble - self) sign
+	];
+			
+	protocol: #'comparing-double dispatch' method:
+	[## inverseCompareToDouble: aDouble
+	
+		^(aDouble - self) sign
+	];
+		
+	protocol: #converting
+	method:
+	[## coerce: operand
+		
+		^operand asDouble];
+			
+	protocol: #generality method:
+	[## withHighestGenerality: operand
+	
+		"Answers whichever value has the highest generality."
+		
+		^operand withGeneralityEqualToOrGreaterThanDouble: self
+	];
+			
+	protocol: #generality method:
+	[## withGeneralityEqualToOrGreaterThanSmallInteger: operand
+	
+		"Answers whichever value has the highest generality. Assumes the operand is a SmallInteger."
+	
+		^self
+	];
+		
+	protocol: #generality method:
+	[## withGeneralityEqualToOrGreaterThanFloat: operand
+	
+		"Answers whichever value has the highest generality. Assumes the operand is a Float."
+	
+		^self
+	];
+		
+	protocol: #generality method:
+	[## withGeneralityEqualToOrGreaterThanDouble: operand
+	
+		"Answers whichever value has the highest generality. Assumes the operand is a Double."
+	
+		^self
+	]
+	
+	
+	
+	

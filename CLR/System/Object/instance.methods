@@ -1,0 +1,37 @@
+	"Instance methods for System.Object"
+
+	protocol: #printing method:
+	[## asHostSystemString 
+			<invokeMethod: #ToString>
+	];
+	
+	protocol: #printing method:
+	[## printString
+		^self asHostSystemString asString
+	];
+	
+	protocol: #'system testing' method: 
+	[##reportToConsole
+			('This is a CLR.System.Object: type = ', self class name) showCr
+	];
+	
+	protocol: #'system testing' method:
+	[## halt
+	
+		<primitive: #halt domain: #Object>
+	];
+	
+	protocol: #'system testing' method:
+	[## show
+			self printString show
+	];
+		
+	protocol: #'system testing' method:
+	[## crShow
+			self printString crShow
+	];
+		
+	protocol: #'system testing' method:
+	[## showCr
+			self printString showCr
+	]

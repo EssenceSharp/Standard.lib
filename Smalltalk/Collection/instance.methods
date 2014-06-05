@@ -1,0 +1,14 @@
+	"Instance methods for Collection"
+
+	protocol: #binding method:
+	[## metaValueAt: key ifAbsent: absentBlock
+			self do: [:each | key = each key ifTrue: [^each value value]].
+			^absentBlock value
+	];
+	
+	protocol: #binding method:
+	[## metaValueAtIndex: index ifAbsent: absentBlock
+			index > self size ifTrue:  [^absentBlock value].
+			index < 1 ifTrue: [^absentBlock value].
+			^(self at: index) value
+	]

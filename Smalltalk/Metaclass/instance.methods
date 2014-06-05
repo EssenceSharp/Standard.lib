@@ -1,0 +1,10 @@
+	"Instance methods for Metaclass"
+
+	protocol: #'Smalltalk compatibility' method: 
+	[## soleInstance
+		"Answer the canonical instance of the receiver"
+		
+		<primitive: canonicalInstance domain: Metaclass>
+	]
+
+		

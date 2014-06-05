@@ -1,0 +1,32 @@
+	"Published system primitives for Message"
+	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
+
+	protocol: #'system primitives' method:
+	[## selector
+
+		<primitive: selector domain: Message>
+	];
+
+	protocol: #'system primitives' method:
+	[## selector: selector 
+
+		<primitive: #selector: domain: Message>
+	];
+
+	protocol: #'system primitives' method:
+	[## arguments
+
+		<primitive: arguments domain: Message>
+	];
+
+	protocol: #'system primitives' method:
+	[## arguments: arguments 
+
+		<primitive: #arguments: domain: Message>
+	];
+
+	protocol: #'system primitives' method:
+	[## sendTo: metaReceiver 
+
+		<primitive: #sendTo: domain: Message>
+	];

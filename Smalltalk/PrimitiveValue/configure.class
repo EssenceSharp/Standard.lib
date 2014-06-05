@@ -1,0 +1,3 @@
+	"Configuration of the instance architecture, initial state and module memberships of PrimitiveValue." 
+	
+	superclass: CLR.System.Object

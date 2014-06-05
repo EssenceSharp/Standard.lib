@@ -1,0 +1,17 @@
+	"Class methods for ArrayedCollection"
+	
+	protocol: #enumerating method: 
+	[## collect: map
+
+		"Answer an array such that each of its elements is computed from the elements of the receiver by applying the <map> function."
+
+		| size array |
+
+		size := self size.
+		array := self class new: size.
+		1 to: size do: [:index | array at: index put: (map value: (self at: index))].
+		^array
+	]
+
+
+			

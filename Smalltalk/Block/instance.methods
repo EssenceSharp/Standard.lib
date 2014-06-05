@@ -1,0 +1,9 @@
+	"Instance methods for Block"
+			
+	protocol: #evaluating method: 
+	[## valueWithExit
+
+		"Evaluate the receiver with a single argument which it can use to exit before evaluating its final statement."
+		
+		^self value: [^nil]
+	]
