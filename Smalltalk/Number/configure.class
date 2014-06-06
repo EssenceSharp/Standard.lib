@@ -1,3 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Number." 
 	
-	superclass: Smalltalk.ArithmeticValue
+	superclass: ArithmeticValue;
+	instanceArchitecture: #Abstract

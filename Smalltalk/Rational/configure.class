@@ -1,3 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Rational." 
 	
-	superclass: Smalltalk.Number
+	superclass: Number;
+	instanceArchitecture: #Abstract

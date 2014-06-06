@@ -176,13 +176,13 @@
 	];
 
 	protocol: #'system primitives' method:
-	[## bindingInNamespace: stNamespace transitivity: importTransitivity ifAbsent: ifAbsentAction 
+	[## bindingInNamespace: environment transitivity: importTransitivity ifAbsent: ifAbsentAction 
 
 		<primitive: #bindingInNamespace:transitivity:ifAbsent: domain: Pathname>
 	];
 
 	protocol: #'system primitives' method:
-	[## valueInNamespace: stNamespace transitivity: importTransitivity ifAbsent: ifAbsentAction 
+	[## valueInNamespace: environment transitivity: importTransitivity ifAbsent: ifAbsentAction 
 
 		<primitive: #valueInNamespace:transitivity:ifAbsent: domain: Pathname>
 	];

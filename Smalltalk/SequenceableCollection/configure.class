@@ -1,1 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of SequenceableCollection." 
+	
+	superclass: Collection;
+	instanceArchitecture: #Abstract

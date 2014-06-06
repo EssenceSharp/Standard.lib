@@ -1,3 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Namespace." 
 	
-	superclass: KeyedCollection
+	superclass: KeyedCollection;
+	instanceArchitecture: #Namespace

@@ -1,3 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Magnitude." 
 
-	superclass: Smalltalk.Object
+	superclass: Object;
+	instanceArchitecture: #Abstract

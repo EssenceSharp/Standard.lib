@@ -1,6 +1,6 @@
 	"Instance methods for Metaclass"
 
-	protocol: #'Smalltalk compatibility' method: 
+	protocol: #'Inter-Smalltalk compatibility' method: 
 	[## soleInstance
 		"Answer the canonical instance of the receiver"
 		

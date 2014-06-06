@@ -1,12 +1,2 @@
 	"Instance methods for UndefinedObject"
 		
-	"The following methods deliberately have references to undefined variables:
-	protocol: #'system testing' method:
-	[## valarMorghulis
-		^zork
-	];
-	
-	protocol: #'system testing' method:
-	[## with: environment do: action
-		acton value: (self in: environmet) 
-	]"

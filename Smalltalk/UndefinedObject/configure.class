@@ -1,3 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of UndefinedObject." 
 
-	superclass: Smalltalk.PrimitiveValue
+	superclass: PrimitiveValue;
+	instanceArchitecture: #Nil

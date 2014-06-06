@@ -1,1 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Metaclass." 
+
+	superclass: Behavior;
+	instanceArchitecture: #Metaclass
