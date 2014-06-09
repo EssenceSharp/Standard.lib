@@ -1,0 +1,6 @@
+	"Class methods of EssenceSharp.Exceptions.MessageNotUnderstood"
+	
+	protocol: #'instance creation' method:
+	[## receiver: messageReceiver message: messageObject
+		<invokeMethod: new>
+	]

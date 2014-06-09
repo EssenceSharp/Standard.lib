@@ -1,0 +1,11 @@
+	"Instance methods of Class"
+	
+	protocol: #converting method:
+	[## asClass
+		^self
+	];	
+	
+	protocol: #converting method:
+	[## asMetaclass
+		^self class
+	]

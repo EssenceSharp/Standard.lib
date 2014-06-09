@@ -1,0 +1,6 @@
+	"Class methods of Notification"
+	
+	protocol: #'class initialization' method:
+	[## setSystemExceptionType
+		systemExceptionType := 'EssenceSharp.Exceptions.Notification' asHostSystemType
+	]

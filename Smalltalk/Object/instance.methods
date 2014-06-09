@@ -94,7 +94,8 @@
 	protocol: #'system testing' method: 
 	[## reportToConsole
 
-		('This is a Smalltalk.Object: class = ', self class name) showCr
+		
+		self showCr
 	];
 			
 	protocol: #testing method:

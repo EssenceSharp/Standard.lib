@@ -1,0 +1,6 @@
+	"Class methods of Error"
+	
+	protocol: #'class initialization' method:
+	[## setSystemExceptionType
+		systemExceptionType := 'EssenceSharp.Exceptions.Error' asHostSystemType
+	]

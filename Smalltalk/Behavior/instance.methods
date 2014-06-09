@@ -8,6 +8,11 @@
 		^self
 	];
 
+	protocol: #converting method:
+	[## asBehavior 
+		^self
+	];
+	
 	protocol: #'instance creation' method:
 	[## basicNew
 

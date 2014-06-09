@@ -1,0 +1,16 @@
+	"Instance methods of Type"
+
+	protocol: #accessing method:
+	[## instanceType 
+		^self 
+	];
+
+	protocol: #converting method:
+	[## asClass 
+		^self asBehavior 
+	];
+	
+	protocol: #converting method:
+	[## asMetaclass 
+		^self asBehavior asMetaclass
+	]

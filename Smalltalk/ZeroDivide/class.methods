@@ -1,0 +1,6 @@
+	"Class methods of ZeroDivide"
+	
+	protocol: #'class initialization' method:
+	[## setSystemExceptionType
+		systemExceptionType := 'System.DivideByZeroException' asHostSystemType
+	]

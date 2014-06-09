@@ -1,0 +1,48 @@
+	"Instance methods of EssenceSharp.Exceptions.EssenceSharpException"
+		
+	protocol: #accessing method:
+	[## description
+		<getProperty: #Description>
+	];
+		
+	protocol: #accessing method:
+	[## messageText
+		<getProperty: #MessageText>
+	];
+		
+	protocol: #accessing method:
+	[## messageText: aString 
+		<setProperty: #MessageText>
+	];
+		
+	protocol: #accessing method:
+	[## tag 
+		<getProperty: #Tag>
+	];
+	
+	protocol: #accessing method:
+	[## tag: aValue 
+		<setProperty: #Tag>
+	];
+		
+	protocol: #handling method:
+	[## defaultAction 
+		<invokeMethod: #defaultAction>
+	];
+		
+	protocol: #handling method:
+	[## pass 
+		<invokeMethod: #pass>
+	];
+		
+	protocol: #signalling method:
+	[## signal: messageText
+		<invokeMethod: signal>
+	];
+	
+	protocol: #testing method:
+	[## isResumable 
+		<getProperty: #IsResumable>
+	]
+
+
