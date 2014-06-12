@@ -77,6 +77,12 @@
 		^self
 	];
 
+	protocol: #'error handling' method:
+	[## doesNotUnderstand: aMessage
+		
+		^(MessageNotUnderstood signalWithReceiver: self message: aMessage)
+	];
+	
 	protocol: #'object creation' method: 
 	[## -> aValue
 

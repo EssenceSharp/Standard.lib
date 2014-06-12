@@ -68,9 +68,21 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## addMethod: method systemSelector: systemSelector 
+
+		<primitive: #addMethod:systemSelector: domain: Behavior>
+	];
+
+	protocol: #'system primitives' method:
 	[## protocol: protocol method: method 
 
 		<primitive: #protocol:method: domain: Behavior>
+	];
+
+	protocol: #'system primitives' method:
+	[## protocol: protocol systemSelector: systemSelector method: method 
+
+		<primitive: #protocol:systemSelector:method: domain: Behavior>
 	];
 
 	protocol: #'system primitives' method:

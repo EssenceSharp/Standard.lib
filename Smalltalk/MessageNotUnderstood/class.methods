@@ -3,4 +3,16 @@
 	protocol: #'class initialization' method:
 	[## setSystemExceptionType
 		systemExceptionType := 'EssenceSharp.Exceptions.MessageNotUnderstood' asHostSystemType
+	];
+	
+	protocol: #'instance creation' method:
+	[## receiver: messageReceiver message: messageObject
+		^self basicNew systemException: 
+			(self systemExceptionType asClass 
+				receiver: messageReceiver message: messageObject)
+	];
+	
+	protocol: #signalling method:
+	[## signalWithReceiver: messageReceiver message: messageObject
+		^(self receiver: messageReceiver message: messageObject) signal
 	]

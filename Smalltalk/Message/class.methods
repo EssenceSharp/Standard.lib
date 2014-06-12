@@ -1,0 +1,9 @@
+	"Class methods of Message"
+	
+	protocol: #'instance creation' method: 
+	[## selector: aMessageSelector arguments: anArray
+		
+		^self new
+			selector: aMessageSelector;
+			arguments: anArray
+	]
