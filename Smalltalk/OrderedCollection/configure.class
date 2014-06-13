@@ -1,5 +1,4 @@
 	"Configuration of class OrderedCollection"
 	
-	instanceArchitecture: #HostSystemObject;
-	hostSystemNamespace: #System.Collections.Generic;
-	hostSystemName: 'List`1[[System.Object]]'
+	hostSystemNamespace: #EssenceSharp.Runtime;
+	hostSystemName: 'OrderedCollection'

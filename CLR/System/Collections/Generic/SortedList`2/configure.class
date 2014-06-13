@@ -1,4 +1,4 @@
-	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.SortedList"
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.SortedList`2"
 
 	superclass: System.KeyedCollection;
 	instanceArchitecture: #HostSystemObject	

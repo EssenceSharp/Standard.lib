@@ -1,5 +1,5 @@
 	"Class methods for ArrayedCollection"
-	
+
 	protocol: #enumerating method: 
 	[## collect: map
 

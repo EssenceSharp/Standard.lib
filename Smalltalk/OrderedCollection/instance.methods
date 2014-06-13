@@ -1,0 +1,17 @@
+	"Instance methods of OrderedCollection"
+	
+	protocol: #enumerating method:
+	[## detect: predicateBlock ifNone: notFoundAction
+		<invokeMethod: #detect>
+	];
+		
+	protocol: #enumerating method:
+	[## select: predicateBlock
+		<invokeMethod: #select>
+	];
+		
+	protocol: #querying method:
+	[## contains: predicateBlock
+		<invokeMethod: #contains>
+	]
+

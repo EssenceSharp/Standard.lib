@@ -1,0 +1,41 @@
+	"Instance methods of CLR.System.Collections.Generic.List`1"
+	
+	protocol: #adding method:
+	[## add: anElement
+		<invokeMethod: #Add>
+	];
+	
+	protocol: #adding method:
+	[## addAll: aCollectionOfElements
+		<invokeMethod: #AddRange>
+	];
+
+	protocol: #converting method:
+	[## asImmutable
+		<invokeMethod: #AsReadOnly>
+	];
+	
+	protocol: #moving method:
+	[## moveAllInto: anArray
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #moving method:
+	[## moveAllInto: anArray startingAt: targetIndex
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #moving method:
+	[## moveAllStartingFrom: sourceBeginIndex into: anArray startingAt: targetIndex for: length
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #querying method:
+	[## includes: anElement
+		<invokeMethod: #Contains>
+	];
+	
+	protocol: #removing method:
+	[## removeAll
+		<invokeMethod: #Clear>
+	]

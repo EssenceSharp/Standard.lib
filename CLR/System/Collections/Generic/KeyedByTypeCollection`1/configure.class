@@ -1,4 +1,4 @@
-	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.KeyedByTypeCollection"
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.KeyedByTypeCollection`1"
 
 	superclass: System.KeyedCollection;
 	instanceArchitecture: #HostSystemObject	

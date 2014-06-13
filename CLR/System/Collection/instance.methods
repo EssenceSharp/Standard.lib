@@ -1,7 +1,50 @@
 	"Instance methods for System.Collection"
 	
-	protocol: #'system testing' method:
-	[## hello
+	protocol: #binding method:
+	[## metaValueAt: key ifAbsent: absentBlock
+			self do: [:each | key = each key ifTrue: [^each value value]].
+			^absentBlock value
+	];
 	
-		^'Hello, world' showCr
+	protocol: #binding method:
+	[## metaValueAtIndex: index ifAbsent: absentBlock
+			index > self size ifTrue:  [^absentBlock value].
+			index < 1 ifTrue: [^absentBlock value].
+			^(self at: index) value
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map
+
+		"Answer new collection such that each of its elements is computed from the elements of the receiver by applying the <map> function."
+
+		| projection |
+		projection := Smalltalk.OrderedCollection new: self size.
+		self do: [:each | projection add: (map value: each)].
+		^projection
+	];
+	
+	protocol: #enumerating method:
+	[## detect: predicateBlock
+		^self detect: predicateBlock ifNone: [Smalltalk.Error signal: 'Element not found']
+	];
+	
+	protocol: #enumerating method:
+	[## detect: predicateBlock ifNone: notFoundAction
+		self do: [:each | (predicateBlock value: each) ifTrue: [^each]].
+		^notFoundAction ifNotNil: [notFoundAction value]
+	];
+
+	protocol: #enumerating method:
+	[## select: predicateBlock
+		| selection |
+		selection := Smalltalk.OrderedCollection new.
+		self do: [:each | (predicateBlock value: each) ifTrue: [selection add: each]].
+		^selection
+	];
+		
+	protocol: #querying method:
+	[## contains: predicateBlock
+		self do: [:each | (predicateBlock value: each) ifTrue: [^true]].
+		^false
 	]

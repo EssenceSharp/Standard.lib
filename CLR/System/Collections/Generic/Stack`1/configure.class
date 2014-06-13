@@ -1,4 +1,4 @@
-	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.Stack"
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.Stack`1"
 
 	superclass: System.Collection;
 	instanceArchitecture: #HostSystemObject	
