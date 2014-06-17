@@ -1,4 +1,6 @@
 	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collections.Generic.HashSet`1"
 
 	superclass: System.Collection;
-	instanceArchitecture: #HostSystemObject	
+	hostSystemNamespace: #System.Collections.Generic;
+	hostSystemName: 'HashSet`1';
+	assemblyName: 'System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'

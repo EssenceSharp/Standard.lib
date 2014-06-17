@@ -1,0 +1,6 @@
+	"Instance methods of System.Single[]"
+	
+	protocol: #converting method:
+	[## asArray
+		^Smalltalk.FloatArray value: self
+	]

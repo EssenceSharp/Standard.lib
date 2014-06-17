@@ -1,8 +1,23 @@
-	"Instance methods for ArrayedCollection"
-
+	"Instance methods of System.String"
+	
 	protocol: #converting method:
-	[## asArray
-		^self
+	[## asHostSytemType
+		^self asString asHostSystemType
+	];
+	
+	protocol: #converting method:
+	[## asBehavior
+		^self asString asBehavior
+	];
+	
+	protocol: #converting method:
+	[## asClass
+		^self asString asClass
+	];
+	
+	protocol: #converting method:
+	[## asMetaclass
+		^self asString asMetaclass
 	];
 	
 	protocol: #enumerating method: 
@@ -20,7 +35,6 @@
 	
 	protocol: #enumerating method:
 	[## projectionClass
-		^self class
+		^Smalltalk.String
 	]
 
-			

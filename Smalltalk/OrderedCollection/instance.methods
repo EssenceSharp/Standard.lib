@@ -2,16 +2,30 @@
 	
 	protocol: #enumerating method:
 	[## detect: predicateBlock ifNone: notFoundAction
-		<invokeMethod: #detect>
+		<primitive: #detect:ifNone: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+	
+	protocol: #enumerating method:
+	[## findFirst: predicateBlock from: startIndex to: endIndex ifAbsent: ifAbsentValue
+		<primitive: #findFirst:from:to:ifAbsent: domain: CLR_System_Collections_Generic_List_1_Object>
 	];
 		
 	protocol: #enumerating method:
 	[## select: predicateBlock
-		<invokeMethod: #select>
+		<primitive: #select: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+		
+	protocol: #querying method:
+	[## anySatisfy: predicateBlock
+		<primitive: #contains: domain: CLR_System_Collections_Generic_List_1_Object>
 	];
 		
 	protocol: #querying method:
 	[## contains: predicateBlock
-		<invokeMethod: #contains>
+		<primitive: #contains: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+	
+	protocol: #removing method:
+	[## removeAllSuchThat: predicate
+		<primitive: #removeAllSuchThat: domain: CLR_System_Collections_Generic_List_1_Object>
 	]
-

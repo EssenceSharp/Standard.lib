@@ -1,0 +1,32 @@
+	"Published system primitives for List`1[[System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
+
+	protocol: #'system primitives' method:
+	[## contains: predicateObject 
+
+		<primitive: #contains: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+
+	protocol: #'system primitives' method:
+	[## detect: predicateObject ifNone: ifAbsentActionObject 
+
+		<primitive: #detect:ifNone: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+
+	protocol: #'system primitives' method:
+	[## findFirst: predicateObject from: startIndexObject to: endIndexObject ifAbsent: ifAbsentActionObject 
+
+		<primitive: #findFirst:from:to:ifAbsent: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+
+	protocol: #'system primitives' method:
+	[## select: predicateObject 
+
+		<primitive: #select: domain: CLR_System_Collections_Generic_List_1_Object>
+	];
+
+	protocol: #'system primitives' method:
+	[## removeAllSuchThat: predicateObject 
+
+		<primitive: #removeAllSuchThat: domain: CLR_System_Collections_Generic_List_1_Object>
+	];

@@ -50,6 +50,18 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## instanceEqualityComparer
+
+		<primitive: instanceEqualityComparer domain: Behavior>
+	];
+
+	protocol: #'system primitives' method:
+	[## newObjectEqualityComparer
+
+		<primitive: newObjectEqualityComparer domain: Behavior>
+	];
+
+	protocol: #'system primitives' method:
 	[## basicCompiledMethodAt: selector 
 
 		<primitive: #basicCompiledMethodAt: domain: Behavior>

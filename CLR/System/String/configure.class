@@ -1,3 +1,4 @@
 	"Configuration of System.String"
 	
+	superclass: System.ArrayedCollection;
 	instanceArchitecture: #HostSystemObject

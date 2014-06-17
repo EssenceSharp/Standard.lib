@@ -1,4 +1,4 @@
-	"Instance methods of System.SequenceableCollection"
+	"Instance methods of SequenceableCollection"
 	
 	protocol: #accessing method:
 	[## atFirstPutOrAdd: anElement
@@ -163,6 +163,19 @@
 	];
 	
 	protocol: #copying method:
+	[## copyFrom: startIndex for: length
+		^self copyFrom: startIndex to: startIndex + length - 1
+	];
+	
+	protocol: #copying method:
+	[## copyFrom: startIndex to: endIndex
+		| copy |
+		copy := self class new: endIndex - startIndex + 1.
+		self from: startIndex to: endIndex do: [:element | copy add: element].
+		^copy
+	];
+	
+	protocol: #copying method:
 	[## withAllButFirst
 		^self size > 1
 			ifTrue: [self copyFrom: 2 to: self self size]
@@ -192,12 +205,7 @@
 				self copyFrom: size to: size]
 			ifFalse: [self signalEmptyCollectionError]
 	];
-	
-	" The following two commmented-out methods are presented solely for documentation purposes.
-	The Essence# runtime system uses the DLR's Meta Object Protocol to implement these 
-	methods virtually, as part of the the dynamic binding subsystem. They'll work if compiled, 
-	but at the cost of reduced performance:
-	
+
 	protocol: #enumerating method:
 	[## from: startIndex to: endIndex do: enumerator1
 		startIndex to: endIndex do: [:index | enumerator1 value: (self at: index)]
@@ -206,8 +214,8 @@
 	protocol: #enumerating method:
 	[## from: startIndex to: endIndex by: step do: enumerator1
 		startIndex to: endIndex by: step do: [:index | enumerator1 value: (self at: index)]
-	];"
-
+	];
+	
 	protocol: #enumerating method:
 	[## reverseDo: enumerator1
 		self size to: 1 by: -1 do: enumerator1
@@ -514,6 +522,11 @@
 	];
 	
 	protocol: #removing method:
+	[## removeAtIndex: index
+		^self removeAt: index
+	];
+	
+	protocol: #removing method:
 	[## copyIdentityRemoving: anElement
 		^self copyIdentityRemovingNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
 	];
@@ -792,3 +805,5 @@
 		copy reverse.
 		^copy
 	]
+
+

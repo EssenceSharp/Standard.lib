@@ -20,7 +20,7 @@
 	];
 
 	protocol: #'system primitives' method:
-	[## == other
+	[## == comparand
 
 		<primitive: #== domain: Object>
 	];

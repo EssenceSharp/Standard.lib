@@ -54,7 +54,7 @@
 	protocol: #signalling method: 
 	[## signal
 	
-		^self new signal
+		^(self messageText: self name) signal
 	];
 	
 	protocol: #signalling method: 

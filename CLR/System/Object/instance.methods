@@ -20,9 +20,19 @@
 			<invokeMethod: #GetHashCode>
 	];
 
+	protocol: #converting method:
+	[## asMutable
+		^self
+	];
+	
 	protocol: #copying method:
 	[## shallowCopy
 			<invokeMethod: #MemberwiseClone>
+	];
+	
+	protocol: #'double dispatching' method:
+	[## addTo: aCollection
+		^aCollection add: self
 	];
 
 	protocol: #printing method:

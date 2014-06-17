@@ -69,6 +69,19 @@
 		<primitive: #ifNil:ifNotNil: domain: Object>
 	];
 
+	protocol: #copying method:
+	[## copy
+		| copy |
+		copy := self shallowCopy.
+		copy postCopy.
+		^copy
+	];
+	
+	protocol: #'double dispatching' method:
+	[## addTo: aCollection
+		^aCollection add: self
+	];
+	
 	protocol: #'initialize-release' method:
 	[## initialize
 
@@ -89,6 +102,12 @@
 		"Answer a new Association whose key is the receiver and whose value is <aValue>"
 		
 		<primitive: #-> domain: Object>
+	];
+
+	protocol: #private method:
+	[## postCopy
+		"By default, do nothing"
+		
 	];
 		
 	protocol: #'system testing' method: 

@@ -1,0 +1,6 @@
+	"Instance methods of System.UInt64[]"
+	
+	protocol: #converting method:
+	[## asArray
+		^Smalltalk.LongWordArray value: self
+	]

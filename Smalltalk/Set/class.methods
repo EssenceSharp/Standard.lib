@@ -1,0 +1,21 @@
+	"Class methods of Set"
+	
+	protocol: #'instance creation' method:
+	[## basicNew
+		^self withEqualityComparer: self newObjectEqualityComparer
+	];
+	
+	protocol: #'instance creation' method:
+	[## new
+		^self withEqualityComparer: self newObjectEqualityComparer
+	];
+	
+	protocol: #'instance creation' method:
+	[## basicNew: capacity
+		^self withEqualityComparer: self newObjectEqualityComparer
+	];
+	
+	protocol: #'instance creation' method:
+	[## new: capacity
+		^self withEqualityComparer: self newObjectEqualityComparer
+	]

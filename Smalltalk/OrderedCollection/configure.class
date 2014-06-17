@@ -1,4 +1,6 @@
 	"Configuration of class OrderedCollection"
 	
-	hostSystemNamespace: #EssenceSharp.Runtime;
-	hostSystemName: 'OrderedCollection'
+	hostSystemNamespace: #System.Collections.Generic;
+	hostSystemName: 'List`1[[System.Object]]';
+	assemblyName: 'mscorlib'
+	

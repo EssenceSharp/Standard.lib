@@ -1,0 +1,4 @@
+	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Single[]" 
+	"Note that the C# name for this type is 'float[]'."
+	
+	instanceArchitecture: #HostSystemObject

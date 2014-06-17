@@ -1,4 +1,24 @@
 	"Instance methods for Collection"
+	
+	protocol: #accessing method:
+	[## any
+		self do: [:each | ^each].
+		self signalEmptyCollectionError
+	];
+	
+	protocol: #accessing method:
+	[## anyIfNone: noneAction
+		self do: [:each | ^each].
+		^noneAction value
+	];
+	
+	protocol: #adding method:
+	[## addAll: aCollectionOfElements
+		| targetCollection |
+		targetCollection := self asMutable.
+		aCollectionOfElements do: [:element | targetCollection add: element].
+		^targetCollection
+	];
 
 	protocol: #binding method:
 	[## metaValueAt: key ifAbsent: absentBlock
@@ -13,38 +33,383 @@
 			^(self at: index) value
 	];
 	
+	protocol: #converting method:
+	[## asArray
+		
+		| array index |
+		array := Array new: self size.
+		index := 0.
+		self do: [:element | array at: (index := index + 1) put: element].
+		^array
+	];
+	
+	protocol: #copying method:
+	[## copyWith: anElement
+		^self copy add: anElement
+	];
+	
+	protocol: #copying method:
+	[## , aElementOrACollectionOfElements
+		^aElementOrACollectionOfElements addTo: self
+	];
+	
+	protocol: #'double dispatching' method:
+	[## addTo: aCollection
+		^aCollection addAll: self
+	];
+	
 	protocol: #enumerating method: 
 	[## collect: map
 
 		"Answer new collection such that each of its elements is computed from the elements of the receiver by applying the <map> function."
 
 		| projection |
-		projection := OrderedCollection new: self size.
+		projection := self projectionClass new: self size.
 		self do: [:each | projection add: (map value: each)].
 		^projection
 	];
 	
 	protocol: #enumerating method:
-	[## detect: predicateBlock
-		^self detect: predicateBlock ifNone: [Error signal: 'Element not found']
+	[## detect: predicate
+		^self detect: predicate ifNone: [self signalElementNotFoundError]
+	];
+	
+	protocol: #enumerating method:
+	[## detect: predicate ifFound: foundAction
+		^self detect: predicate ifFound: foundAction ifNone: nil
 	];
 
 	protocol: #enumerating method:
-	[## detect: predicateBlock ifNone: notFoundAction
-		self do: [:each | (predicateBlock value: each) ifTrue: [^each]].
+	[## detect: predicate ifFound: foundAction ifNone: notFoundAction
+		self do: [:each | (predicate value: each) ifTrue: [^foundAction ifNil: [each] ifNotNil: [foundAction value: each]]].
 		^notFoundAction ifNotNil: [notFoundAction value]
 	];
 
 	protocol: #enumerating method:
-	[## select: predicateBlock
+	[## detect: predicate ifNone: notFoundAction
+		self do: [:each | (predicate value: each) ifTrue: [^each]].
+		^notFoundAction ifNotNil: [notFoundAction value]
+	];
+
+	protocol: #enumerating method:
+	[## do: enumerator1 separatedBy: interleavedAction
+		| separatingAction |
+		separatingAction := nil.
+		self do: [:element | 
+			separatingAction ifNil: [separatingAction := interleavedAction] ifNotNil: [separatingAction value].
+			enumerator1 value: element]
+	];
+	
+	protocol: #enumerating method:
+	[## fold: block2
+		| flag value |
+		flag := value := nil.
+		self do: [:element | 
+			flag 
+				ifNil: [value := element. flag := 0]
+				ifNotNil: [value := block2 value: value value: element]].
+		^value
+	];
+	
+	protocol: #enumerating method:
+	[## inject: initialValue into: block2
+		| value |
+		value := initialValue.
+		self do: [:element | value := block2 value: value value: element].
+		^value
+	];
+	
+	protocol: #enumerating method:
+	[## reduce: block2
+		| flag value |
+		flag := value := nil.
+		self do: [:element | 
+			flag 
+				ifNil: [value := element. flag := 0]
+				ifNotNil: [value := block2 value: value value: element]].
+		^value
+	];
+	
+	protocol: #enumerating method:
+	[## reject: predicate 
+		^self select: [:element | (predicate value: element) not]
+	];
+	
+	protocol: #enumerating method:
+	[## select: predicate
 		| selection |
-		selection := OrderedCollection new.
-		self do: [:each | (predicateBlock value: each) ifTrue: [selection add: each]].
+		selection := self selectionClass new.
+		self do: [:each | (predicate value: each) ifTrue: [selection add: each]].
 		^selection
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map do: enumerator1
+		self do: [:each | enumerator1 value: (map value: each)].
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map inject: initialValue into: block2
+		| value |
+		value := initialValue.
+		self do: [:each | value := block2 value: value value: (map value: each)].
+		^value
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map select: predicate
+
+		"Canonical message--as coined by author of Essence# in 1987."
+
+		| selection |
+		selection := self selectionClass new: self size.
+		self do: [:each | 
+			| value |
+			value := map value: each.
+			(predicate value: value) 
+				ifTrue: [selection add: value]].
+		^selection
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map select: predicate do: enumerator1
+		self do: [:each | 
+			| value |
+			value := map value: each.
+			(predicate value: value) 
+				ifTrue: [enumerator1 value: value]].
+	];
+	
+	protocol: #enumerating method: 
+	[## collect: map select: predicate inject: initialValue into: block2
+		| value |
+		value := initialValue.
+		self do: [:each | 
+			| mappedValue |
+			mappedValue := map value: each.
+			(predicate value: mappedValue) 
+				ifTrue: [value := block2 value: value value: mappedValue]].
+		^value
+	];
+	
+	protocol: #enumerating method:
+	[## select: predicate do: enumerator1
+		self do: [:each | (predicate value: each) ifTrue: [enumerator1 value: each]].
+	];
+	
+	protocol: #enumerating method:
+	[## select: predicate inject: initialValue into: block2
+		| value |
+		value := initialValue.
+		self do: [:each | (predicate value: each) ifTrue: [value := block2 value: value value: each]].
+	];
+	
+	protocol: #enumerating method: 
+	[## select: predicate collect: map
+
+		"Canonical message--as coined by author of Essence# in 1987."
+
+		| selection |
+		selection := self selectionClass new: self size.
+		self do: [:each | 
+			| value |
+			(predicate value: each) 
+				ifTrue: [selection add: (map value: each)]].
+		^selection
+	];
+	
+	protocol: #enumerating method: 
+	[## select: predicate collect: map do: enumerator1
+
+		self do: [:each | 
+			(predicate value: each) 
+				ifTrue: [enumerator1 value: (map value: each)]].
+	];
+	
+	protocol: #enumerating method: 
+	[## select: predicate collect: map inject: initialValue into: block2
+		
+		| value |
+		value := initialValue.
+		self do: [:each | 
+			(predicate value: each) 
+				ifTrue: [value := block2 value: value value: (map value: each)]].
+		^value
+	];
+	
+	protocol: #enumerating method:
+	[## collect: map thenDo: enumerator1		
+		^self collect: map do: enumerator1
+	];
+	
+	protocol: #enumerating method:
+	[## collect: map thenSelect: predicate
+		"If you have any respect for PRIOR ART, please use the canonical message (as used below.)"
+		
+		^self collect: map select: predicate
+	];
+	
+	protocol: #enumerating method:
+	[## select: predicate thenDo: enumerator1
+		^self select: predicate do: enumerator1
+	];
+	
+	protocol: #enumerating method:
+	[## select: predicate thenCollect: map
+		"If you have any respect for PRIOR ART, please use the canonical message (as used below.)"
+		
+		^self select: predicate collect: map
+	];
+	
+	protocol: #enumerating method:
+	[## reduce: block2
+		^self fold: block2
+	];
+	
+	protocol: #enumerating method:
+	[## projectionClass
+		^self class
+	];
+	
+	protocol: #enumerating method:
+	[## selectionClass
+		^OrderedCollection
+	];
+	
+	protocol: #'error handling' method: 
+	[## signalElementNotFoundError
+		^ElementNotFoundError signal
+	];
+	
+	protocol: #'error handling' method: 
+	[## signalEmptyCollectionError
+		^Error signal: 'Collection must not be empty'
 	];
 		
 	protocol: #querying method:
-	[## contains: predicateBlock
-		self do: [:each | (predicateBlock value: each) ifTrue: [^true]].
+	[## allSatisfy: predicate
+		self do: [:each | (predicate value: each) ifFalse: [^false]].
+		^true
+	];
+		
+	protocol: #querying method:
+	[## anySatisfy: predicate
+		self do: [:each | (predicate value: each) ifTrue: [^true]].
 		^false
+	];
+		
+	protocol: #querying method:
+	[## noneSatisfy: predicate
+		self do: [:each | (predicate value: each) ifTrue: [^false]].
+		^true
+	];
+		
+	protocol: #querying method:
+	[## contains: predicate
+		self do: [:each | (predicate value: each) ifTrue: [^true]].
+		^false
+	];
+	
+	protocol: #querying method:
+	[## identityIncludes: target
+		self do: [:each | (target == each) ifTrue: [^true]].
+		^false
+	];
+	
+	protocol: #querying method:
+	[## includes: target
+		self do: [:each | (target = each) ifTrue: [^true]].
+		^false
+	];
+	
+	protocol: #querying method:
+	[## occurrencesOf: anElement
+		| count |
+		count := 0.
+		self do: [:each | anElement = each ifTrue: [count := count + 1]].
+		^count
+	];
+	
+	protocol: #removing method:
+	[## copyIdentityRemoving: anElement
+		^self copyIdentityRemoving: anElement ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	[## copyIdentityRemoving: anElement ifAbsent: block0
+		^self copy identityRemove: anElement ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	[## copyIdentityRemovingAll: aCollection
+		| copy |
+		copy := self copy.
+		copy identityRemoveAll: aCollection.
+		^copy
+	];
+	
+	protocol: #removing method:
+	[## copyRemoving: anElement
+		^self copyRemoving: anElement ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	[## copyRemoving: anElement ifAbsent: block0
+		^self copy remove: anElement ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	[## copyRemovingAll: aCollection
+		| copy |
+		copy := self copy.
+		copy removeAll: aCollection.
+		^copy
+	];
+	
+	protocol: #removing method:
+	[## copyRemovingAllSuchThat: predicate
+		| copy |
+		copy := self copy.
+		copy removeAllSuchThat: predicate.
+		^copy
+	];
+	
+	protocol: #removing method:
+	[## copyWithout: anElement
+		^self copyRemovingAll: anElement
+	];
+	
+	protocol: #removing method:
+	[## identityRemove: anElement
+		self identityRemove: anElement ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	[## identityRemoveAll: aCollection
+		self removeAllSuchThat: [:element | aCollection identityIncludes: element]
+	];
+	
+	protocol: #removing method:
+	[## remove: anElement
+		self remove: anElement ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	[## removeAll: aCollection
+		self removeAllSuchThat: [:element | aCollection includes: element]
+	];
+	
+	protocol: #removing method:
+	[## removeAllSuchThat: predicate
+		self do: [:element | (predicate value: element) ifTrue: [self identityRemove: element ifAbsent: []]]
+	];
+	
+	protocol: #testing method:
+	[## isEmpty
+		^self size isZero
+	];
+	
+	protocol: #testing method:
+	[## notEmpty
+		^self size > 0
 	]
