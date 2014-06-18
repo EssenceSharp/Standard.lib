@@ -138,12 +138,24 @@
 		
 		^true
 	];
-
+	
 	protocol: #testing method:
-	[## isTrue
-
-		"Answer whether the receiver is true."
-
+	[## isBehavior
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isBoolean
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isCharacter
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isClass
 		^false
 	];
 
@@ -153,7 +165,41 @@
 		"Answer whether the receiver is false."
 
 		^false
+	];
+	
+	protocol: #testing method:
+	[## isImmutable
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isInteger
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isMetaclass
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isNumber
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isSymbol
+		^false
+	];
+
+	protocol: #testing method:
+	[## isTrue
+
+		"Answer whether the receiver is true."
+
+		^false
 	]
+
 
 
 		

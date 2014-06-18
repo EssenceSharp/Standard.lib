@@ -1,0 +1,6 @@
+	"Class methods of Character"
+	
+	protocol: #querying method:
+	[## unicodeCategory: aCharacter
+		<invokeMethod: #GetUnicodeCategory>
+	]

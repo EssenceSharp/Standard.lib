@@ -20,21 +20,33 @@
 		^self asString asMetaclass
 	];
 	
-	protocol: #enumerating method: 
-	[## collect: map
-
-		"Answer an array such that each of its elements is computed from the elements of the receiver by applying the <map> function."
-
-		| size array |
-
-		size := self size.
-		array := self projectionClass new: size.
-		1 to: size do: [:index | array at: index put: (map value: (self at: index))].
-		^array
+	protocol: #converting method:
+	[## asLowercase
+		<invokeMethod: #ToLower>
+	];
+	
+	protocol: #converting method:
+	[## asLowercase: aCultureInfo
+		<invokeMethod: #ToLower>
+	];
+	
+	protocol: #converting method:
+	[## asUppercase
+		<invokeMethod: #ToUpper>
+	];
+	
+	protocol: #converting method:
+	[## asUppercase: aCultureInfo
+		<invokeMethod: #ToUpper>
 	];
 	
 	protocol: #enumerating method:
 	[## projectionClass
 		^Smalltalk.String
+	];
+	
+	protocol: #testing method:
+	[## isString
+		^true
 	]
 

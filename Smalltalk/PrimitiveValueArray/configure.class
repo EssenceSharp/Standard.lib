@@ -1,0 +1,4 @@
+	"Configuration of PrimitiveValueArray"
+	
+	superclass: ArrayedCollection;
+	instanceArchitecture: #Abstract

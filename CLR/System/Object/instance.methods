@@ -75,4 +75,49 @@
 	protocol: #'system testing' method:
 	[## showCr
 			self printString showCr
+	];
+	
+	protocol: #testing method:
+	[## isBehavior
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isBoolean
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isCharacter
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isClass
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isImmutable
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isInteger
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isMetaclass
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isNumber
+		^false
+	];
+	
+	protocol: #testing method:
+	[## isSymbol
+		^false
 	]

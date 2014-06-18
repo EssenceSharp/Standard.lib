@@ -1,0 +1,21 @@
+	"Instance methods of Symbol"
+	
+	protocol: #converting method:
+	[## asHostSystemString
+		<getProperty: #PrimitiveValue>
+	];
+	
+	protocol: #converting method:
+	[## asString
+		<invokeMethod: #asESString>
+	];
+	
+	protocol: #converting method:
+	[## asSymbol
+		^self
+	];
+
+	protocol: #testing method:
+	[## isSymbol
+		^true
+	]

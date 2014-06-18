@@ -15,6 +15,16 @@
 		"Answer the canonical instance of the receiver"
 		
 		<primitive: canonicalInstance domain: Metaclass>
+	];
+	
+	protocol: #testing method:
+	[## isMeta
+		^true
+	];
+	
+	protocol: #testing method:
+	[## isMetaclass
+		^true
 	]
 
 		

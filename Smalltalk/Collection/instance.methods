@@ -33,6 +33,20 @@
 			^(self at: index) value
 	];
 	
+	protocol: #comparing method:
+	[## = comparand
+		self == comparand ifTrue: [^true].
+		^[comparand isEqualToCollection: self]
+			on: MessageNotUnderstood
+			do: [:ex | false]
+	];
+	
+	protocol: #comparing method:
+	[## isSubsetOf: comparand
+		self == comparand ifTrue: [^true].
+		^self allSatisfy: [:element | comparand includes: element]
+	];
+	
 	protocol: #converting method:
 	[## asArray
 		
@@ -41,6 +55,11 @@
 		index := 0.
 		self do: [:element | array at: (index := index + 1) put: element].
 		^array
+	];
+	
+	protocol: #copying method:
+	[## copyEmpty: capacity
+		^self class new: capacity
 	];
 	
 	protocol: #copying method:
@@ -57,6 +76,17 @@
 	[## addTo: aCollection
 		^aCollection addAll: self
 	];
+	
+	protocol: #'double dispatching' method:
+	[## isEqualToCollection: comparand
+		self size = comparand size ifFalse: [^false].
+		^self isSubsetOf: comparand
+	];	
+	
+	protocol: #'double dispatching' method:
+	[## isEqualToSequenceableCollection: comparand
+		^self isEqualToCollection: comparand
+	];	
 	
 	protocol: #enumerating method: 
 	[## collect: map

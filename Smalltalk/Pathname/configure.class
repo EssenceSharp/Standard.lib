@@ -1,4 +1,4 @@
 	"Configuration of the instance architecture, initial state and module memberships of Pathname." 
 	
-	superclass: ArrayedCollection;
+	superclass: PrimitiveValueArray;
 	instanceArchitecture: #Pathname

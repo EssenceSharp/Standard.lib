@@ -123,4 +123,10 @@
 	[## coerce: operand
 	
 		^operand asNumber
+	];
+	
+	protocol: #testing method:
+	[## isNumber
+		^true
 	]
+

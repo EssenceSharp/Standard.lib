@@ -7,4 +7,9 @@
 		If there is no such value, raise the MustBeBoolean exception."
 
 		^self
+	];
+	
+	protocol: #testing method:
+	[## isBoolean
+		^true
 	]

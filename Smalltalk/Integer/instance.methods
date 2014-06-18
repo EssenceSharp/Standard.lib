@@ -21,4 +21,9 @@
 	[## coerce: operand
 		
 		^operand asInteger
+	];
+	
+	protocol: #testing method:
+	[## isInteger
+		^true
 	]

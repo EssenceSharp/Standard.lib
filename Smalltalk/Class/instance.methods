@@ -8,4 +8,9 @@
 	protocol: #converting method:
 	[## asMetaclass
 		^self class
+	];
+	
+	protocol: #testing method:
+	[## isClass
+		^true
 	]

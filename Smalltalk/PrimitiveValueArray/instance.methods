@@ -1,34 +1,29 @@
-	"Instance methods of Magnitude"
+	"Instance methods of PrimitiveValueArray"
 	
 	protocol: #comparing method:
 	[## > comparand
-		^comparand < self
+	
+		^(self compareTo: comparand) > 0
 	];
 			
 	protocol: #comparing method:
-	[## < comparand
-	
-			"Most subclasses will implement #< as a primitive, so this is the fallback implementation."
-			
-			^(self compareTo: comparand) < 0
+	[## < comparand			
+		^(self compareTo: comparand) < 0
 	];
 				
 	protocol: #comparing method:
 	[## = comparand
-	
-			"Most subclasses will implement #= as a primitive, so this is the fallback implementation."
-	
-			^(self compareTo: comparand) = 0
+		^(self compareTo: comparand) = 0
 	];
 		
 	protocol: #comparing method:
 	[## <= comparand
-			^(self > comparand) not
+			^(self compareTo: comparand) <= 0
 	];
 	
 	protocol: #comparing method:
 	[## >= comparand
-			^(self < comparand) not
+		^(self compareTo: comparand) >= 0
 	];
 				
 	protocol: #querying method:

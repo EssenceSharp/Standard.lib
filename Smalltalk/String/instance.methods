@@ -1,0 +1,36 @@
+	"Instance methods of String"
+	
+	protocol: #converting method:
+	[## asLowercase
+		^self copyReplacing: [:ch | ch asLowercase]
+	];
+	
+	protocol: #converting method:
+	[## asUppercase
+		^self copyReplacing: [:ch | ch asUppercase]
+	];
+	
+	protocol: #converting method:
+	[## asCharArray
+		<invokeMethod: #ToCharArray>
+	];
+	
+	protocol: #converting method:
+	[## asHostSystemString
+		<invokeMethod: #asHostString>
+	];
+	
+	protocol: #converting method:
+	[## asString
+		^self
+	];
+
+	protocol: #converting method:
+	[## asSymbol
+		<invokeMethod: #asESSymbol>
+	];
+	
+	protocol: #testing method:
+	[## isString
+		^true
+	]

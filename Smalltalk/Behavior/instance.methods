@@ -75,4 +75,15 @@
 		<primitive: #newWithValue: domain: Behavior>
 
 		^self new
+	];
+	
+	protocol: #testing method:
+	[## isBehavior
+		^true
+	];
+	
+	protocol: #testing method:
+	[## isMeta
+		^false
 	]
+
