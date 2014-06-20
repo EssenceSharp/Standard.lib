@@ -45,6 +45,16 @@
 		^Smalltalk.String
 	];
 	
+	protocol: #primitives method:
+	[## primIndexOf: aCharOrString
+		<invokeMethod: #IndexOf>
+	];
+	
+	protocol: #querying method:
+	[## indexOf: aCharOrString
+		^(self primIndexOf: aCharOrString) + 1
+	];
+	
 	protocol: #testing method:
 	[## isString
 		^true

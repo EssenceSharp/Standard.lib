@@ -221,7 +221,7 @@
 	
 	protocol: #'double dispatching' method:
 	[## isEqualToSequenceableCollection: comparand
-		^[| index |
+		| index |
 		self size = comparand size ifFalse: [^false].
 		index := 0.
 		self from: 1 to: self size do: 
@@ -229,9 +229,7 @@
 			| thatElement |
 			thatElement := comparand at: (index := index + 1).
 			thisElement = thatElement ifFalse: [^false]].
-		^true]
-				on: MessageNotUnderstood
-				do: [:ex | false]
+		^true
 	];	
 
 	protocol: #enumerating method:
