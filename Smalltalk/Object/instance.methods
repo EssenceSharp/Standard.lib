@@ -7,6 +7,11 @@
 		
 		<primitive: class domain: Object>
 	];
+	
+	protocol: #accessing method:
+	[## value
+		^self
+	];
 
 	protocol: #accessing method: 
 	[## yourself 
