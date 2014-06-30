@@ -1,0 +1,8 @@
+	"Configuration of trait TWriteStream"
+	
+	"This is where a trait would specify any other traits it uses,
+	as in the following example:
+	
+	uses: TStream"
+	
+	import: #Console from: CLR.System as: #Console withAccess: #InHierarchy

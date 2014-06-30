@@ -58,23 +58,34 @@
 	];
 	
 	protocol: #copying method:
+	[## copyAdding: anElement
+		^self copy add: anElement
+	];
+	
+	protocol: #copying method:
+	[## copyAddingAll: aCollection
+		^self copy addAll: aCollection
+	];
+	
+	protocol: #copying method:
 	[## copyEmpty: capacity
 		^self class new: capacity
 	];
 	
 	protocol: #copying method:
 	[## copyWith: anElement
-		^self copy add: anElement
+		^self copyAdding: anElement
 	];
 	
 	protocol: #copying method:
-	[## , aElementOrACollectionOfElements
-		^aElementOrACollectionOfElements addTo: self
+	[## , anElementOrACollectionOfElements
+		"^anElementOrACollectionOfElements addTo: self"
+		^self copyAdding: anElementOrACollectionOfElements
 	];
 	
 	protocol: #'double dispatching' method:
 	[## addTo: aCollection
-		^aCollection addAll: self
+		^aCollection copyAddingAll: self
 	];
 	
 	protocol: #'double dispatching' method:

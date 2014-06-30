@@ -2,6 +2,24 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+	[## hash
+
+		<primitive: hash domain: IndexedHalfWordSlots>
+	];
+
+	protocol: #'system primitives' method:
+	[## = comparandObject
+
+		<primitive: #= domain: IndexedHalfWordSlots>
+	];
+
+	protocol: #'system primitives' method:
+	[## compareTo: comparandObject 
+
+		<primitive: #compareTo: domain: IndexedHalfWordSlots>
+	];
+
+	protocol: #'system primitives' method:
 	[## at: slotIndexObject 
 
 		<primitive: #at: domain: IndexedHalfWordSlots>
@@ -50,9 +68,9 @@
 	];
 
 	protocol: #'system primitives' method:
-	[## copyWith: suffix 
+	[## copyAdding: suffix 
 
-		<primitive: #copyWith: domain: IndexedHalfWordSlots>
+		<primitive: #copyAdding: domain: IndexedHalfWordSlots>
 	];
 
 	protocol: #'system primitives' method:
@@ -182,9 +200,9 @@
 	];
 
 	protocol: #'system primitives' method:
-	[## , suffix
+	[## copyAddingAll: suffix 
 
-		<primitive: #, domain: IndexedHalfWordSlots>
+		<primitive: #copyAddingAll: domain: IndexedHalfWordSlots>
 	];
 
 	protocol: #'system primitives' method:

@@ -2,9 +2,33 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+	[## numArgs
+
+		<primitive: numArgs domain: Block>
+	];
+
+	protocol: #'system primitives' method:
+	[## environment
+
+		<primitive: environment domain: Block>
+	];
+
+	protocol: #'system primitives' method:
 	[## lexicalContext
 
 		<primitive: lexicalContext domain: Block>
+	];
+
+	protocol: #'system primitives' method:
+	[## homeMethod
+
+		<primitive: homeMethod domain: Block>
+	];
+
+	protocol: #'system primitives' method:
+	[## hasHomeClass
+
+		<primitive: hasHomeClass domain: Block>
 	];
 
 	protocol: #'system primitives' method:

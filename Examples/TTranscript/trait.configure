@@ -1,0 +1,6 @@
+	"Configuration of trait TTranscript"
+	
+	"This is where a trait would specify any other traits it uses,
+	as in the following example:
+	
+	TTranscript uses: TReadWriteStream"

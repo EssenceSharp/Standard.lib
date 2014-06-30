@@ -1,0 +1,248 @@
+	"Published system primitives for TraitTransformation"
+	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
+
+	protocol: #'system primitives' method:
+	[## objectSpace
+
+		<primitive: objectSpace domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## identityObject
+
+		<primitive: identityObject domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## reduced
+
+		<primitive: reduced domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## addUser: user 
+
+		<primitive: #addUser: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## removeUser: user 
+
+		<primitive: #removeUser: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## + usageExpression
+
+		<primitive: #+ domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## combinedWithTrait: trait 
+
+		<primitive: #combinedWithTrait: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## combinedWithTransformation: traitTransformation 
+
+		<primitive: #combinedWithTransformation: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## combinedWithComposition: traitComposition 
+
+		<primitive: #combinedWithComposition: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## excluding: selectorObject 
+
+		<primitive: #excluding: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## - selectorExclusionSpec
+
+		<primitive: #- domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## aliasing: sourceSelector as: selectorAlias 
+
+		<primitive: #aliasing:as: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## @ selectorAliasingSpec
+
+		<primitive: #@ domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## excludedSelectorsDo: enumerator1 
+
+		<primitive: #excludedSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## aliasedSelectorsDo: enumerator2 
+
+		<primitive: #aliasedSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## methodConflictsDo: enumerator2 
+
+		<primitive: #methodConflictsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## hostSystemMethodConflictsDo: enumerator3 
+
+		<primitive: #hostSystemMethodConflictsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usesTraits
+
+		<primitive: usesTraits domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## traitUsage
+
+		<primitive: traitUsage domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## invalidateUsedTraitsFrom: source 
+
+		<primitive: #invalidateUsedTraitsFrom: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usedTraitsDo: enumerator1 
+
+		<primitive: #usedTraitsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## withUsedTraitUnimplementedMessagesSentToSelfDo: enumerator1 
+
+		<primitive: #withUsedTraitUnimplementedMessagesSentToSelfDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usedTraitMethodConflictsDo: enumerator2 
+
+		<primitive: #usedTraitMethodConflictsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usedTraitHostSystemMethodConflictsDo: enumerator3 
+
+		<primitive: #usedTraitHostSystemMethodConflictsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usedTraitExcludedSelectorsDo: enumerator1 
+
+		<primitive: #usedTraitExcludedSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## usedTraitAliasedSelectorsDo: enumerator2 
+
+		<primitive: #usedTraitAliasedSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## selectorsDo: enumerator1 
+
+		<primitive: #selectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## selectorsAndMethodsDo: enumerator2 
+
+		<primitive: #selectorsAndMethodsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## selectors
+
+		<primitive: selectors domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## includesSelector: selector 
+
+		<primitive: #includesSelector: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## allSelectorsDo: enumerator1 
+
+		<primitive: #allSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## allSelectorsAndMethodsDo: enumerator2 
+
+		<primitive: #allSelectorsAndMethodsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## allSelectors
+
+		<primitive: allSelectors domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## canUnderstand: selector 
+
+		<primitive: #canUnderstand: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## compiledMethodAt: selector 
+
+		<primitive: #compiledMethodAt: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## systemSelectorsDo: enumerator2 
+
+		<primitive: #systemSelectorsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## systemSelectorsAndMethodsDo: enumerator3 
+
+		<primitive: #systemSelectorsAndMethodsDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## systemSelectorCount
+
+		<primitive: systemSelectorCount domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## includesSystemSelector: systemSelector numArgs: numArgs 
+
+		<primitive: #includesSystemSelector:numArgs: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## canUnderstandSystemMessage: selector 
+
+		<primitive: #canUnderstandSystemMessage: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## compiledMethodAtSystemSelector: systemSelector numArgs: numArgs 
+
+		<primitive: #compiledMethodAtSystemSelector:numArgs: domain: TraitTransformation>
+	];

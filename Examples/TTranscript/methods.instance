@@ -1,0 +1,13 @@
+	"Instance methods of trait TTranscript"
+	
+	protocol: #writing method:
+	[## cr
+		
+		self nextPut: 13 asCharacter
+	];
+	
+	protocol: #writing method:
+	[## show: aString
+		
+		self nextPutAll: aString
+	]

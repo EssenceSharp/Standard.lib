@@ -32,7 +32,7 @@
 	
 	protocol: #'double dispatching' method:
 	[## addTo: aCollection
-		^aCollection add: self
+		^aCollection copyAdding: self
 	];
 
 	protocol: #printing method:

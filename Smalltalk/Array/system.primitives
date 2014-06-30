@@ -2,6 +2,12 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+	[## hash
+
+		<primitive: hash domain: IndexedObjectSlots>
+	];
+
+	protocol: #'system primitives' method:
 	[## at: slotIndexObject 
 
 		<primitive: #at: domain: IndexedObjectSlots>
@@ -62,9 +68,9 @@
 	];
 
 	protocol: #'system primitives' method:
-	[## copyWith: suffix 
+	[## copyAdding: suffix 
 
-		<primitive: #copyWith: domain: IndexedObjectSlots>
+		<primitive: #copyAdding: domain: IndexedObjectSlots>
 	];
 
 	protocol: #'system primitives' method:

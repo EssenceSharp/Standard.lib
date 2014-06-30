@@ -37,47 +37,6 @@
 			ifTrue: [noneAction value]
 			ifFalse: [self at: self size]
 	];
-	
-	protocol: #accessing method:
-	[## copyReplacing: map
-		| copy index |
-		copy := self copyEmpty: self size.
-		index := 0.
-		self 
-			from: 1
-			to: self size
-			do: [:element | copy at: (index := index + 1) put: (map value: element)].
-		^copy
-	];
-
-	protocol: #accessing method:
-	[## copyReplacingAll: target with: newValue
-		| copy index |
-		copy := self copyEmpty: self size.
-		index := 0.
-		self 
-			from: 1
-			to: self size
-			do: [:element | 
-				index := index + 1.
-				target = element
-					ifTrue: [copy at: index put: newValue]
-					ifFalse: [copy at: index put: element]].
-		^copy
-	];
-	
-	protocol: #accessing method:
-	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence
-		^self copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: 1
-	];
-	
-	protocol: #accessing method:
-	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex
-		| copy |
-		copy := self copy.
-		copy replaceFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex.
-		^copy
-	];
 
 	protocol: #accessing method:
 	[## replaceFrom: startIndex to: endIndex with: replacementSequence
@@ -168,6 +127,47 @@
 		^[comparand isEqualToSequenceableCollection: self]
 			on: MessageNotUnderstood
 			do: [:ex | false]
+	];
+	
+	protocol: #copying method:
+	[## copyReplacing: map
+		| copy index |
+		copy := self copyEmpty: self size.
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | copy at: (index := index + 1) put: (map value: element)].
+		^copy
+	];
+
+	protocol: #copying method:
+	[## copyReplacingAll: target with: newValue
+		| copy index |
+		copy := self copyEmpty: self size.
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | 
+				index := index + 1.
+				target = element
+					ifTrue: [copy at: index put: newValue]
+					ifFalse: [copy at: index put: element]].
+		^copy
+	];
+	
+	protocol: #copying method:
+	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence
+		^self copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: 1
+	];
+	
+	protocol: #copying method:
+	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex
+		| copy |
+		copy := self copy.
+		copy replaceFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex.
+		^copy
 	];
 	
 	protocol: #copying method:

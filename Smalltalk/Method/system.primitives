@@ -2,6 +2,36 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+	[## environment
+
+		<primitive: environment domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## homeMethod
+
+		<primitive: homeMethod domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## hasHomeClass
+
+		<primitive: hasHomeClass domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## homeClass
+
+		<primitive: homeClass domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## numArgs
+
+		<primitive: numArgs domain: Method>
+	];
+
+	protocol: #'system primitives' method:
 	[## selector
 
 		<primitive: selector domain: Method>
@@ -35,6 +65,30 @@
 	[## removeFromAllProtocols
 
 		<primitive: removeFromAllProtocols domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## messagesSent
+
+		<primitive: messagesSent domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## messagesSentToSelf
+
+		<primitive: messagesSentToSelf domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## messagesSentToSuper
+
+		<primitive: messagesSentToSuper domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## messagesSentToThisContext
+
+		<primitive: messagesSentToThisContext domain: Method>
 	];
 
 	protocol: #'system primitives' method:

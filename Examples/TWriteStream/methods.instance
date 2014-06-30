@@ -1,0 +1,25 @@
+	"Instance methods of trait TWriteStream"
+	
+	protocol: #writing method:
+	[## cr
+	
+		self nextPut: 13 asCharacter
+	];
+	
+	protocol: #writing method:
+	[## space
+	
+		self nextPut: $ 
+	];
+	
+	protocol: #writing method:
+	[## nextPut: anElement
+		
+		Console write: anElement
+	];
+	
+	protocol: #writing method:
+	[## nextPutAll: aSequence
+		
+		aSequence do: [:each | self nextPut: each; space]
+	]

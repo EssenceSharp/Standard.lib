@@ -1,0 +1,11 @@
+	"Instance methods of class Transcript"
+	
+	protocol: #operations method:
+	[## sayHello
+		self show: 'Hello, world'; cr
+	];
+	
+	protocol: #operations method:
+	[## showAll: aCollection
+		self nextPutAll: aCollection
+	]

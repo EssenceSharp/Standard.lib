@@ -5,5 +5,13 @@
 
 		"Evaluate the receiver with a single argument which it can use to exit before evaluating its final statement."
 		
-		^self value: [^nil]
+		^self value: [:exitValue | ^exitValue]
+	];
+				
+	protocol: #evaluating method: 
+	[## valueWithExit: exitValue
+
+		"Evaluate the receiver with a single argument which it can use to exit before evaluating its final statement."
+		
+		^self value: [^exitValue]
 	]

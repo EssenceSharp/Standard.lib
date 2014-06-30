@@ -64,7 +64,6 @@
 		<primitive: #ifNotNil: domain: Object>
 	];
 
-		
 	protocol: #'control flow' method: 
 	[## ifNil: nilAction ifNotNil: notNilAction
 
@@ -84,7 +83,7 @@
 	
 	protocol: #'double dispatching' method:
 	[## addTo: aCollection
-		^aCollection add: self
+		^aCollection copyAdding: self
 	];
 	
 	protocol: #'initialize-release' method:

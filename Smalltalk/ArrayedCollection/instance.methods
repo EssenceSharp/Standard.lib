@@ -5,6 +5,11 @@
 		^self
 	];
 	
+	protocol: #copying method:
+	[## copyEmpty: aSize
+		self class new: aSize
+	];
+	
 	protocol: #enumerating method: 
 	[## collect: map
 
