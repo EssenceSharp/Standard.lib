@@ -198,3 +198,9 @@
 
 		<primitive: showCr domain: Object>
 	];
+
+	protocol: #'system primitives' method:
+	[## changeClassToThatOf: other 
+
+		<primitive: #changeClassToThatOf: domain: Object>
+	];

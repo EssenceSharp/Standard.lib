@@ -224,6 +224,12 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## defineTrait: traitName withAccess: accessPrivilegeLevel configure: configureTrait 
+
+		<primitive: #defineTrait:withAccess:configure: domain: Namespace>
+	];
+
+	protocol: #'system primitives' method:
 	[## initializeSpecificImports
 
 		<primitive: initializeSpecificImports domain: Namespace>

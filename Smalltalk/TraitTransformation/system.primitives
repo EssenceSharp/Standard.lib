@@ -212,6 +212,18 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## withUnimplementedMessagesSentToSelfDo: enumerator1 
+
+		<primitive: #withUnimplementedMessagesSentToSelfDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
+	[## withUndeclaredVariablesDo: enumerator2 
+
+		<primitive: #withUndeclaredVariablesDo: domain: TraitTransformation>
+	];
+
+	protocol: #'system primitives' method:
 	[## systemSelectorsDo: enumerator2 
 
 		<primitive: #systemSelectorsDo: domain: TraitTransformation>

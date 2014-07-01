@@ -1,0 +1,3 @@
+	"Configuration of trait Debutant"
+	
+	import: #Console from: CLR.System.Console as: #Console withAccess: #InHierarchy

@@ -1,0 +1,7 @@
+	"Methods of trait Debutant"
+	
+	protocol: #examples method:
+	[## introduceYourself
+	
+		Console writeLine: 'Hello, world! I''m a Debutant!'
+	]

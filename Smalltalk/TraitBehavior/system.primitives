@@ -182,6 +182,12 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## withUndeclaredVariablesDo: enumerator2 
+
+		<primitive: #withUndeclaredVariablesDo: domain: BehavioralTrait>
+	];
+
+	protocol: #'system primitives' method:
 	[## addMethod: method systemSelector: systemSelector 
 
 		<primitive: #addMethod:systemSelector: domain: BehavioralTrait>
@@ -221,6 +227,12 @@
 	[## traitUsage
 
 		<primitive: traitUsage domain: BehavioralTrait>
+	];
+
+	protocol: #'system primitives' method:
+	[## uses: traitUsageExpression 
+
+		<primitive: #uses: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:

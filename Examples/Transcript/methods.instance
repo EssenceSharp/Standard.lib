@@ -1,8 +1,8 @@
 	"Instance methods of class Transcript"
 	
 	protocol: #operations method:
-	[## sayHello
-		self show: 'Hello, world'; cr
+	[## whoAmI
+		self show: 'I am a Transcript. And I am a stream. I get my Transcript and Stream behavior by using Traits.'; cr
 	];
 	
 	protocol: #operations method:

@@ -92,6 +92,12 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## withUndeclaredVariablesDo: enumerator1 
+
+		<primitive: #withUndeclaredVariablesDo: domain: Method>
+	];
+
+	protocol: #'system primitives' method:
 	[## valueWithReceiver: self withArguments: arguments 
 
 		<primitive: #valueWithReceiver:withArguments: domain: Method>
