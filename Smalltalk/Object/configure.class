@@ -1,6 +1,7 @@
 	"Configuration of the instance architecture, initial state and module memberships of Object." 
 
 	superclass: nil;
-	instanceArchitecture: #Stateless
+	instanceArchitecture: #Stateless;
+	uses: TObject
 
 		

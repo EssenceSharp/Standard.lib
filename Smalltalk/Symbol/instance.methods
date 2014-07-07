@@ -15,6 +15,60 @@
 		^self
 	];
 
+	protocol: #evaluating method:
+	[## cull: receiver 
+		^receiver perform: self
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1
+		^self numArgs = 1
+			ifTrue: [receiver perform: self with: arg1]
+			ifFalse: [receiver perform: self]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2
+		^self numArgs = 2
+			ifTrue: [receiver perform: self with: arg1 with: arg2]
+			ifFalse: [self cull: receiver cull: arg1]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2 cull: arg3
+		^self numArgs = 3
+			ifTrue: [receiver perform: self with: arg1 with: arg2 with: arg3]
+			ifFalse: [self cull: receiver cull: arg1 cull: arg2]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2 cull: arg3 cull: arg4
+		^self numArgs = 4
+			ifTrue: [receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4]
+			ifFalse: [self cull: receiver cull: arg1 cull: arg2 with: arg3]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5
+		^self numArgs = 5
+			ifTrue: [receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5]
+			ifFalse: [self cull: receiver cull: arg1 cull: arg2 with: arg3 with: arg4]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5 cull: arg6
+		^self numArgs = 6
+			ifTrue: [receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5 with: arg6]
+			ifFalse: [self cull: receiver cull: arg1 cull: arg2 with: arg3 with: arg4 with: arg5]
+	];
+
+	protocol: #evaluating method:
+	[## cull: receiver cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5 cull: arg6 cull: arg7
+		^self numArgs = 7
+			ifTrue: [receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5 with: arg6 with: arg7]
+			ifFalse: [self cull: receiver cull: arg1 cull: arg2 with: arg3 with: arg4 with: arg5 with: arg6]
+	];
+	
 	protocol: #testing method:
 	[## isSymbol
 		^true

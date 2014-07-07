@@ -1,0 +1,5 @@
+	"Configuration of class MessageSend"
+	
+	superclass: Message;
+	instanceArchitecture: #MessageSend;
+	uses: TCullable

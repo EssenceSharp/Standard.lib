@@ -1,0 +1,1 @@
+	"Instance methods for TAnnouncement"	protocol: #converting method:	[## asAnnouncement			^ self	]

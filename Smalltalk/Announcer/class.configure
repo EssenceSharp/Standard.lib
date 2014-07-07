@@ -1,0 +1,1 @@
+	"Configuration of the instance architecture, initial state and module memberships of Announcer"	superclass: Object;	instanceArchitecture: #NamedSlots;	instanceVariableNames: #(registry);	uses: TAnnouncer

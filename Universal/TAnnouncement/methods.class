@@ -1,0 +1,11 @@
+	"Class methods for TAnnouncement"
+
+	protocol: #converting method:
+	[## asAnnouncement
+		^ self new
+	];
+
+	protocol: #testing method:
+	[## handles: anAnnouncement
+		^ anAnnouncement isKindOf: self 
+	]

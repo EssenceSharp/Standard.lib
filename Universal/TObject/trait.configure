@@ -1,0 +1,5 @@
+	"Configuration of trait TObject"
+	
+	import: Smalltalk withAccess: #InHierarchy;
+	import: #Console from: CLR.System as: #Console withAccess: #InHierarchy
+	

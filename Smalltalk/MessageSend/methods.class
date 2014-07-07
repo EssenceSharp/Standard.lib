@@ -1,0 +1,36 @@
+	"Class methods of MessageSend"
+	
+	protocol: #'instance creation' method:
+	[## receiver: receiver selector: selector
+		
+		^self new
+			receiver: receiver;
+			selector: selector
+	];
+	
+	protocol: #'instance creation' method:
+	[## receiver: receiver selector: selector arguments: arguments
+		
+		^self new
+			receiver: receiver;
+			selector: selector;
+			arguments: arguments
+	];
+	
+	protocol: #'instance creation' method:
+	[## receiver: receiver methodAt: selector
+		
+		^self new
+			receiver: receiver;
+			method: (receiver class compiledMethodAt: selector)
+	];
+		
+	protocol: #'instance creation' method:
+	[## receiver: receiver methodAt: selector arguments: arguments
+		
+		^self new
+			receiver: receiver;
+			method: (receiver class compiledMethodAt: selector);
+			arguments: arguments
+	]
+

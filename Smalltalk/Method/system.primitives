@@ -98,6 +98,18 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## asMessageSend
+
+		<primitive: asMessageSend domain: Method>
+	];
+
+	protocol: #'system primitives' method:
+	[## asMessageSendWithReceiver: messageSendReceiver 
+
+		<primitive: #asMessageSendWithReceiver: domain: Method>
+	];
+
+	protocol: #'system primitives' method:
 	[## valueWithReceiver: self withArguments: arguments 
 
 		<primitive: #valueWithReceiver:withArguments: domain: Method>

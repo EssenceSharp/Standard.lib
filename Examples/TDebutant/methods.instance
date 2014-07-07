@@ -1,4 +1,4 @@
-	"Methods of trait Debutant"
+	"Methods of trait TDebutant"
 	
 	protocol: #examples method:
 	[## introduceYourself

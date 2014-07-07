@@ -2,22 +2,7 @@
 
 	protocol: #accessing method:
 	[## hostSystemType
-			<invokeMethod: #GetType>
-	];
-
-	protocol: #comparing method:
-	[## = comparand
-			<invokeMethod: #Equals>
-	];
-
-	protocol: #comparing method:
-	[## ~= comparand
-			^(self = comparand) not
-	];
-
-	protocol: #comparing method:
-	[## hash
-			<invokeMethod: #GetHashCode>
+		<invokeMethod: #GetType>
 	];
 
 	protocol: #converting method:
@@ -27,31 +12,10 @@
 	
 	protocol: #copying method:
 	[## shallowCopy
-			<invokeMethod: #MemberwiseClone>
+		<invokeMethod: #MemberwiseClone>
 	];
 	
-	protocol: #'double dispatching' method:
-	[## addTo: aCollection
-		^aCollection copyAdding: self
-	];
-
-	protocol: #printing method:
-	[## asHostSystemString 
-			<invokeMethod: #ToString>
-	];
-	
-	protocol: #printing method:
-	[## printString
-		^self asHostSystemString asString
-	];
-	
-	protocol: #'system debugging' method:
-	[## halt
-	
-		<primitive: #halt domain: #Object>
-	];
-	
-	protocol: #'system testing' method: 
+	protocol: #debugging method: 
 	[## reportToConsole
 			Console writeLine: 'HostSystemObject:'.
 			Console write: 9 asCharacter.
@@ -60,64 +24,4 @@
 			Console write: 9 asCharacter.
 			Console write: 'value = '.
 			Console writeLine: self asHostSystemString
-	];
-	
-	protocol: #'system testing' method:
-	[## show
-			self printString show
-	];
-		
-	protocol: #'system testing' method:
-	[## crShow
-			self printString crShow
-	];
-		
-	protocol: #'system testing' method:
-	[## showCr
-			self printString showCr
-	];
-	
-	protocol: #testing method:
-	[## isBehavior
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isBoolean
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isCharacter
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isClass
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isImmutable
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isInteger
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isMetaclass
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isNumber
-		^false
-	];
-	
-	protocol: #testing method:
-	[## isSymbol
-		^false
 	]

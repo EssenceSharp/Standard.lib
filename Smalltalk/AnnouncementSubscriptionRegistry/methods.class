@@ -1,0 +1,1 @@
+	"Class methods for SubscriptionRegistry"	protocol: #'instance creation' method:	[## new			^self basicNew initialize	];	protocol: #'instance creation' method:	[## new: capacity			^self basicNew intialize: capacity	]

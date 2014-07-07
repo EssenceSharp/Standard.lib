@@ -12,3 +12,15 @@
 
 		<primitive: type domain: Symbol>
 	];
+
+	protocol: #'system primitives' method:
+	[## asMessageSend
+
+		<primitive: asMessageSend domain: Symbol>
+	];
+
+	protocol: #'system primitives' method:
+	[## asMessageSendWithReceiver: messageSendReceiver 
+
+		<primitive: #asMessageSendWithReceiver: domain: Symbol>
+	];

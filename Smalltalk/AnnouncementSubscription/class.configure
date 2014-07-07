@@ -1,0 +1,1 @@
+	"Configuration of the instance architecture, initial state and module memberships of AnnouncementSubscription"	superclass: Object;	instanceArchitecture: #NamedSlots;	instanceVariableNames: #(announcer announcementClass subscriber action)

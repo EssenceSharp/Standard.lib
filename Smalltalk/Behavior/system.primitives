@@ -356,6 +356,12 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## objectIdentityComparer
+
+		<primitive: objectIdentityComparer domain: Behavior>
+	];
+
+	protocol: #'system primitives' method:
 	[## instanceEqualityComparer
 
 		<primitive: instanceEqualityComparer domain: Behavior>

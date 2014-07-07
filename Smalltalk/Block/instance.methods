@@ -1,5 +1,5 @@
 	"Instance methods for Block"
-			
+	
 	protocol: #evaluating method: 
 	[## valueWithExit
 

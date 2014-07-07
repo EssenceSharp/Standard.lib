@@ -1,4 +1,5 @@
 	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Object" 
 	
 	superclass: nil;
-	instanceArchitecture: #HostSystemObject
+	instanceArchitecture: #HostSystemObject;
+	uses: TObject
