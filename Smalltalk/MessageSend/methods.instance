@@ -1,0 +1,29 @@
+	"Instance methods of MessageSend"
+	
+	protocol: #'announcement-subscriptions' method:
+	[## addAsHandlerOf: anAnnouncementClass from: anAnnouncer
+	
+		^anAnnouncer when: anAnnouncementClass do: self
+	];
+	
+	protocol: #'announcement-subscriptions' method:
+	[## asAnnouncementSubscription
+		^MessageSendAnnouncementSubscription new 
+			subscriber: self receiver;
+			action: self
+	];
+	
+	protocol: #'announcement-subscriptions' method:
+	[## removeAsHandlerOf: anAnnouncementClass from: anAnnouncer
+	
+		^anAnnouncer when: anAnnouncementClass doNotDo: self
+	];
+	
+	protocol: #comparing method: 
+	[## = comparand
+	
+		self == comparand ifTrue: [^true].
+		^[self selector = comparand selector and: [self receiver == comparand receiver]]
+			on: MessageNotUnderstood
+			do: [:ex | false]
+	]

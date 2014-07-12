@@ -1,0 +1,13 @@
+	"Instance methods of System.Delegate"
+	
+	protocol: #'multicast operators' method:
+	[## + aDelegate
+	
+		^self class combine: self with: aDelegate
+	];
+	
+	protocol: #'multicast operators' method:
+	[## - aDelegate 
+	
+		^self class remove: aDelegate from: self
+	]

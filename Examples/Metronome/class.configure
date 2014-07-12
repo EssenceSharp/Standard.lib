@@ -1,0 +1,4 @@
+	"Configuration of Examples.Metronome"
+	
+	instanceType: 'EssenceSharp.Examples.Metronome' asHostSystemType
+	

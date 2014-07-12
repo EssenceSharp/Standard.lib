@@ -176,6 +176,12 @@
 	];
 
 	protocol: #'system primitives' method:
+	[## asHostSystemString
+
+		<primitive: asHostSystemString domain: IndexedCharSlots>
+	];
+
+	protocol: #'system primitives' method:
 	[## asHostSystemType
 
 		<primitive: asHostSystemType domain: IndexedCharSlots>

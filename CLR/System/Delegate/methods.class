@@ -1,0 +1,13 @@
+	"Class methods of System.Delegate"
+	
+	protocol: #'multicast operators' method:
+	[## combine: delegate1 with: delegate2
+	
+		<invokeMethod: #Combine>
+	];
+	
+	protocol: #'multicast operators' method:
+	[## remove: removal from: aDelegate
+	
+		<invokeMethod: #Remove>
+	]

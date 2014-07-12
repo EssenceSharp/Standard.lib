@@ -4,7 +4,7 @@
 	[## hostSystemType
 		<invokeMethod: #GetType>
 	];
-
+	
 	protocol: #converting method:
 	[## asMutable
 		^self
@@ -24,4 +24,16 @@
 			Console write: 9 asCharacter.
 			Console write: 'value = '.
 			Console writeLine: self asHostSystemString
+	];
+
+	protocol: #'events-subscribing' method:
+	[## when: anAnnouncementClass do: anAction
+	
+		^self onEvent: anAnnouncementClass eventName do: anAction
+	];
+	
+	protocol: #'events-subscribing' method:
+	[## when: anAnnouncementClass doNotDo: anAction
+	
+		^self onEvent: anAnnouncementClass eventName doNotDo: anAction
 	]

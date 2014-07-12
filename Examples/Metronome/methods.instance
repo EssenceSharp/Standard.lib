@@ -1,0 +1,13 @@
+	"Instance methods of Examples.Metronome"
+	
+	protocol: #events method:
+	[## announceTick 
+	
+		self invokeTickEvent: self args: self e
+	];
+	
+	protocol: #events method: 
+	[## invokeTickEvent: eventSource args: eventArgs
+	
+		<invokeEvent: #tick>
+	]
