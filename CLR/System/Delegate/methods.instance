@@ -8,6 +8,8 @@
 	
 	protocol: #'multicast operators' method:
 	[## - aDelegate 
+		"Answers a new delegate constructed by removing the invocation
+		list of <aDelegate> from that of the receiver"
 	
-		^self class remove: aDelegate from: self
+		^self class removeFrom: self invocationListOf: aDelegate
 	]

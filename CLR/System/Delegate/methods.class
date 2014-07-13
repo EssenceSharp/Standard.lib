@@ -7,7 +7,9 @@
 	];
 	
 	protocol: #'multicast operators' method:
-	[## remove: removal from: aDelegate
-	
+	[## removeFrom: aDelegate invocationListOf: removal
+		"Answers a new delegate constructed by removing the invocation
+		list of <removal> from that of <aDelegate>"
+		
 		<invokeMethod: #Remove>
 	]
