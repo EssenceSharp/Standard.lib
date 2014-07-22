@@ -1,0 +1,22 @@
+	"Class methods of System.Threading.CancellationToken"
+	
+	protocol: #'instance creation' method:
+	
+	[## initiallyCancelled: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## initiallyCancelled
+	
+		^self initiallyCancelled: true
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## initiallyUncancelled
+	
+		^self initiallyCancelled: false
+	]

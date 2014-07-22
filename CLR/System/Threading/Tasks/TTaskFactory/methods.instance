@@ -1,0 +1,127 @@
+	"Instance methods of System.Threading.Tasks.TaskFactory"
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAll: prerequisiteTasks continueDoing: action
+	
+		<invokeMethod: #ContinueWhenAll>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAll: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken
+	
+		<invokeMethod: #ContinueWhenAll>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAll: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken scheduledBy: taskScheduler
+	
+		<invokeMethod: #ContinueWhenAll>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAll: prerequisiteTasks continueDoing: action withContinuationOptions: continuationOptions
+	
+		<invokeMethod: #ContinueWhenAll>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAll: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken withContinuationOptions: continuationOptions scheduledBy: taskScheduler
+	
+		<invokeMethod: #ContinueWhenAll>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAny: prerequisiteTasks continueDoing: action
+	
+		<invokeMethod: #ContinueWhenAny>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAny: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken
+	
+		<invokeMethod: #ContinueWhenAny>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAny: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken scheduledBy: taskScheduler
+	
+		<invokeMethod: #ContinueWhenAny>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAny: prerequisiteTasks continueDoing: action withContinuationOptions: continuationOptions
+	
+		<invokeMethod: #ContinueWhenAny>
+	];
+	
+	protocol: #continuations method:
+	
+	[## onCompletionOfAny: prerequisiteTasks continueDoing: action withCancellationToken: cancellationToken withContinuationOptions: continuationOptions scheduledBy: taskScheduler
+	
+		<invokeMethod: #ContinueWhenAny>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action withCancellationToken: cancellationToken
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action withTaskCreationOptions: taskCreationOptions
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action context: anObject
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action context: anObject withCancellationToken: cancellationToken
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action context: anObject withTaskCreationOptions: taskCreationOptions
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action withCancellationToken: cancellationToken withTaskCreationOptions: taskCreationOptions scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #StartNew>
+	];
+	
+	protocol: #starting method:
+	
+	[## startDoing: action context: anObject withCancellationToken: cancellationToken withTaskCreationOptions: taskCreationOptions scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #StartNew>
+	]

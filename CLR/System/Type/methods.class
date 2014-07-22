@@ -1,0 +1,211 @@
+	"Class methods of System.Type"
+	
+	protocol: #'reference types' method:
+	
+	[## object
+	
+		^Types.Object
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## boolean
+	
+		^Types.Boolean
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## bool
+	
+		^Types.bool
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## char
+	
+		^Types.Char
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## byte
+	
+		^Types.Byte
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## sbyte
+	
+		^Types.SByte
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## int16
+	
+		^Types.Int16
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## uint16
+	
+		^Types.UInt16
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## int32
+	
+		^Types.Int32
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## uint32
+	
+		^Types.UInt32
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## int64
+	
+		^Types.Int64
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## uint64
+	
+		^Types.UInt64
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## single
+	
+		^Types.Single
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## double
+	
+		^Types.Double
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## decimal
+	
+		^Types.Decimal
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## short
+	
+		^Types.short
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## ushort
+	
+		^Types.ushort
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## int
+	
+		^Types.int
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## uint
+	
+		^Types.uint
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## long
+	
+		^Types.long
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## ulong
+	
+		^Types.ulong
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## float
+	
+		^Types.float
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## double
+	
+		^Types.double
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## decimal
+	
+		^Types.decimal
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## string
+	
+		^Types.String
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## type
+	
+		^Types.Type
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## delegate
+	
+		^Types.Delegate
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## exception
+	
+		^Types.Exception
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## timeSpan
+	
+		^Types.TimeSpan
+	];
+	
+	protocol: #'reference types' method:
+	
+	[## dateTime
+	
+		^Types.DateTime
+	]

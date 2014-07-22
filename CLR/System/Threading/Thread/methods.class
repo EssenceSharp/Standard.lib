@@ -1,0 +1,15 @@
+	"Class methods for System.Threading.Thread"
+	
+	protocol: #'instance creation' method:
+	
+	[## doing: aBlockOrDelegate
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## doing: aBlockOrDelegate maxStackSize: aPositiveInteger
+	
+		<invokeMethod: new>
+	]

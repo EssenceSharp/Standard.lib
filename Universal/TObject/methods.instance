@@ -67,11 +67,11 @@
 		^aCollection copyAdding: self
 	];
 
-	protocol: #'error handling' method:
+	"protocol: #'error handling' method:
 	[## doesNotUnderstand: aMessage
 
-		^(MessageNotUnderstood signalWithReceiver: self message: aMessage)
-	];
+		^MessageNotUnderstood signalWithReceiver: self message: aMessage
+	];"
 
 	protocol: #'error handling' method:
 	[## subclassResponsibility

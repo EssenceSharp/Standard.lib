@@ -1,12 +1,14 @@
 	"Instance methods for Block"
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## addAsHandlerOf: anAnnouncementClass from: anAnnouncer
 	
 		^anAnnouncer when: anAnnouncementClass do: self
 	];
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## asAnnouncementSubscription
 	
 		^BlockAnnouncementSubscription new 
@@ -15,12 +17,14 @@
 	];
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## removeAsHandlerOf: anAnnouncementClass from: anAnnouncer
 	
 		^anAnnouncer when: anAnnouncementClass doNotDo: self
 	];
 	
 	protocol: #evaluating method: 
+	
 	[## valueWithExit
 
 		"Evaluate the receiver with a single argument which it can use to exit before evaluating its final statement."
@@ -29,6 +33,7 @@
 	];
 				
 	protocol: #evaluating method: 
+	
 	[## valueWithExit: exitValue
 
 		"Evaluate the receiver with a single argument which it can use to exit before evaluating its final statement."
@@ -37,15 +42,48 @@
 	];
 	
 	protocol: #'multicast operations' method:
+	
 	[## += aBlockOrDelegate
 	
 		self function: self function + aBlockOrDelegate
 	];
 	
 	protocol: #'multicast operations' method:
+	
 	[## -= aBlockOrDelegate
 	
 		self function: self function - aBlockOrDelegate
+	];
+	
+	protocol: #concurrency method:
+	
+	[## newProcess
+	
+		^Thread doing: self
+	];
+	
+	protocol: #concurrency method:
+	
+	[## newProcessAt: threadPriority
+	
+		| thread |
+		thread := Thread doing: self.
+		thread priority: threadPriority.
+		^thread
+	];
+	
+	protocol: #concurrency method:
+	
+	[## fork
+	
+		^self newProcess start
+	];
+	
+	protocol: #concurrency method:
+	
+	[## forkAt: threadPriority
+	
+		^(self newProcessAt: threadPriority) start
 	]
 	
 	

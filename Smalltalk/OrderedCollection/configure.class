@@ -1,6 +1,5 @@
 	"Configuration of class OrderedCollection"
 	
+	assemblyName: 'mscorlib';
 	hostSystemNamespace: #System.Collections.Generic;
-	hostSystemName: 'List`1[[System.Object]]';
-	assemblyName: 'mscorlib'
-	
+	hostSystemName: 'List`1[[System.Object]]'

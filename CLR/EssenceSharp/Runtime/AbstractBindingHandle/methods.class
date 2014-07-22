@@ -1,0 +1,8 @@
+	"Class methods of EssenceSharp.Runtime.AbstractBindingHandle"
+	
+	protocol: #'instance creation' method:
+	
+	[## newImmutable: aBoolean
+	
+		<invokeMethod: new>
+	]

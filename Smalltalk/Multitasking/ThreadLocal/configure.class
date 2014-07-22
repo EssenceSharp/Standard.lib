@@ -1,0 +1,5 @@
+	"Configuration of class ThreadLocal"
+	
+	assemblyName: 'mscorlib';
+	hostSystemNamespace: #System.Threading;
+	hostSystemName: 'ThreadLocal`1[[System.Object]]'

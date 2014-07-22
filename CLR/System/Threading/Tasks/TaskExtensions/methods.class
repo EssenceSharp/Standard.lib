@@ -1,0 +1,9 @@
+	"Class methods of System.Threading.Tasks.TaskExtensions"
+	
+	protocol: #utilities method:
+	
+	[## uwwrap: aMetaTask
+	
+		<invokeMethod: #Unwrap>
+	]
+	

@@ -1,0 +1,83 @@
+	"Class methods of System.Threading.WaitHandle"
+	
+	protocol: #'mutex operations' method: 
+	
+	[## signal: waitHandleToSignal await: waitHandleToAwait
+	
+		<invokeMethod: #SignalAndWait>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## signal: waitHandleToSignal await: waitHandleToAwait withMillisecondTimeout: anInteger exitThenRenter: aBoolean
+	
+		<invokeMethod: #SignalAndWait>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## signal: waitHandleToSignal await: waitHandleToAwait withTimeoutDuration: aTimespan exitThenRenter: aBoolean
+	
+		<invokeMethod: #SignalAndWait>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAll: arrayOfWaitHandles withMillisecondTimeout: anInteger
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAll: arrayOfWaitHandles  withTimeoutDuration: aTimespan
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAll: arrayOfWaitHandles withMillisecondTimeout: anInteger exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAll: arrayOfWaitHandles  withTimeoutDuration: aTimespan exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAny: arrayOfWaitHandles withMillisecondTimeout: anInteger
+	
+		<invokeMethod: #WaitAny>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAny: arrayOfWaitHandles  withTimeoutDuration: aTimespan
+	
+		<invokeMethod: #WaitAny>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	
+	[## waitAny: arrayOfWaitHandles withMillisecondTimeout: anInteger exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitAny>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitAny: arrayOfWaitHandles  withTimeoutDuration: aTimespan exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitAny>
+	]
+
+
+	
+	

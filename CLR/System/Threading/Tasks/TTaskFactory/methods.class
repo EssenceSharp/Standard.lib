@@ -1,0 +1,31 @@
+	"Class methods of System.Threading.Tasks.TaskFactory"
+	
+	protocol: #'instance creation' method:
+	
+	[## cancellationToken: cancellationToken
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## taskScheduler: aTaskScheduler
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## taskCreationOptions: taskCreationOptions taskContinuationOptions: taskContinuationOptions
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## cancellationToken: cancellationToken taskCreationOptions: taskCreationOptions taskContinuationOptions: taskContinuationOptions taskScheduler: aTaskScheduler
+	
+		<invokeMethod: new>
+	]
+
+	

@@ -1,0 +1,22 @@
+	"Class methods of System.Threading.Tasks.ConcurrentExclusiveScheduledPair"
+	
+	protocol: #'instance creation' method:
+	
+	[## taskScheduler: taskScheduler
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## taskScheduler: taskScheduler maxConcurrencyLevel: maxConcurrencyLevel
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## taskScheduler: taskScheduler maxConcurrencyLevel: maxConcurrencyLevel maxItemsPerTask: maxItemsPerTask
+	
+		<invokeMethod: new>
+	]

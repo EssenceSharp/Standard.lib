@@ -2,354 +2,413 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## hash
 
 		<primitive: hash domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## = comparandObject
 
 		<primitive: #= domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## compareTo: comparandObject 
 
 		<primitive: #compareTo: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## at: slotIndexObject 
 
 		<primitive: #at: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## do: enumerator 
 
 		<primitive: #do: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## from: startIndex to: endIndex do: enumerator 
 
 		<primitive: #from:to:do: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## from: startIndex to: endIndex by: step do: enumerator 
 
 		<primitive: #from:to:by:do: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## at: slotIndexObject put: newValue 
 
 		<primitive: #at:put: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## nextIdentityIndexOf: element from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #nextIdentityIndexOf:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityIncludes: element 
 
 		<primitive: #identityIncludes: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## add: suffix 
 
 		<primitive: #add: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAdding: suffix 
 
 		<primitive: #copyAdding: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityRemoveNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #identityRemoveNext:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyIdentityRemovingNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyIdentityRemovingNext:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityRemoveAll: removal 
 
 		<primitive: #identityRemoveAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyIdentityRemovingAll: removal 
 
 		<primitive: #copyIdentityRemovingAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## add: infix beforeIndex: insertionIndex 
 
 		<primitive: #add:beforeIndex: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAdding: infix beforeIndex: insertionIndex 
 
 		<primitive: #copyAdding:beforeIndex: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## nextIndexOf: element from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #nextIndexOf:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## includes: element 
 
 		<primitive: #includes: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #removeNext:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyRemovingNext:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAll: removal 
 
 		<primitive: #removeAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAll: removal 
 
 		<primitive: #copyRemovingAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## atFirstPutOrAdd: newValue 
 
 		<primitive: #atFirstPutOrAdd: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## atLastPutOrAdd: newValue 
 
 		<primitive: #atLastPutOrAdd: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## setSize: newSize 
 
 		<primitive: #setSize: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyWithSize: newSize 
 
 		<primitive: #copyWithSize: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## firstIfNone: noSuchElementAction 
 
 		<primitive: #firstIfNone: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## lastIfNone: noSuchElementAction 
 
 		<primitive: #lastIfNone: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## findtFirst: predicate from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #findtFirst:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## contains: predicate 
 
 		<primitive: #contains: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addAll: suffix 
 
 		<primitive: #addAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAddingAll: suffix 
 
 		<primitive: #copyAddingAll: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyFrom: startIndex to: endIndex 
 
 		<primitive: #copyFrom:to: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyTo: endIndex 
 
 		<primitive: #copyTo: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyFrom: startIndex 
 
 		<primitive: #copyFrom: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withAllButFirst
 
 		<primitive: withAllButFirst domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withAllButLast
 
 		<primitive: withAllButLast domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withFirst
 
 		<primitive: withFirst domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withLast
 
 		<primitive: withLast domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAt: index 
 
 		<primitive: #removeAt: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAt: index 
 
 		<primitive: #copyRemovingAt: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAndRemoveFrom: startIndex to: endIndex 
 
 		<primitive: #copyAndRemoveFrom:to: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingFrom: startIndex to: endIndex 
 
 		<primitive: #copyRemovingFrom:to: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #removeNextSuchThat:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyRemovingNextSuchThat:from:to:ifAbsent: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAllSuchThat: predicate 
 
 		<primitive: #removeAllSuchThat: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAllSuchThat: predicate 
 
 		<primitive: #copyRemovingAllSuchThat: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addAll: infix beforeIndex: insertionIndex 
 
 		<primitive: #addAll:beforeIndex: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAddingAll: infix beforeIndex: insertionIndex 
 
 		<primitive: #copyAddingAll:beforeIndex: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## moveFrom: startIndex to: stopIndex by: displacement 
 
 		<primitive: #moveFrom:to:by: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyMovingFrom: startIndex to: stopIndex by: displacement 
 
 		<primitive: #copyMovingFrom:to:by: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## replaceFrom: startIndex to: stopIndex with: replacementSource startingAt: replacementSourceStartIndex 
 
 		<primitive: #replaceFrom:to:with:startingAt: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReplacingFrom: startIndex to: stopIndex with: replacementSource startingAt: replacementSourceStartIndex 
 
 		<primitive: #copyReplacingFrom:to:with:startingAt: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## reverse
 
 		<primitive: reverse domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReversed
 
 		<primitive: copyReversed domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## reverseFrom: startIndex to: endIndex 
 
 		<primitive: #reverseFrom:to: domain: IndexedQuadPrecisionSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReversedFrom: startIndex to: endIndex 
 
 		<primitive: #copyReversedFrom:to: domain: IndexedQuadPrecisionSlots>

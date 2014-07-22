@@ -1,0 +1,8 @@
+	"Class methods of EssenceSharp.Runtime.ScopeVariableBindingHandle"
+	
+	protocol: #'instance creation' method:
+	
+	[## value: aScopeVariable immutable: aBoolean
+	
+		<invokeMethod: new>
+	]

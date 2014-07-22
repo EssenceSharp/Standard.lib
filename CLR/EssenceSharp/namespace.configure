@@ -1,0 +1,19 @@
+	"Configuration of namespace CLR.EssenceSharp"
+	
+	"Examples:
+
+	accessPrivilege: #Public; -- The other two valid options would be #InHierarchy or #Local
+	import: <namespaceSpec> withAccess: #InHierarchy; -- See below for an explanation of <namespaceSpec>
+	importTransitive: <namespaceSpec> withAccess: #Local;
+	import: #Global from: <namespaceSpec> as: #LocalName withAccess: #Public
+
+
+	A <namespaceSpec> is either a variable (local or global) that contains a Namespace (not a Dictionary),
+	the name of a Namespace as a Symbol or String, or an instance of a Pathname object.  If it's a Symbol,
+	then the symbol may use qualified name syntax (dotted notation) to specify a namespace path.
+
+	Transitive import means that the search will include all the namespaces imported by the imported namespace,
+	recursively throughout the namespace import graph, but excluding any namespaces not imported as public.  
+	Cycles are handled correctly--they do not cause an error or an infinite loop."
+	
+	assemblyName: 'EssenceSharp'

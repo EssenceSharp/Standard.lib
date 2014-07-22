@@ -1,0 +1,22 @@
+	"Class methods of System.Threading.SpinLock"
+	
+	protocol: #'instance creation' method:
+	
+	[## basicNew
+	
+		^self trackingThreadOwners: false
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## new
+	
+		^self trackingThreadOwners: false
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## trackingThreadOwners: aBoolean
+	
+		<invokeMethod: new>
+	]

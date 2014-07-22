@@ -1,0 +1,36 @@
+	"Class methods of System.Threading.ThreadPool"
+	
+	protocol: #scheduling method:
+	
+	[## queueUserWorkItem: aWaitCallback context: anObject
+	
+		<invokeMethod: QueueUserWorkItem>
+	];
+	
+	protocol: #synchronizing method:
+	
+	[## registerWaitForSingleObject: waitHandle callBack: waitOrTimerCallback context: anObject millisecondTimeout: anInteger executingOnceOnly: aBoolean
+	
+		<invokeMethod: RegisterWaitForSingleObject>
+	];
+	
+	protocol: #synchronizing method:
+	
+	[## registerWaitForSingleObject: waitHandle callBack: waitOrTimerCallback context: anObject timeoutDuration: aDuration executingOnceOnly: aBoolean
+	
+		<invokeMethod: RegisterWaitForSingleObject>
+	];
+	
+	protocol: #configuring method:
+	
+	[## maxWorkerThreads: maxWorkerThreads maxCompletionPortThreads: maxCompletionPortThreads
+	
+		<invokeMethod: #SetMaxThreads>
+	];
+	
+	protocol: #configuring method:
+	
+	[## minWorkerThreads: minWorkerThreads minCompletionPortThreads: minCompletionPortThreads
+	
+		<invokeMethod: #SetMinThreads>
+	]

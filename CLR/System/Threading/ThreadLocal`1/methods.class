@@ -1,0 +1,22 @@
+	"Class methods for System.Threading.ThreadLocal`1"
+	
+	protocol: #'instance creation' method:
+	
+	[## trackingAllValues: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## valueFactory: aZeroArgBlock
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## valueFactory: aZeroArgBlock trackingAllValues: aBoolean
+	
+		<invokeMethod: new>
+	]

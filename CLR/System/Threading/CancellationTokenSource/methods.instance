@@ -1,0 +1,22 @@
+	"Instance methods of System.Threading.CancellationTokenSource"
+	
+	protocol: #canceling method:
+	
+	[## cancelWithImmediateExceptionPropagation: aBoolean
+	
+		<invokeMethod: #Cancel>
+	];
+	
+	protocol: #canceling method:
+	
+	[## cancelAfterDelayForMilleseconds: anInteger
+	
+		<invokeMethod: #CancelAfter>
+	];
+	
+	protocol: #canceling method:
+	
+	[## cancelAfterDelayForDuration: aDuration
+	
+		<invokeMethod: #CancelAfter>
+	]

@@ -1,0 +1,34 @@
+	"Instance methods of CLR.System.Collections.Generic.Dictionary`2"
+	
+	protocol: #accessing method:
+	
+	[## at: key ifAbsent: ifAbsentAction
+	
+		self tryAt: key ifPresent: [:value | ^value].
+		^ifAbsentAction value
+	];
+	
+	protocol: #accessing method:
+	
+	[## at: key ifPresent: ifPresentFunction
+	
+		self tryAt: key ifPresent: [:value | ^ifPresentFunction value: value].
+		^nil
+	];
+	
+	protocol: #accessing method:
+	
+	[## at: key ifPresent: ifPresentFunction ifAbsent: ifAbsentAction
+	
+		self tryAt: key ifPresent: [:value | ^ifPresentFunction value: value].
+		^ifAbsentAction value
+	];
+	
+	protocol: #accessing method:
+	
+	[## tryAt: key ifPresent: block1
+	
+		<invokeMethod: TryGetValue>
+	]
+
+	

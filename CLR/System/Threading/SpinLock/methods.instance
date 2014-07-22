@@ -1,0 +1,29 @@
+	"Instance methods of System.Threading.SpinLock"
+
+	protocol: #entering method:
+	
+	[## enterWithStatusDo: statusFunction
+	
+		<invokeMethod: TryEnter>
+	];
+
+	protocol: #entering method:
+	
+	[## enterWithMillisecondTimeout: milliseconds withStatusDo: statusFunction
+	
+		<invokeMethod: TryEnter>
+	];
+
+	protocol: #entering method:
+	
+	[## enterWithTimeoutDuration: aDuration withStatusDo: statusFunction
+	
+		<invokeMethod: TryEnter>
+	];
+	
+	protocol: #exiting method:
+	
+	[## exitUsingMemoryBarrier: aBoolean
+	
+		<invokeMethod: #Exit>
+	]

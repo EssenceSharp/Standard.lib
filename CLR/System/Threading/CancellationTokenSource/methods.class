@@ -1,0 +1,29 @@
+	"Class methods of System.Threading.CancellationTokenSource"
+	
+	protocol: #'instance creation' method:
+	
+	[## withMillisecondDelay: anInteger
+	
+		<invokeMethod: new>
+	];	
+	
+	protocol: #'instance creation' method:
+	
+	[## withDelayDuration: aDuration
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## createLinkedTokenSourceFrom: cancellationToken1 and: cancellationToken2
+	
+		<invokeMethod: #CreateLinkedTokenSource>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## createLinkedTokenSourceFromAll: cancellationTokenArray
+	
+		<invokeMethod: #CreateLinkedTokenSource>
+	]

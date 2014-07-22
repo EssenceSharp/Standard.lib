@@ -1,0 +1,74 @@
+	"Class methods of System.Threading.Tasks.Parallel"
+
+	protocol: #enumerating method:
+	
+	[## from: startIndex to: endIndex do: action
+	
+		<invokeMethod: #For>
+	];
+
+	protocol: #enumerating method:
+	
+	[## from: startIndex to: endIndex usingOptions: parallelOptions do: action
+	
+		<invokeMethod: #For>
+	];
+
+	protocol: #enumerating method:
+	
+	[## from: startIndex to: endIndex initialLocalValueFrom: aZeroArgBlock do: action finallyApplying: aOneArgBlock
+	
+		<invokeMethod: #For>
+	];
+
+	protocol: #enumerating method:
+	
+	[## from: startIndex to: endIndex usingOptions: parallelOptions initialLocalValueFrom: aZeroArgBlock do: action finallyApplying: aOneArgBlock
+	
+		<invokeMethod: #For>
+	];
+
+	protocol: #enumerating method:
+	
+	[## withAll: aCollection do: action
+	
+		<invokeMethod: #ForEach>
+	];
+
+	protocol: #enumerating method:
+	
+	[## withAll: aCollection usingOptions: parallelOptions do: action
+	
+		<invokeMethod: #ForEach>
+	];
+
+	protocol: #enumerating method:
+	
+	[## withAll: aCollection initialLocalValueFrom: aZeroArgBlock do: action finallyApplying: aOneArgBlock
+	
+		<invokeMethod: #ForEach>
+	];
+
+	protocol: #enumerating method:
+	
+	[## withAll: aCollection usingOptions: parallelOptions initialLocalValueFrom: aZeroArgBlock do: action finallyApplying: aOneArgBlock
+	
+		<invokeMethod: #ForEach>
+	];
+
+	protocol: #invoking method:
+	
+	[## invokeAll: aCollectionOfActions
+	
+		<invokeMethod: #Invoke>
+	];
+
+	protocol: #invoking method:
+	
+	[## usingOptions: parallelOptions invokeAll: aCollectionOfActions
+	
+		<invokeMethod: #Invoke>
+	]
+
+
+	

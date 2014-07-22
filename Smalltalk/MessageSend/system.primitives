@@ -2,228 +2,266 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## function
 
 		<primitive: function domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## receiver
 
 		<primitive: receiver domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## receiver: newMessageSendReceiver 
 
 		<primitive: #receiver: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## method: compiledMethod 
 
 		<primitive: #method: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithArguments: arguments 
 
 		<primitive: #valueWithArguments: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value
 
 		<primitive: value domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 
 
 		<primitive: #value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 
 
 		<primitive: #value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 
 
 		<primitive: #value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 
 
 		<primitive: #value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 
 
 		<primitive: #value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 
 
 		<primitive: #value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 
 
 		<primitive: #value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 
 
 		<primitive: #value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 
 
 		<primitive: #value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 value: a28 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 value: a28 value: a29 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 value: a28 value: a29 value: a30 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 value: a28 value: a29 value: a30 value: a31 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## value: a1 value: a2 value: a3 value: a4 value: a5 value: a6 value: a7 value: a8 value: a9 value: a10 value: a11 value: a12 value: a13 value: a14 value: a15 value: a16 value: a17 value: a18 value: a19 value: a20 value: a21 value: a22 value: a23 value: a24 value: a25 value: a26 value: a27 value: a28 value: a29 value: a30 value: a31 value: a32 
 
 		<primitive: #value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value:value: domain: MessageSend>

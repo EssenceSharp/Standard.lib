@@ -1,0 +1,29 @@
+	"Instance methods of System.Threading.CancellationToken"
+	
+	protocol: #callbacks method:
+	
+	[## registerCallBack: action 
+	
+		<invokeMethod: #Register>
+	];
+	
+	protocol: #callbacks method:
+	
+	[## registerCallBack: action useSynchronizationContext: aBoolean
+	
+		<invokeMethod: #Register>
+	];
+	
+	protocol: #callbacks method:
+	
+	[## registerCallBack: action withContext: anObject
+	
+		<invokeMethod: #Register>
+	];
+	
+	protocol: #callbacks method:
+	
+	[## registerCallBack: action withContext: anObject useSynchronizationContext: aBoolean
+	
+		<invokeMethod: #Register>
+	]

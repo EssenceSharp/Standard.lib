@@ -1,11 +1,13 @@
 	"Instance methods of System.ArrayedCollection"
 	
 	protocol: #copying method:
+	
 	[## copyEmpty: aSize
-		self class new: aSize
+		^self class new: aSize
 	];
 		
 	protocol: #enumerating method: 
+	
 	[## collect: map
 
 		"Answer an array such that each of its elements is computed from the elements of the receiver by applying the <map> function."
@@ -19,6 +21,7 @@
 	];
 	
 	protocol: #enumerating method:
+	
 	[## projectionClass
 		^self class
 	]

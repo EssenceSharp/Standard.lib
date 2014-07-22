@@ -1,0 +1,4 @@
+	"Configuration of System.Threading.SemaphoreSlim"
+	
+	hostSystemName: #SemaphoreSlim;
+	instanceArchitecture: #HostSystemObject

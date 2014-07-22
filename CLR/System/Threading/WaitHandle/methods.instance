@@ -1,0 +1,36 @@
+	"Instance methods of System.Threading.WaitHandle"
+	
+	protocol: #'mutex operations' method:
+	
+	[## wait
+	
+		<invokeMethod: #WaitOne>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitWithMillisecondTimeout: anInteger
+	
+		<invokeMethod: #WaitOne>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitWithTimeoutDuration: aTimespan
+	
+		<invokeMethod: #WaitOne>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitWithMillisecondTimeout: anInteger exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitOne>
+	];
+	
+	protocol: #'mutex operations' method:
+	
+	[## waitWithTimeoutDuration: aTimespan exitThenRenter: aBoolean
+	
+		<invokeMethod: #WaitOne>
+	]

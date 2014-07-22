@@ -1,0 +1,9 @@
+	"Instance methods of System.Threading.Tasks.TaskScheduler"
+	
+	protocol: #x method:
+	
+	[## tryExecuteTaskInline: aTask wasPreviouslyQueued: taskWasPreviouslyQueued
+	
+		<invokeMethod: #TryExecuteTaskInline>
+	]
+	

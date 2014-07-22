@@ -1,0 +1,4 @@
+	"Configuration of System.Threading.ReaderWriterLockSlim"
+	
+	hostSystemName: #ReaderWriterLockSlim;
+	instanceArchitecture: #HostSystemObject

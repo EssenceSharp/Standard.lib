@@ -1,0 +1,57 @@
+	"Class methods of System.Threading.EventWaitHandle"
+	
+	protocol: #'instance access' method: 
+	
+	[## openExisting: nameOfExistingHandle
+	
+		<invokeMethod: OpenExisting>
+	];
+	
+	protocol: #'instance access' method: 
+	
+	[## openExisting: nameOfExistingHandle withRights: eventWaitHandleRights
+	
+		<invokeMethod: OpenExisting>
+	];
+	
+	protocol: #'instance access' method: 
+	
+	[## openExisting: nameOfExistingHandle ifPresent: ifPresentFunction
+	
+		<invokeMethod: TryOpenExisting>
+	];
+	
+	protocol: #'instance access' method: 
+	
+	[## openExisting: nameOfExistingHandle withRights: eventWaitHandleRights ifPresent: ifPresentFunction
+	
+		<invokeMethod: TryOpenExisting>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## signalled: initialllySignalled resetMode: resetMode
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## signalled: initialllySignalled resetMode: resetMode name: name
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## signalled: initialllySignalled resetMode: resetMode name: name withStatusDo: statusFunction
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## signalled: initialllySignalled resetMode: resetMode name: name withStatusDo: statusFunction security: eventWaitHandleSecurity
+	
+		<invokeMethod: new>
+	]

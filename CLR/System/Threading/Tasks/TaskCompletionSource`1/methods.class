@@ -1,0 +1,22 @@
+	"Class methods of System.Threading.Tasks.TaskCompletionSource`1"
+
+	protocol: #'instance creation' method:
+	
+	[## context: anObject
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## taskCreationOptions: taskCreationOptions 
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## context: anObject taskCreationOptions: taskCreationOptions 
+	
+		<invokeMethod: new>
+	]

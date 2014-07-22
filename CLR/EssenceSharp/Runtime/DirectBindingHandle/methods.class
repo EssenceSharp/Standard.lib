@@ -1,0 +1,8 @@
+	"Class methods of EssenceSharp.Runtime.DirectBindingHandle"
+	
+	protocol: #'instance creation' method:
+	
+	[## value: aValue immutable: aBoolean
+	
+		<invokeMethod: new>
+	]

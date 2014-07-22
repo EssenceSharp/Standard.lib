@@ -1,0 +1,4 @@
+	"Configuration of class EssenceSharp.Runtime.ESObjectSpace"
+	
+	hostSystemName: #ESObjectSpace;
+	instanceArchitecture: #HostSystemObject

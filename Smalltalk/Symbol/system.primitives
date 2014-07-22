@@ -2,24 +2,28 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## numArgs
 
 		<primitive: numArgs domain: Symbol>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## type
 
 		<primitive: type domain: Symbol>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asMessageSend
 
 		<primitive: asMessageSend domain: Symbol>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asMessageSendWithReceiver: messageSendReceiver 
 
 		<primitive: #asMessageSendWithReceiver: domain: Symbol>

@@ -2,432 +2,504 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## objectSpace
 
 		<primitive: objectSpace domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSelectorsDo: enumerator1 
 
 		<primitive: #localSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSelectorsAndMethodsDo: enumerator2 
 
 		<primitive: #localSelectorsAndMethodsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSelectorCount
 
 		<primitive: localSelectorCount domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSelectors
 
 		<primitive: localSelectors domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localIncludesSelector: selector 
 
 		<primitive: #localIncludesSelector: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localCompiledMethodAt: selector 
 
 		<primitive: #localCompiledMethodAt: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## selectorsDo: enumerator1 
 
 		<primitive: #selectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## selectorsAndMethodsDo: enumerator2 
 
 		<primitive: #selectorsAndMethodsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## selectorCount
 
 		<primitive: selectorCount domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## selectors
 
 		<primitive: selectors domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## includesSelector: selector 
 
 		<primitive: #includesSelector: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## allSelectorsDo: enumerator1 
 
 		<primitive: #allSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## allSelectorsAndMethodsDo: enumerator2 
 
 		<primitive: #allSelectorsAndMethodsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## allSelectors
 
 		<primitive: allSelectors domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## canUnderstand: selector 
 
 		<primitive: #canUnderstand: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## compiledMethodAt: selector 
 
 		<primitive: #compiledMethodAt: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addMethod: method 
 
 		<primitive: #addMethod: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## protocol: protocol method: method 
 
 		<primitive: #protocol:method: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeSelector: selector 
 
 		<primitive: #removeSelector: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSystemSelectorsDo: enumerator2 
 
 		<primitive: #localSystemSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSystemSelectorsAndMethodsDo: enumerator3 
 
 		<primitive: #localSystemSelectorsAndMethodsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localSystemSelectorCount
 
 		<primitive: localSystemSelectorCount domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## includesSystemSelector: systemSelector numArgs: numArgs 
 
 		<primitive: #includesSystemSelector:numArgs: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## systemSelectorsDo: enumerator2 
 
 		<primitive: #systemSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## systemSelectorsAndMethodsDo: enumerator3 
 
 		<primitive: #systemSelectorsAndMethodsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## systemSelectorCount
 
 		<primitive: systemSelectorCount domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## canUnderstandSystemMessage: selector 
 
 		<primitive: #canUnderstandSystemMessage: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## compiledMethodAtSystemSelector: systemSelector numArgs: numArgs 
 
 		<primitive: #compiledMethodAtSystemSelector:numArgs: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withUnimplementedMessagesSentToSelfDo: enumerator1 
 
 		<primitive: #withUnimplementedMessagesSentToSelfDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withUndeclaredVariablesDo: enumerator2 
 
 		<primitive: #withUndeclaredVariablesDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addMethod: method systemSelector: systemSelector 
 
 		<primitive: #addMethod:systemSelector: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## protocol: protocol systemSelector: systemSelector method: method 
 
 		<primitive: #protocol:systemSelector:method: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## bindMethodAt: essenceSelector toSystemSelector: systemSelector 
 
 		<primitive: #bindMethodAt:toSystemSelector: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## unbindindMethodFromSystemSelector: systemSelector numArgs: numArgs 
 
 		<primitive: #unbindindMethodFromSystemSelector:numArgs: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## compileMethodInProtocol: protocol fromString: methodText 
 
 		<primitive: #compileMethodInProtocol:fromString: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usesTraits
 
 		<primitive: usesTraits domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## traitUsage
 
 		<primitive: traitUsage domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## uses: traitUsageExpression 
 
 		<primitive: #uses: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## invalidateUsedTraitsFrom: source 
 
 		<primitive: #invalidateUsedTraitsFrom: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usedTraitsDo: enumerator1 
 
 		<primitive: #usedTraitsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withUsedTraitUnimplementedMessagesSentToSelfDo: enumerator1 
 
 		<primitive: #withUsedTraitUnimplementedMessagesSentToSelfDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usedTraitMethodConflictsDo: enumerator2 
 
 		<primitive: #usedTraitMethodConflictsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usedTraitHostSystemMethodConflictsDo: enumerator3 
 
 		<primitive: #usedTraitHostSystemMethodConflictsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usedTraitExcludedSelectorsDo: enumerator1 
 
 		<primitive: #usedTraitExcludedSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## usedTraitAliasedSelectorsDo: enumerator2 
 
 		<primitive: #usedTraitAliasedSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## superclass
 
 		<primitive: superclass domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## includesBehavior: aBehavior 
 
 		<primitive: #includesBehavior: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## inheritsFrom: aBehavior 
 
 		<primitive: #inheritsFrom: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## instanceVariableNames
 
 		<primitive: instanceVariableNames domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## localInstVarNameAt: index 
 
 		<primitive: #localInstVarNameAt: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## instVarNameAt: index 
 
 		<primitive: #instVarNameAt: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## instVarIndexFor: instanceVariableName 
 
 		<primitive: #instVarIndexFor: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## basicInstSize
 
 		<primitive: basicInstSize domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## instSize
 
 		<primitive: instSize domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## allInstVarNamesAndIndexesDo: enumerator2 
 
 		<primitive: #allInstVarNamesAndIndexesDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityObject
 
 		<primitive: identityObject domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## reduced
 
 		<primitive: reduced domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addUser: user 
 
 		<primitive: #addUser: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeUser: user 
 
 		<primitive: #removeUser: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## + usageExpression
 
 		<primitive: #+ domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## combinedWithTrait: trait 
 
 		<primitive: #combinedWithTrait: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## combinedWithTransformation: traitTransformation 
 
 		<primitive: #combinedWithTransformation: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## combinedWithComposition: traitComposition 
 
 		<primitive: #combinedWithComposition: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## excluding: selectorObject 
 
 		<primitive: #excluding: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## - selectorExclusionSpec
 
 		<primitive: #- domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## aliasing: sourceSelector as: selectorAlias 
 
 		<primitive: #aliasing:as: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## @ selectorAliasingSpec
 
 		<primitive: #@ domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## excludedSelectorsDo: enumerator1 
 
 		<primitive: #excludedSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## aliasedSelectorsDo: enumerator2 
 
 		<primitive: #aliasedSelectorsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## methodConflictsDo: enumerator2 
 
 		<primitive: #methodConflictsDo: domain: BehavioralTrait>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## hostSystemMethodConflictsDo: enumerator3 
 
 		<primitive: #hostSystemMethodConflictsDo: domain: BehavioralTrait>

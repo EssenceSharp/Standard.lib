@@ -1,0 +1,18 @@
+	"Instance methods of System.Threading.ReaderWriterLockSlim"
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnterReadLockWithMillesecondTimeout: milliseconds
+	
+		<invokeMethod: #TryEnterReadLock>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnterReadLockWithTimeoutDuration: aTimespace
+	
+		<invokeMethod: #TryEnterReadLock>
+	]
+	
+	
+	

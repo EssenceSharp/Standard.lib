@@ -2,150 +2,175 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## environment
 
 		<primitive: environment domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## homeMethod
 
 		<primitive: homeMethod domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## hasHomeClass
 
 		<primitive: hasHomeClass domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## homeClass
 
 		<primitive: homeClass domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## numArgs
 
 		<primitive: numArgs domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## selector
 
 		<primitive: selector domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## protocolCount
 
 		<primitive: protocolCount domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## protocolsDo: enumerator1 
 
 		<primitive: #protocolsDo: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addToProtocol: protocol 
 
 		<primitive: #addToProtocol: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeFromProtocol: protocol 
 
 		<primitive: #removeFromProtocol: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeFromAllProtocols
 
 		<primitive: removeFromAllProtocols domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## messagesSent
 
 		<primitive: messagesSent domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## messagesSentToSelf
 
 		<primitive: messagesSentToSelf domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## messagesSentToSuper
 
 		<primitive: messagesSentToSuper domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## messagesSentToThisContext
 
 		<primitive: messagesSentToThisContext domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withUndeclaredVariablesDo: enumerator1 
 
 		<primitive: #withUndeclaredVariablesDo: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asMessageSend
 
 		<primitive: asMessageSend domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asMessageSendWithReceiver: messageSendReceiver 
 
 		<primitive: #asMessageSendWithReceiver: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self withArguments: arguments 
 
 		<primitive: #valueWithReceiver:withArguments: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self 
 
 		<primitive: #valueWithReceiver: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self with: a1 
 
 		<primitive: #valueWithReceiver:with: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self with: a1 with: a2 
 
 		<primitive: #valueWithReceiver:with:with: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self with: a1 with: a2 with: a3 
 
 		<primitive: #valueWithReceiver:with:with:with: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self with: a1 with: a2 with: a3 with: a4 
 
 		<primitive: #valueWithReceiver:with:with:with:with: domain: Method>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueWithReceiver: self with: a1 with: a2 with: a3 with: a4 with: a5 
 
 		<primitive: #valueWithReceiver:with:with:with:with:with: domain: Method>

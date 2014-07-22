@@ -1,0 +1,129 @@
+	"Instance methods of System.Threading.Tasks.Task"
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withCancellationToken: cancellationToken
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContinuationOptions: continuationOptions
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContext: anObject
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContext: anObject withCancellationToken: cancellationToken
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContext: anObject withContinuationOptions: continuationOptions
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContext: anObject scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withCancellationToken: cancellationToken withContinuationOptions: continuationOptions scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #continuations method:
+	
+	[## continueDoing: anAction withContext: anObject withCancellationToken: cancellationToken withContinuationOptions: continuationOptions scheduledBy: aTaskScheduler
+	
+		<invokeMethod: #ContinueWith>
+	];
+	
+	protocol: #delays method:
+	
+	[## delayForMillisconds: anInteger
+	
+		<invokeMethod: #Delay>
+	];
+
+	protocol: #delays method:
+	
+	[## delayForDuration: aDuration
+	
+		<invokeMethod: #Delay>
+	];
+	
+	protocol: #delays method:
+	
+	[## delayForMillisconds: anInteger withCancellationToken: cancellationToken
+	
+		<invokeMethod: #Delay>
+	];
+
+	protocol: #delays method:
+	
+	[## delayForDuration: aDuration withCancellationToken: cancellationToken
+	
+		<invokeMethod: #Delay>
+	];
+
+	protocol: #waiting method:
+	
+	[## waitWithCancellationToken: cancellationToken
+	
+		<invokeMethod: #Wait>
+	];
+
+	protocol: #waiting method:
+	
+	[## waitWithMillescondTimeout: anInteger
+	
+		<invokeMethod: #Wait>
+	];
+
+	protocol: #waiting method:
+	
+	[## waitTimeoutDuration: aDuration
+	
+		<invokeMethod: #Wait>
+	];
+
+	protocol: #waiting method:
+	
+	[## waitWithMillescondTimeout: anInteger withCancellationToken: cancellationToken
+	
+		<invokeMethod: #Wait>
+	]
+
+

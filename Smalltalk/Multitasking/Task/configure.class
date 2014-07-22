@@ -1,0 +1,5 @@
+	"Configuration of class Task"
+	
+	assemblyName: 'mscorlib';
+	hostSystemNamespace: #System.Threading.Tasks;
+	hostSystemName: 'Task`1[[System.Object]]'

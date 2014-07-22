@@ -1,0 +1,4 @@
+	"Configuration of System.Threading.Tasks.TaskFactory"
+	
+	instanceArchitecture: #HostSystemObject;
+	uses: TTaskFactory

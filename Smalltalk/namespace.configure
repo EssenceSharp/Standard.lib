@@ -15,3 +15,5 @@
 	Transitive import means that the search will include all the namespaces imported by the imported namespace,
 	recursively throughout the namespace import graph, but excluding any namespaces not imported as public.  
 	Cycles are handled correctly--they do not cause an error or an infinite loop."
+		
+	assemblyName: 'EssenceSharp'

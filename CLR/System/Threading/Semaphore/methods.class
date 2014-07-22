@@ -1,0 +1,34 @@
+	"Class methods of System.Threading.SemaphoreSlim"
+	
+	protocol: #'instance creation' method:
+	
+	[## initialCount: initialCount
+	
+		<invokeMethod: new>
+	];	
+	
+	protocol: #'instance creation' method:
+	
+	[## initialCount: initialCount maxCount: maxCount
+	
+		<invokeMethod: new>
+	];	
+	
+	protocol: #'instance creation' method:
+	
+	[## forMutualExclusion
+	
+		^self initialCount: 1
+	];	
+	
+	protocol: #'instance creation' method:
+	
+	[## new
+	
+		^self initialCount: 0
+	]
+
+	
+
+	
+	

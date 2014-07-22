@@ -1,0 +1,75 @@
+	"Class methods of System.Threading.Monitor"
+	
+	protocol: #'mutex operations' method:
+	
+	[## enter: lock 
+	
+		<invokeMethod: #Enter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## enter: lock withStatusDo: statusFunction
+	
+		<invokeMethod: #Enter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock 
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock withStatusDo: statusFunction
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock withMillisecondTimeout: anInteger
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock withTimeoutDuration: aTimespan
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock withMillisecondTimeout: anInteger withStatusDo: statusFunction
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## tryEnter: lock withTimeoutDuration: aTimespan withStatusDo: statusFunction
+	
+		<invokeMethod: #TryEnter>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## wait: lock withMillisecondTimeout: anInteger
+	
+		<invokeMethod: #Wait>
+	];	
+	
+	protocol: #'mutex operations' method:
+	
+	[## wait: lock withTimeoutDuration: aTimespan
+	
+		<invokeMethod: #Wait>
+	]
+
+
+	

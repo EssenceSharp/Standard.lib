@@ -1,0 +1,83 @@
+	"Instance methods of System.Threading.SemaphoreSlim"
+	
+	protocol: #scheduling method:
+	
+	[## waitObserving: aCancellationToken
+	
+		<invokeMethod: #Wait>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitWithMillisecondTimeout: anInteger
+	
+		<invokeMethod: #Wait>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitWithTimeoutDuration: aTimespan
+	
+		<invokeMethod: #Wait>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitWithMillisecondTimeout: anInteger withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #Wait>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitWithTimeoutDuration: aTimespan withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #Wait>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitAsyncObserving: aCancellationToken
+	
+		<invokeMethod: #WaitAsync>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitAsyncWithMillisecondTimeout: anInteger
+	
+		<invokeMethod: #WaitAsync>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitAsyncWithTimeoutDuration: aTimespan
+	
+		<invokeMethod: #WaitAsync>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitAsyncWithMillisecondTimeout: anInteger withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #WaitAsync>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## waitAsyncWithTimeoutDuration: aTimespan withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #WaitAsync>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## signal
+	
+		<invokeMethod: Release>
+	]
+
+	
+	
+	
+	

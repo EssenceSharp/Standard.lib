@@ -1,0 +1,145 @@
+	"Class methods of System.Threading.Tasks.Task"
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action withCancellationToken: aCancellationToken
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action options: creationOptions
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action with: context
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action withCancellationToken: aCancellationToken options: creationOptions
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action with: context withCancellationToken: aCancellationToken
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action with: context options: creationOptions
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## doing: action with: context withCancellationToken: aCancellationToken options: creationOptions
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## run: aTask
+	
+		<invokeMethod: #Run>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## run: aTask  withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #Run>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAll: prerequisiteTasks
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAll: prerequisiteTasks withMillesecondTimeout: anInteger
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAll: prerequisiteTasks withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAll: prerequisiteTasks withTimeoutDuration: aDuration
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAll: prerequisiteTasks withMillesecondTimeout: anInteger withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #WaitAll>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAny: prerequisiteTasks
+	
+		<invokeMethod: #waitAny>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAny: prerequisiteTasks withMillesecondTimeout: anInteger
+	
+		<invokeMethod: #waitAny>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAny: prerequisiteTasks withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #waitAny>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAny: prerequisiteTasks withTimeoutDuration: aDuration
+	
+		<invokeMethod: #waitAny>
+	];
+	
+	protocol: #synchronization method:
+	
+	[## awaitAny: prerequisiteTasks withMillesecondTimeout: anInteger withCancellationToken: aCancellationToken
+	
+		<invokeMethod: #waitAny>
+	]
+	
+
+	
+

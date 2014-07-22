@@ -1,0 +1,175 @@
+	"Instance methods for class Behavior"
+
+	protocol: #'class initialization' method:
+	
+	[## initialize
+
+		"Initialize the receiver's state"
+
+		^self
+	];
+
+	protocol: #converting method:
+	
+	[## asBehavior 
+		^self
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceArrayType
+	
+		<getProperty: #InstanceArrayType>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceByRefType
+	
+		<getProperty: #InstanceByRefType>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## genericInstanceTypeDefinition
+		"Answer the fully-open generic type definition that either is or can be derived from the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<getProperty: #GenericInstanceTypeDefinition>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWith: type1
+		"Answer a generic type constructed by applying <type1> as a type argument to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<invokeMethod: #instanceTypeWith>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWith: type1 with: type2
+		"Answer a generic type constructed by applying <type1> and <type2> as type arguments to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<invokeMethod: #instanceTypeWith>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWith: type1 with: type2 with: type3
+		"Answer a generic type constructed by applying <type1>, <type2> and <type3> as type arguments to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<invokeMethod: #instanceTypeWith>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWith: type1 with: type2 with: type3 with: type4
+		"Answer a generic type constructed by applying <type1>, <type2>, <type3> and <type4> as type arguments to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<invokeMethod: #instanceTypeWith>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWith: type1 with: type2 with: type3 with: type4 with: type5
+		"Answer a generic type constructed by applying <type1>, <type2>, <type3>, <type4> and <type5> as type arguments to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type (which, if there is no code following the primitive spec, will result in sending doesNotUnderstand: to the receiver.)"
+	
+		<invokeMethod: #instanceTypeWith>
+	];
+	
+	protocol: #'host system reflection' method:
+	
+	[## instanceTypeWithAll: anArrayOfTypes
+		"Answer a generic type constructed by applying the types in <anArrayOfTypes> as type arguments to the generic type that is the instance type of the receiver.
+		Raise a PrimInvalidOperationException if the instance type of the receiver is not a generic type."
+	
+		<invokeMethod: #instanceTypeWithAll>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## basicNew
+
+		"Answer a new instance of the receiver"
+
+		<primitive: new domain: Behavior>
+
+		^self newWithSize: 0
+	];
+
+
+	protocol: #'instance creation' method:
+	
+	[## basicNew: size
+
+		"Answer a new instance of the receiver with the specified <size> (number of indexed slots)"
+
+		<primitive: #newWithSize: domain: Behavior>
+
+		^self newWithValue: size
+	];
+
+
+	protocol: #'instance creation' method:
+	
+	[## basicValue: value
+
+		"Answer a new instance of the receiver initialized by or representing the specified <value>"
+
+		<primitive: #newWithValue: domain: Behavior>
+
+		^self new
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## new
+
+		"Answer a new instance of the receiver"
+
+		<primitive: new domain: Behavior>
+
+		^self newWithSize: 0
+	];
+
+
+	protocol: #'instance creation' method:
+	[## new: size
+
+		"Answer a new instance of the receiver with the specified <size> (number of indexed slots)"
+
+		<primitive: #newWithSize: domain: Behavior>
+
+		^self newWithValue: size
+	];
+
+
+	protocol: #'instance creation' method:
+	
+	[## value: value
+
+		"Answer a new instance of the receiver initialized by or representing the specified <value>"
+
+		<primitive: #newWithValue: domain: Behavior>
+
+		^self new
+	];
+	
+	protocol: #testing method:
+	
+	[## isBehavior
+		^true
+	];
+	
+	protocol: #testing method:
+	
+	[## isMeta
+		^false
+	]
+

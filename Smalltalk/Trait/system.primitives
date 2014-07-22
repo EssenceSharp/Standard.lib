@@ -2,6 +2,7 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## classTrait
 
 		<primitive: classTrait domain: InstanceTrait>

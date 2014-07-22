@@ -2,402 +2,469 @@
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:
+
 	[## hash
 
 		<primitive: hash domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## = comparandObject
 
 		<primitive: #= domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## compareTo: comparandObject 
 
 		<primitive: #compareTo: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## at: slotIndexObject 
 
 		<primitive: #at: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## do: enumerator 
 
 		<primitive: #do: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## from: startIndex to: endIndex do: enumerator 
 
 		<primitive: #from:to:do: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## from: startIndex to: endIndex by: step do: enumerator 
 
 		<primitive: #from:to:by:do: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## at: slotIndexObject put: newValue 
 
 		<primitive: #at:put: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## nextIdentityIndexOf: element from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #nextIdentityIndexOf:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityIncludes: element 
 
 		<primitive: #identityIncludes: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## add: suffix 
 
 		<primitive: #add: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAdding: suffix 
 
 		<primitive: #copyAdding: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityRemoveNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #identityRemoveNext:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyIdentityRemovingNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyIdentityRemovingNext:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## identityRemoveAll: removal 
 
 		<primitive: #identityRemoveAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyIdentityRemovingAll: removal 
 
 		<primitive: #copyIdentityRemovingAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## add: infix beforeIndex: insertionIndex 
 
 		<primitive: #add:beforeIndex: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAdding: infix beforeIndex: insertionIndex 
 
 		<primitive: #copyAdding:beforeIndex: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## nextIndexOf: element from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #nextIndexOf:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## includes: element 
 
 		<primitive: #includes: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #removeNext:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingNext: removal from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyRemovingNext:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAll: removal 
 
 		<primitive: #removeAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAll: removal 
 
 		<primitive: #copyRemovingAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## atFirstPutOrAdd: newValue 
 
 		<primitive: #atFirstPutOrAdd: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## atLastPutOrAdd: newValue 
 
 		<primitive: #atLastPutOrAdd: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asPathname
 
 		<primitive: asPathname domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asPathname: separatorObject 
 
 		<primitive: #asPathname: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asNamespace
 
 		<primitive: asNamespace domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asHostSystemString
 
 		<primitive: asHostSystemString domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## asHostSystemType
 
 		<primitive: asHostSystemType domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## => value
 
 		<primitive: #=> domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## bindingInNamespace: environment transitivity: importTransitivity ifAbsent: ifAbsentAction 
 
 		<primitive: #bindingInNamespace:transitivity:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## valueInNamespace: environment transitivity: importTransitivity ifAbsent: ifAbsentAction 
 
 		<primitive: #valueInNamespace:transitivity:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## setSize: newSize 
 
 		<primitive: #setSize: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyWithSize: newSize 
 
 		<primitive: #copyWithSize: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## firstIfNone: noSuchElementAction 
 
 		<primitive: #firstIfNone: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## lastIfNone: noSuchElementAction 
 
 		<primitive: #lastIfNone: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## findtFirst: predicate from: startIndex to: endIndex ifAbsent: noSuchElementAction 
 
 		<primitive: #findtFirst:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## contains: predicate 
 
 		<primitive: #contains: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addAll: suffix 
 
 		<primitive: #addAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAddingAll: suffix 
 
 		<primitive: #copyAddingAll: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyFrom: startIndex to: endIndex 
 
 		<primitive: #copyFrom:to: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyTo: endIndex 
 
 		<primitive: #copyTo: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyFrom: startIndex 
 
 		<primitive: #copyFrom: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withAllButFirst
 
 		<primitive: withAllButFirst domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withAllButLast
 
 		<primitive: withAllButLast domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withFirst
 
 		<primitive: withFirst domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## withLast
 
 		<primitive: withLast domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAt: index 
 
 		<primitive: #removeAt: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAt: index 
 
 		<primitive: #copyRemovingAt: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAndRemoveFrom: startIndex to: endIndex 
 
 		<primitive: #copyAndRemoveFrom:to: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingFrom: startIndex to: endIndex 
 
 		<primitive: #copyRemovingFrom:to: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #removeNextSuchThat:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction 
 
 		<primitive: #copyRemovingNextSuchThat:from:to:ifAbsent: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## removeAllSuchThat: predicate 
 
 		<primitive: #removeAllSuchThat: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyRemovingAllSuchThat: predicate 
 
 		<primitive: #copyRemovingAllSuchThat: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## addAll: infix beforeIndex: insertionIndex 
 
 		<primitive: #addAll:beforeIndex: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyAddingAll: infix beforeIndex: insertionIndex 
 
 		<primitive: #copyAddingAll:beforeIndex: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## moveFrom: startIndex to: stopIndex by: displacement 
 
 		<primitive: #moveFrom:to:by: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyMovingFrom: startIndex to: stopIndex by: displacement 
 
 		<primitive: #copyMovingFrom:to:by: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## replaceFrom: startIndex to: stopIndex with: replacementSource startingAt: replacementSourceStartIndex 
 
 		<primitive: #replaceFrom:to:with:startingAt: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReplacingFrom: startIndex to: stopIndex with: replacementSource startingAt: replacementSourceStartIndex 
 
 		<primitive: #copyReplacingFrom:to:with:startingAt: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## reverse
 
 		<primitive: reverse domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReversed
 
 		<primitive: copyReversed domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## reverseFrom: startIndex to: endIndex 
 
 		<primitive: #reverseFrom:to: domain: IndexedCharSlots>
 	];
 
 	protocol: #'system primitives' method:
+
 	[## copyReversedFrom: startIndex to: endIndex 
 
 		<primitive: #copyReversedFrom:to: domain: IndexedCharSlots>

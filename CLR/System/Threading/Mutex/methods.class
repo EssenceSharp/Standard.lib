@@ -1,0 +1,43 @@
+	"Class methods of System.Threading.Mutex"
+	
+	protocol: #'instance accessing' method:
+	
+	[## openExisting: aSystemName
+	
+		<invokeMethod: OpenExisting>
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## openExisting: aSystemName withRights: mutexRights
+	
+		<invokeMethod: OpenExisting>
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## openExisting: aSystemName ifPresent: ifPresentAction
+	
+		<invokeMethod: TryOpenExisting>
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## openExisting: aSystemName withRights: mutexRights ifPresent: ifPresentAction
+	
+		<invokeMethod: TryOpenExisting>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newOwned: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newOwned: aBoolean withName: aSystemName
+	
+		<invokeMethod: new>
+	]

@@ -1,0 +1,22 @@
+	"Class methods of System.Threading.SpinWait"
+	
+	protocol: #scheduling method:
+	
+	[## spinUntil: aZeroArgPredicate
+	
+		<invokeMethod: #SpinUntil>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## spinUntil: aZeroArgPredicate withMillisecondTimeout: anInteger
+	
+		<invokeMethod: #SpinUntil>
+	];
+	
+	protocol: #scheduling method:
+	
+	[## spinUntil: aZeroArgPredicate withTimeoutDuration: aDuration
+	
+		<invokeMethod: #SpinUntil>
+	]
