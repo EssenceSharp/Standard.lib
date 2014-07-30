@@ -1,177 +1,246 @@
 	"Instance methods of Character"
 	
 	protocol: #accessing method:
+	
 	[## unicodeCategory
+	
 		^Character unicodeCategory: self
 	];
 			
 	protocol: #'comparing-double dispatch' method:
+	
 	[## inverseCompareToCharacter: aChar
 	
 		^(aChar asInteger - self asInteger) sign
 	];
 			
 	protocol: #'comparing-double dispatch' method:
+	
 	[## inverseCompareToSmallInteger: anInteger
 	
 		^(anInteger - self asInteger) sign
 	];
 			
 	protocol: #'comparing-double dispatch' method:
+	
 	[## inverseCompareToFloat: aFloat
 	
 		^(aFloat asInteger - self asInteger) sign
 	];
 			
 	protocol: #'comparing-double dispatch' method:
+	
 	[## inverseCompareToDouble: aDouble
 	
 		^(aDouble asInteger - self asInteger) sign
 	];
 			
 	protocol: #converting method:
+	
 	[## asCharacter
 	
 		^self
 	];
 			
 	protocol: #converting method:
+	
 	[## coerce: operand
 	
 		^operand asCharacter
 	];
 	
 	protocol: #converting method:
+	
 	[## asLowercase
+	
 		^Character toLower: self
 	];
 	
 	protocol: #converting method:
+	
 	[## asLowercaseInvariant
+	
 		^Character toLowerInvariant: self
 	];
 	
 	protocol: #converting method:
+	
+	
 	[## asLowercase: cultureInfo
+	
 		^Character toLower: self cultureInfo: cultureInfo
 	];
 	
 	protocol: #converting method:
+	
 	[## asUppercase
+	
 		^Character toUpper: self
 	];
 	
 	protocol: #converting method:
+	
 	[## asUppercaseInvariant
+	
 		^Character toUpperInvariant: self
 	];
 	
 	protocol: #converting method:
+	
 	[## asUppercase: cultureInfo
+	
 		^Character toUpper: self cultureInfo: cultureInfo
 	];
 	
 	protocol: #converting method:
+	
+	[## codePoint
+	
+		^self asInteger
+	];
+	
+	protocol: #converting method:
+	
 	[## toLower
+	
 		^Character toLower: self
 	];
 	
 	protocol: #converting method:
+	
 	[## toLowerInvariant
+	
 		^Character toLowerInvariant: self
 	];
 	
 	protocol: #converting method:
+	
 	[## toLower: cultureInfo
+	
 		^Character toLower: self cultureInfo: cultureInfo
 	];
 	
 	protocol: #converting method:
+	
 	[## toUpper
+	
 		^Character toUpper: self
 	];
 	
 	protocol: #converting method:
+	
 	[## toUpperInvariant
+	
 		^Character toUpperInvariant: self
 	];
 	
 	protocol: #converting method:
+	
 	[## toUpper: cultureInfo
+	
 		^Character toUpper: self cultureInfo: cultureInfo
 	];
 	
 	protocol: #testing method:
+	
 	[## isCharacter
 		^true
 	];
 	
 	protocol: #testing method:
+	
 	[## isControl
+	
 		^Character isControl: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isDigit
+	
 		^Character isDigit: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isHighSurrogate
+	
 		^Character isHighSurrogate: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isLetter
+	
 		^Character isLetter: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isLetterOrDigit
+	
 		^Character isLetterOrDigit: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isLower
+	
 		^Character isLower: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isLowSurrogate
+	
 		^Character isLowSurrogate: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isNumberChar
+	
 		^Character isNumber: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isPunctuation
+	
 		^Character isPunctuation: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isSeparator
+	
 		^Character isSeparator: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isSurrogate
+	
 		^Character isSurrogate: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isSymbolChar
+	
 		^Character isSymbol: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isUpper
+	
 		^Character isUpper: self
 	];
 	
 	protocol: #testing method:
+	
 	[## isWhiteSpace
+	
 		^Character isWhiteSpace: self
 	]

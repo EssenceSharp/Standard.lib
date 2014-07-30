@@ -1,3 +1,4 @@
 
-	accessPrivilege: #Public;
-	value: 'System.Char, mscorlib' asHostSystemType
+	self
+		accessPrivilege: #Public;
+		value: 'System.Char, mscorlib' asHostSystemType

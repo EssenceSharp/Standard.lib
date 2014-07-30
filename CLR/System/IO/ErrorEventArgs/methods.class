@@ -1,0 +1,8 @@
+	"Class methods of System.IO.ErrorEventArgs"
+	
+	protocol: #'instance creation' method:
+	
+	[## exception: anException
+	
+		<invokeMethod: new>
+	]

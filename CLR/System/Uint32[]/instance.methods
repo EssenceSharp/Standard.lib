@@ -1,6 +1,0 @@
-	"Instance methods of System.UInt32[]"
-	
-	protocol: #converting method:
-	[## asArray
-		^Smalltalk.WordArray value: self
-	]

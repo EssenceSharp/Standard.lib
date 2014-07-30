@@ -1,0 +1,1066 @@
+	"Instance methods of System.SequenceableCollection"
+	
+	protocol: #accessing method:
+	
+	[## atFirstPutOrAdd: anElement
+	
+		self isEmpty 
+			ifTrue: [self add: anElement]
+			ifFalse: [self at: 1 put: anElement]
+	];
+	
+	protocol: #accessing method:
+	
+	[## atLastPutOrAdd: anElement
+	
+		self isEmpty 
+			ifTrue: [self add: anElement]
+			ifFalse: [self at: self size put: anElement]
+	];
+	
+	protocol: #accessing method:
+	
+	[## first
+	
+		^self firstIfNone: [self signalEmptyCollectionError]
+	];
+	
+	protocol: #accessing method:
+	
+	[## firstIfNone: noneAction
+	
+		^self isEmpty
+			ifTrue: [noneAction value]
+			ifFalse: [self at: 1]
+	];
+	
+	protocol: #accessing method:
+	
+	[## last
+	
+		^self lastIfNone: [self signalEmptyCollectionError]
+	];
+	
+	protocol: #accessing method:
+	
+	[## lastIfNone: noneAction
+	
+		^self isEmpty
+			ifTrue: [noneAction value]
+			ifFalse: [self at: self size]
+	];
+
+	protocol: #accessing method:
+	
+	[## replaceFrom: startIndex to: endIndex with: replacementSequence
+	
+		self replaceFrom: startIndex to: endIndex with: replacementSequence startingAt: 1
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## replace: map
+	
+		| index |
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | self at: (index := index + 1) put: (map value: element)].
+	];
+
+	protocol: #accessing method:
+	
+	[## replaceAll: target with: newValue
+	
+		| index |
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | 
+				index := index + 1.
+				target = element
+					ifTrue: [self at: index put: newValue]].
+	];
+	
+	protocol: #accessing method:
+	
+	[## replaceFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex
+	
+		| span step index |
+		span := endIndex - startIndex.
+		step := span positive ifTrue: [1] ifFalse: [-1].
+		index := startIndex.
+		replacementSequence 
+			from: replacementStartIndex 
+			to: replacementStartIndex + span 
+			by: step
+			do: [:element | 
+				self at: index put: element.
+				index := index + step].
+		
+	];
+	
+	protocol: #adding method:
+	
+	[## add: anElement
+	
+		self addLast: anElement
+	];
+	
+	protocol: #adding method:
+	
+	[## add: anElement afterIndex: index
+	
+		self add: anElement beforeIndex: index + 1
+	];
+	
+	protocol: #adding method:
+	
+	[## addFirst: anElement 
+	
+		self add: anElement beforeIndex: 1
+	];
+	
+	protocol: #adding method:
+	
+	[## addLast: anElement 
+	
+		self add: anElement beforeIndex: self size + 1
+	];
+	
+	protocol: #adding method:
+	
+	[## addAll: aCollectionOfElements beforeIndex: index
+	
+		| nextIndex |
+		nextIndex := index.
+		aCollectionOfElements 
+			do: [:each | 
+				self add: each beforeIndex: nextIndex.
+				nextIndex := nextIndex + 1]
+	];
+	
+	protocol: #adding method:
+	
+	[## copyAdding: anElement beforeIndex: index
+	
+		| copy |
+		copy := self copy.
+		copy add: anElement beforeIndex: index.
+		^copy
+	];
+	
+	protocol: #comparing method:
+	
+	[## = comparand
+	
+		self == comparand ifTrue: [^true].
+		^[comparand isEqualToSequenceableCollection: self]
+			on: MessageNotUnderstood
+			do: [:ex | false]
+	];
+	
+	protocol: #copying method:
+	
+	[## copyReplacing: map
+	
+		| copy index |
+		copy := self copyEmpty: self size.
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | copy at: (index := index + 1) put: (map value: element)].
+		^copy
+	];
+
+	protocol: #copying method:
+	
+	[## copyReplacingAll: target with: newValue
+	
+		| copy index |
+		copy := self copyEmpty: self size.
+		index := 0.
+		self 
+			from: 1
+			to: self size
+			do: [:element | 
+				index := index + 1.
+				target = element
+					ifTrue: [copy at: index put: newValue]
+					ifFalse: [copy at: index put: element]].
+		^copy
+	];
+	
+	protocol: #copying method:
+	
+	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence
+	
+		^self copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: 1
+	];
+	
+	protocol: #copying method:
+	
+	[## copyReplacingFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex
+	
+		| copy |
+		copy := self copy.
+		copy replaceFrom: startIndex to: endIndex with: replacementSequence startingAt: replacementStartIndex.
+		^copy
+	];
+	
+	protocol: #copying method:
+	
+	[## withAllButFirst
+	
+		^self size > 1
+			ifTrue: [self copyFrom: 2 to: self self size]
+			ifFalse: [self class new]
+	];
+	
+	protocol: #copying method:
+	
+	[## withAllButLast
+	
+		^self size > 1
+			ifTrue: [self copyFrom: 1 to: self self size - 1]
+			ifFalse: [self class new]
+	];
+	
+	protocol: #copying method:
+	
+	[## withFirst
+	
+		^self size > 1
+			ifTrue: [self copyFrom: 1 to: 1]
+			ifFalse: [self signalEmptyCollectionError]
+	];
+	
+	protocol: #copying method:
+	
+	[## withLast
+	
+		^self size > 1
+			ifTrue: 
+				[| size |
+				size := self size.
+				self copyFrom: size to: size]
+			ifFalse: [self signalEmptyCollectionError]
+	];
+	
+	protocol: #'double dispatching' method:
+	
+	[## isEqualToSequenceableCollection: comparand
+	
+		| index |
+		self size = comparand size ifFalse: [^false].
+		index := 0.
+		self from: 1 to: self size do: 
+			[:thisElement |
+			| thatElement |
+			thatElement := comparand at: (index := index + 1).
+			thisElement = thatElement ifFalse: [^false]].
+		^true
+	];	
+	
+	" The following two commmented-out methods are presented solely for documentation purposes.
+	The Essence# runtime system uses the DLR's Meta Object Protocol to implement these 
+	methods virtually, as part of the the dynamic binding subsystem. They'll work if compiled, 
+	but at the cost of reduced performance:
+	
+	protocol: #enumerating method:
+	[## from: startIndex to: endIndex do: enumerator1
+		startIndex to: endIndex do: [:index | enumerator1 value: (self at: index)]
+	];
+
+	protocol: #enumerating method:
+	[## from: startIndex to: endIndex by: step do: enumerator1
+		startIndex to: endIndex by: step do: [:index | enumerator1 value: (self at: index)]
+	];"
+
+	protocol: #enumerating method:
+	
+	[## reverseDo: enumerator1
+	
+		self size to: 1 by: -1 do: enumerator1
+	];
+	
+	protocol: #querying method:
+	
+	[## findFirst: predicate
+	
+		^self findFirst: predicate from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## findFirst: predicate ifAbsent: block0
+	
+		^self findFirst: predicate from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## findFirst: predicate from: startIndex 
+	
+		^self findFirst: predicate from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## findFirst: predicate to: endIndex 
+	
+		^self findFirst: predicate from: 1 to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## findFirst: predicate from: startIndex to: endIndex
+	
+		^self findFirst: predicate from: startIndex to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## findFirst: predicate from: startIndex to: endIndex ifAbsent: block0
+	
+		| span step index |
+		self isEmpty ifTrue: [^0].
+		span := endIndex - startIndex.
+		step := span positive ifTrue: [1] ifFalse: [-1].
+		index := startIndex.
+		self 
+			from: startIndex 
+			to: endIndex 
+			by: step
+			do: [:element | 
+				(predicate value: element) ifTrue: [^index].
+				index := index + step].
+		^block0 ifNil: [0] ifNotNil: [block0 value]
+	];
+
+	protocol: #querying method:
+	
+	[## findLast: predicate
+	
+		^self findLast: predicate from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## findLast: predicate ifAbsent: block0
+	
+		^self findLast: predicate from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## findLast: predicate from: startIndex 
+	
+		^self findLast: predicate from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## findLast: predicate to: endIndex 
+	
+		^self findLast: predicate from: 1 to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## findLast: predicate from: startIndex to: endIndex
+	
+		^self findLast: predicate from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## findLast: predicate from: startIndex to: endIndex ifAbsent: block0
+	
+		^self findFirst: predicate from: endIndex to: startIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method:
+	
+	[## identityIndexOf: target
+	
+		^self nextIdentityIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## identityIndexOf: target ifAbsent: block0
+	
+		^self nextIdentityIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## identityIndexOf: target from: startIndex 
+	
+		^self nextIdentityIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## identityIndexOf: target to: endIndex 
+	
+		^self nextIdentityIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## identityIndexOf: target from: startIndex to: endIndex
+	
+		^self nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## identityIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method:
+	
+	[## indexOf: target
+	
+		^self nextIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## indexOf: target ifAbsent: block0
+	
+		^self nextIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## indexOf: target from: startIndex 
+	
+		^self nextIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## indexOf: target to: endIndex 
+	
+		^self nextIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## indexOf: target from: startIndex to: endIndex
+	
+		^self nextIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## indexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self nextIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## lastIdentityIndexOf: target
+	
+		^self lastIdentityIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## lastIdentityIndexOf: target ifAbsent: block0
+	
+		^self lastIdentityIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## lastIdentityIndexOf: target from: startIndex
+	
+		^self lastIdentityIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## lastIdentityIndexOf: target to: endIndex 
+	
+		^self lastIdentityIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIdentityIndexOf: target from: startIndex to: endIndex
+	
+		^self lastIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self lastIdentityIndexOf: target from: endIndex to: startIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self nextIdentityIndexOf: target from: endIndex to: startIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method:
+	
+	[## lastIndexOf: target
+	
+		^self lastIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## lastIndexOf: target ifAbsent: block0
+	
+		^self lastIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## lastIndexOf: target from: startIndex 
+	
+		^self lastIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## lastIndexOf: target to: endIndex 
+	
+		^self lastIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIndexOf: target from: startIndex to: endIndex
+	
+		^self lastIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self lastIndexOf: target from: endIndex to: startIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method: 
+	
+	[## lastIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		^self nextIndexOf: target from: endIndex to: startIndex ifAbsent: block0
+	];
+	
+	protocol: #querying method:
+	
+	[## nextIdentityIndexOf: target
+	
+		^self nextIdentityIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## nextIdentityIndexOf: target ifAbsent: block0
+	
+		^self nextIdentityIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## nextIdentityIndexOf: target from: startIndex 
+	
+		^self nextIdentityIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## nextIdentityIndexOf: target to: endIndex 
+	
+		^self nextIdentityIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## nextIdentityIndexOf: target from: startIndex to: endIndex
+	
+		^self nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		| span step index |
+		self isEmpty ifTrue: [^0].
+		span := endIndex - startIndex.
+		step := span positive ifTrue: [1] ifFalse: [-1].
+		index := startIndex.
+		self 
+			from: startIndex 
+			to: endIndex 
+			by: step
+			do: [:element | 
+				target == element ifTrue: [^index].
+				index := index + step].
+		^block0 ifNil: [0] ifNotNil: [block0 value]
+	];
+	
+	protocol: #querying method:
+	
+	[## nextIndexOf: target
+	
+		^self nextIndexOf: target from: 1 to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## nextIndexOf: target ifAbsent: block0
+	
+		^self nextIndexOf: target from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #querying method:
+	
+	[## nextIndexOf: target from: startIndex 
+	
+		^self nextIndexOf: target from: startIndex to: self size ifAbsent: nil
+	];
+
+	protocol: #querying method:
+	
+	[## nextIndexOf: target to: endIndex 
+	
+		^self nextIndexOf: target from: 1 to: endIndex ifAbsent: nil
+	];
+
+	protocol: #querying method: 
+	
+	[## nextIndexOf: target from: startIndex to: endIndex
+	
+		^self nextIndexOf: target from: startIndex to: endIndex ifAbsent: nil
+	];
+	
+	protocol: #querying method: 
+	
+	[## nextIndexOf: target from: startIndex to: endIndex ifAbsent: block0
+	
+		| span step index |
+		self isEmpty ifTrue: [^0].
+		span := endIndex - startIndex.
+		step := span positive ifTrue: [1] ifFalse: [-1].
+		index := startIndex.
+		self 
+			from: startIndex 
+			to: endIndex 
+			by: step
+			do: [:element | 
+				target = element ifTrue: [^index].
+				index := index + step].
+		^block0 ifNil: [0] ifNotNil: [block0 value]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyAndRemoveFrom: startIndex to: endIndex
+	
+		self removeFrom: startIndex to: endIndex.
+		^self copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingFrom: startIndex to: endIndex
+	
+		| copy |
+		copy := self copy.
+		copy removeFrom: startIndex to: endIndex.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemoving: anElement
+	
+		^self copyIdentityRemovingNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemoving: anElement ifAbsent: block0
+	
+		^self copyIdentityRemovingNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingNext: anElement
+	
+		^self copyIdentityRemovingNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingLast: anElement
+	
+		^self copyIdentityRemovingLast: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingNext: anElement ifAbsent: block0
+	
+		^self copyIdentityRemovingNext: anElement from: 1 to: self size ifAbsent: block0
+	];	
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingLast: anElement ifAbsent: block0
+	
+		^self copyIdentityRemovingLast: anElement from: 1 to: self size ifAbsent: block0
+	];	
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingNext: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		|  index copy |
+		index := self nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyIdentityRemovingLast: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		|  index copy |
+		index := self lastIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemoving: anElement
+	
+		^self copyRemovingNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemoving: anElement ifAbsent: block0
+	
+		^self copyRemovingNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNextSuchThat: predicate
+	
+		^self copyRemovingNextSuchThat: predicate from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLastSuchThat: predicate
+	
+		^self copyRemovingLastSuchThat: predicate from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNextSuchThat: predicate ifAbsent: notFoundAction
+	
+		^self copyRemovingNextSuchThat: predicate from: 1 to: self size ifAbsent: notFoundAction
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLastSuchThat: predicate ifAbsent: notFoundAction
+	
+		^self copyRemovingLastSuchThat: predicate from: 1 to: self size ifAbsent: notFoundAction
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index copy |
+		index := self findFirst: predicate from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLastSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index copy |
+		index := self findLast: predicate from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNext: anElement
+	
+		^self copyRemovingNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLast: anElement
+	
+		^self copyRemovingLast: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNext: anElement ifAbsent: block0
+	
+		^self copyRemovingNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLast: anElement ifAbsent: block0
+	
+		^self copyRemovingLast: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingNext: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		|  index copy |
+		index := self nextIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## copyRemovingLast: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		|  index copy |
+		index := self lastIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		copy := self copy.
+		copy removeAt: index.
+		^copy
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemove: anElement
+	
+		^self identityRemoveNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemove: anElement ifAbsent: block0
+	
+		^self identityRemoveNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveNext: anElement
+	
+		^self identityRemoveNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveLast: anElement
+	
+		^self identityRemoveLast: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveNext: anElement ifAbsent: block0
+	
+		^self identityRemoveNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveLast: anElement ifAbsent: block0
+	
+		^self identityRemoveLast: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveNext: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index |
+		index := self nextIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index
+	];
+	
+	protocol: #removing method:
+	
+	[## identityRemoveLast: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index |
+		index := self lastIdentityIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index
+	];
+	
+	protocol: #removing method:
+	
+	[## remove: anElement
+	
+		^self removeNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## remove: anElement ifAbsent: block0
+	
+		^self removeNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## removeNext: anElement
+	
+		^self removeNext: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## removeLast: anElement
+	
+		^self removeLast: anElement from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## removeNext: anElement ifAbsent: block0
+	
+		^self removeNext: anElement from: 1 to: self size ifAbsent: block0
+	];
+	
+	protocol: #removing method:
+	
+	[## removeLast: anElement ifAbsent: block0
+	
+		^self removeLast: anElement from: 1 to: self size ifAbsent: block0
+	];
+
+	protocol: #removing method:
+	
+	[## removeNext: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index |
+		index := self nextIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index
+	];
+
+	protocol: #removing method:
+	
+	[## removeLast: target from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index |
+		index := self lastIndexOf: target from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index
+	];
+	
+	protocol: #removing method:
+	
+	[## removeNextSuchThat: predicate
+	
+		^self removeNextSuchThat: predicate from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## removeLastSuchThat: predicate
+	
+		^self removeLastSuchThat: predicate from: 1 to: self size ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## removeNextSuchThat: predicate ifAbsent: notFoundAction
+	
+		^self removeNextSuchThat: predicate from: 1 to: self size ifAbsent: notFoundAction
+	];
+	
+	protocol: #removing method:
+	
+	[## removeLastSuchThat: predicate ifAbsent: notFoundAction
+	
+		^self removeLastSuchThat: predicate from: 1 to: self size ifAbsent: notFoundAction
+	];
+	
+	protocol: #removing method:
+	
+	[## removeNextSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index copy |
+		index := self findFirst: predicate from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index.
+	];
+	
+	protocol: #removing method:
+	
+	[## removeLastSuchThat: predicate from: startIndex to: endIndex ifAbsent: notFoundAction
+	
+		| index copy |
+		index := self findLast: predicate from: startIndex to: endIndex ifAbsent: [^notFoundAction ifNotNil: [notFoundAction value]].
+		self removeAt: index.
+	];
+	
+	protocol: #reversing method:
+	
+	[## copyReversed
+	
+		| copy |
+		copy := self copy.
+		copy reverse.
+		^copy
+	];
+	
+	protocol: #reversing method:
+	
+	[## copyReversedFrom: startIndex to: endIndex
+	
+		| copy |
+		copy := self copy.
+		copy reverseFrom: startIndex to: endIndex.
+		^copy
+	];
+	
+	protocol: #reversing method:
+	
+	[## reversed
+		| copy |
+		copy := self copy.
+		copy reverse.
+		^copy
+	]

@@ -1,0 +1,15 @@
+	"Class methods of System.IO.TextWriter"
+	
+	protocol: #'instance creation' method:
+	
+	[## formatProvider: formatProvider
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## synchronizedOn: aStream
+	
+		<invokeMethod: Synchronized>
+	]

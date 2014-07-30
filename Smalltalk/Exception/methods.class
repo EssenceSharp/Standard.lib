@@ -1,0 +1,79 @@
+	"Class methods of Exception"
+	
+	protocol: #accessing method:
+	
+	[## systemExceptionClass
+	
+		^self systemExceptionType asBehavior
+	];
+	
+	protocol: #accessing method:
+	
+	[## systemExceptionType
+	
+		systemExceptionType ifNil: [self setSystemExceptionType].
+		^systemExceptionType
+	];
+	
+	protocol: #'class initialization' method:
+	
+	[## initialize
+	
+		self setSystemExceptionType
+	];
+	
+	protocol: #'class initialization' method:
+	
+	[## setSystemExceptionType
+	
+		systemExceptionType := 'EssenceSharp.Exceptions.ESException' asHostSystemType
+	];
+	
+	protocol: #'exception selector' method:
+	
+	[## handles: anException 
+	
+		^anException satisfiesHandlingConstraint: self
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## new
+	
+		^self basicNew systemException: self systemExceptionClass new
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## messageText: aString
+	
+		^self basicNew 
+			systemException: 
+				(self systemExceptionClass 
+					messageText: aString)
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## messageText: aString innerException: innerException
+	
+		^self basicNew 
+			systemException: 
+				(self systemExceptionClass 
+					messageText: aString 
+					innerException: innerException)
+	];
+		
+	protocol: #signalling method: 
+	
+	[## signal
+	
+		^(self messageText: self name) signal
+	];
+	
+	protocol: #signalling method: 
+	
+	[## signal: aString
+	
+		^(self messageText: aString) signal
+	]

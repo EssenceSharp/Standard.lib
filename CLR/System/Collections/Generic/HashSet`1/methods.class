@@ -1,0 +1,15 @@
+	"Class methods of System.Collections.Generic.HashSet`1"
+	
+	protocol: #private method:
+	
+	[## withEqualityComparer: elementComparer
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #private method:
+	
+	[## withElements: elements andEqualityComparer: elementComparer
+	
+		<invokeMethod: new>
+	]

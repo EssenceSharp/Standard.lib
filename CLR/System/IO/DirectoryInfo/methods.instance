@@ -1,0 +1,204 @@
+	"Instance methods of System.IO.DirectoryInfo"
+	
+	protocol: #creating method:
+	
+	[## create
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## createWithSecurity: aDirectorySecurity
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## createSubdirectory: name
+	
+		<invokeMethod: CreateSubdirectory>
+	];
+	
+	protocol: #creating method:
+	
+	[## createSubdirectory: name withSecurity: aDirectorySecurity
+	
+		<invokeMethod: CreateSubdirectory>
+	];
+	
+	protocol: #deleting method:
+	
+	[## delete
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #deleting method:
+	
+	[## deleteRecursively: aBoolean
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #operations method:
+	
+	[## moveTo: destinationPathnameString
+	
+		<invokeMethod: MoveTo>
+	];
+	
+	protocol: #operations method:
+	
+	[## setAccessControlTo: directorySecurity
+	
+		<invokeMethod: SetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControlType: accessControlSectionType
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectories
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectoriesMatching: patternString
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectoriesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFiles
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFilesMatching: patternString
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFilesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntries
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntriesMatching: patternString
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntriesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectories
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectoriesMatching: patternString
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectoriesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFiles
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFilesMatching: patternString
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFilesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntries
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntriesMatching: patternString
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntriesMatching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #testing method: 
+	
+	[## isDirectory
+	
+		^true
+	]

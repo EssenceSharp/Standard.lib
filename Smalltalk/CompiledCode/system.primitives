@@ -17,9 +17,9 @@
 
 	protocol: #'system primitives' method:
 
-	[## homeMethod
+	[## rootContext
 
-		<primitive: homeMethod domain: CompiledCode>
+		<primitive: rootContext domain: CompiledCode>
 	];
 
 	protocol: #'system primitives' method:

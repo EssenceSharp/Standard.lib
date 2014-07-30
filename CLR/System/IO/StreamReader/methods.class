@@ -1,0 +1,78 @@
+	"Class methods of System.IO.StreamReader"
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks bufferSize: size
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks bufferSize: size leaveOpen: leaveOpen
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname encoding: encoding
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname encoding: encoding detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname encoding: encoding detectEncodingFromByteOrderMarks: detectEncodingFromByteOrderMarks bufferSize: size
+	
+		<invokeMethod: new>
+	]

@@ -1,0 +1,25 @@
+	"Class methods of System.IO.BinaryReader"
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding leaveOpen: leaveOpen
+	
+		<invokeMethod: new>
+	]
+
+	
+	

@@ -1,0 +1,8 @@
+	"Class methods of System.IO.RenamedEventArgs"
+	
+	protocol: #'instance creation' method:
+	
+	[## changeType: aWatcherChangeType directory: directoryPathname name: newName oldName: oldName
+	
+		<invokeMethod: new>
+	]

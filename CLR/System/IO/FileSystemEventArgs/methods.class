@@ -1,0 +1,8 @@
+	"Class methods of System.IO.FileSystemEventArgs"
+	
+	protocol: #'instance creation' method:
+	
+	[## changeType: aWatcherChangeType directory: directoryPathname name: localName
+	
+		<invokeMethod: new>
+	]

@@ -1,6 +1,0 @@
-	"Instance methods of System.Object[]"
-	
-	protocol: #converting method:
-	[## asArray
-		^Smalltalk.Array value: self
-	]

@@ -24,16 +24,16 @@
 
 	protocol: #'system primitives' method:
 
-	[## lexicalContext
+	[## enclosingContext
 
-		<primitive: lexicalContext domain: Block>
+		<primitive: enclosingContext domain: Block>
 	];
 
 	protocol: #'system primitives' method:
 
-	[## homeMethod
+	[## rootContext
 
-		<primitive: homeMethod domain: Block>
+		<primitive: rootContext domain: Block>
 	];
 
 	protocol: #'system primitives' method:
@@ -41,6 +41,13 @@
 	[## hasHomeClass
 
 		<primitive: hasHomeClass domain: Block>
+	];
+
+	protocol: #'system primitives' method:
+
+	[## homeClass
+
+		<primitive: homeClass domain: Block>
 	];
 
 	protocol: #'system primitives' method:

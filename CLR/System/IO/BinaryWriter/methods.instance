@@ -1,0 +1,16 @@
+	"Instance methods of System.IO.BinaryWriter"
+	
+	protocol: #positioning method:
+	
+	[## seek: offset relativeTo: seekOrigin
+	
+		<invokeMethod: Seek>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeFrom: buffer at: index for: byteCount
+	
+		<invokeMethod: Write>
+	]
+

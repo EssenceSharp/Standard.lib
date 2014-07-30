@@ -1,0 +1,43 @@
+	"Class methods of System.IO.MemoryStream"
+	
+	protocol: #'instance creation' method: 
+	
+	[## on: byteArray
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## capacity: capacity
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## on: byteArray writable: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## on: byteArray startingAt: index for: length
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## on: byteArray startingAt: index for: length writable: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## on: byteArray startingAt: index for: length writable: isWritable allowAccess: allowAccessToBuffer
+	
+		<invokeMethod: new>
+	]

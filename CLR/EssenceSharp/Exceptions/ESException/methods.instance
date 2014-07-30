@@ -1,0 +1,8 @@
+	"Instance methods of EssenceSharp.Exceptions.ESException"
+
+	protocol: #accessing method:
+	
+	[## exceptionObject 
+	
+		<getProperty: ExceptionObject>
+	]

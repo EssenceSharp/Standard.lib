@@ -1,0 +1,8 @@
+	"Class methods of InvalidOperationException"
+	
+	protocol: #'class initialization' method:
+	
+	[## setSystemExceptionType
+	
+		systemExceptionType := 'EssenceSharp.Exceptions.InvalidOperationException' asHostSystemType
+	]

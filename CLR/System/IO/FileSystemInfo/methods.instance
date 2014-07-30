@@ -1,0 +1,15 @@
+	"Instance methods of System.IO.FileSystemInfo"
+	
+	protocol: #operations method:
+	
+	[## delete
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #operations method:
+	
+	[## refresh
+	
+		<invokeMethod: Refresh>
+	]

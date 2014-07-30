@@ -1,0 +1,36 @@
+	"Instance methods of System.IO.TextWriter"
+	
+	protocol: #writing method:
+	
+	[## writeWithFormat: aFormatString subject: s1
+		
+		<invokeMethod: Write>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeWithFormat: aFormatString subject: s1 subject: s2
+		
+		<invokeMethod: Write>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeWithFormat: aFormatString subject: s1 subject: s2 subject: s3
+		
+		<invokeMethod: Write>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeWithFormat: aFormatString subjects: anArrayOfObjects
+		
+		<invokeMethod: Write>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeFrom: buffer at: index for: charCount
+	
+		<invokeMethod: Write>
+	]

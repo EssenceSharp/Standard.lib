@@ -1,0 +1,57 @@
+	"Class methods of System.IO.StreamWriter"
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream
+	
+		<invokeMethod: new>
+	];
+		
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding
+	
+		<invokeMethod: new>
+	];
+		
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding bufferSize: size
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aStream encoding: encoding bufferSize: size leaveOpen: leaveOpen
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname append: append
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname append: append encoding: encoding
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname append: append encoding: encoding bufferSize: size
+	
+		<invokeMethod: new>
+	]

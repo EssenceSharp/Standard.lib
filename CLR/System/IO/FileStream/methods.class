@@ -1,0 +1,75 @@
+	"Class methods of System.IO.FileStream"
+	
+	protocol: #'instance creation' method:
+	
+	[## handle: aSafeFileHandle access: fileAccess
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## handle: aSafeFileHandle access: fileAccess bufferSize: size
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## handle: aSafeFileHandle access: fileAccess bufferSize: size isAsync: aBoolean
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode access: fileAccess
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode access: fileAccess share: fileShare
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode access: fileAccess share: fileShare bufferSize: size
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode access: fileAccess share: fileShare bufferSize: size useAsync: useAsync
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode access: fileAccess share: fileShare bufferSize: size options: fileOptions
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode rights: fileSystemRights share: fileShare bufferSize: size options: fileOptions
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathname mode: fileMode rights: fileSystemRights share: fileShare bufferSize: size options: fileOptions security: fileSecurity
+		<invokeMethod: new>
+	]

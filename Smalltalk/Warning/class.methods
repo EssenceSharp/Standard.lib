@@ -1,6 +1,0 @@
-	"Class methods of Warning"
-	
-	protocol: #'class initialization' method:
-	[## setSystemExceptionType
-		systemExceptionType := 'EssenceSharp.Exceptions.Warning' asHostSystemType
-	]

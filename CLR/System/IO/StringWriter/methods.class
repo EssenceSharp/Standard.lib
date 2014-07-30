@@ -1,0 +1,15 @@
+	"Class methods of System.IO.StringWriter"
+	
+	protocol: #'instance creation' method:
+	
+	[## stringBuilder: aStringBuilder
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## stringBuilder: aStringBuilder formatProvider: formatProvider
+	
+		<invokeMethod: new>
+	]

@@ -1,0 +1,332 @@
+	"Class methods of System.IO.File"
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString bufferSize: size
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString bufferSize: size options: fileCreationOptions
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString bufferSize: size options: fileCreationOptions security: fileSecurity
+	
+		<invokeMethod: Create>
+	];
+	
+	protocol: #creating method:
+	
+	[## createText: pathnameString
+	
+		<invokeMethod: CreateText>
+	];
+	
+	protocol: #deleting method:
+	
+	[## delete: pathnameString
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #'encryption/decryption' method:
+	
+	[## decrypt: pathnameString
+	
+		<invokeMethod: Decrypt>
+	];
+	
+	protocol: #'encryption/decryption' method:
+	
+	[## encrypt: pathnameString
+	
+		<invokeMethod: Encrypt>
+	];
+	
+	protocol: #opening method:
+	
+	[## open: pathname mode: fileMode
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #opening method:
+	
+	[## open: pathname mode: fileMode access: fileAccess
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #opening method:
+	
+	[## open: pathname mode: fileMode access: fileAccess share: fileShare
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #opening method:
+	
+	[## toRead: pathname
+	
+		<invokeMethod: OpenRead>
+	];
+	
+	protocol: #opening method:
+	
+	[## toReadText: pathname
+	
+		<invokeMethod: OpenText>
+	];
+	
+	protocol: #opening method:
+	
+	[## toWrite: pathname
+	
+		<invokeMethod: OpenWrite>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyFrom: sourcePathnameString to: destinationPathnameString
+	
+		<invokeMethod: Copy>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyFrom: sourcePathnameString to: destinationPathnameString overwrite: aBoolean
+	
+		<invokeMethod: Copy>
+	];
+	
+	protocol: #operations method:
+	
+	[## moveFrom: sourcePathnameString to: destinationPathnameString
+	
+		<invokeMethod: Move>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyReplaceFrom: sourcePathnameString to: targetPathnameString backingUpTo: backupPathnameString
+	
+		<invokeMethod: Replace>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyReplaceFrom: sourcePathnameString to: targetPathnameString backingUpTo: backupPathnameString ignoreMetadataErrors: ignoreMetadataErrors
+	
+		<invokeMethod: Replace>
+	];
+	
+	protocol: #operations method:
+	
+	[## setAccessControl: pathnameString to: fileSecurity
+	
+		<invokeMethod: SetAccessControl>
+	];
+	
+	protocol: #operations method:
+	
+	[## setAttributes: pathnameString to: fileAttributes
+	
+		<invokeMethod: SetAttributes>
+	];
+	
+	protocol: #operations method:
+	
+	[## setCreationTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetCreationTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setCreationTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetCreationTimeUtc>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastAccessTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastAccessTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastAccessTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastAccessTimeUtc>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastWriteTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastWriteTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastWriteTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastWriteTimeUtc>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl: pathnameString
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl: pathnameString type: accessControlSectionType
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## exists: pathnameString
+	
+		<invokeMethod: Exists>
+	];
+	
+	protocol: #querying method:
+	
+	[## attributes: pathnameString
+	
+		<invokeMethod: GetAttributes>
+	];
+	
+	protocol: #reading method:
+	
+	[## allBytesFrom: pathnameString
+	
+		<invokeMethod: ReadAllBytes>
+	];
+	
+	protocol: #reading method:
+	
+	[## linesFrom: pathnameString
+	
+		<invokeMethod: ReadLines>
+	];
+	
+	protocol: #reading method:
+	
+	[## linesFrom: pathnameString encoding: encoding
+	
+		<invokeMethod: ReadLines>
+	];
+	
+	protocol: #reading method:
+	
+	[## allLinesFrom: pathnameString
+	
+		<invokeMethod: ReadAllLines>
+	];
+	
+	protocol: #reading method:
+	
+	[## allLinesFrom: pathnameString encoding: encoding
+	
+		<invokeMethod: ReadAllLines>
+	];
+	
+	protocol: #reading method:
+	
+	[## allTextFrom: pathnameString
+	
+		<invokeMethod: ReadAllText>
+	];
+	
+	protocol: #reading method:
+	
+	[## allTextFrom: pathnameString encoding: encoding
+	
+		<invokeMethod: ReadAllText>
+	];
+	
+	protocol: #writing method: 
+	
+	[## appendLinesTo: pathname from: anArrayOfStrings
+	
+		<invokeMethod: AppendAllLines>
+	];
+	
+	protocol: #writing method: 
+	
+	[## appendLinesTo: pathname from: anArrayOfStrings encoding: encoding
+	
+		<invokeMethod: AppendAllLines>
+	];
+	
+	protocol: #writing method: 
+	
+	[## appendTextTo: pathname from: aString
+	
+		<invokeMethod: AppendAllText>
+	];
+	
+	protocol: #writing method: 
+	
+	[## appendTextTo: pathname from: aString encoding: encoding
+	
+		<invokeMethod: AppendAllText>
+	];
+	
+	protocol: #writing method: 
+	
+	[## writeAllBytes: pathname from: aByteArray
+	
+		<invokeMethod: WriteAllBytes>
+	];
+	
+	protocol: #writing method: 
+	
+	[## writeAllLines: pathname from: aCollectionOfStrings
+	
+		<invokeMethod: WriteAllLines>
+	];
+	
+	protocol: #writing method: 
+	
+	[## writeAllLines: pathname from: aCollectionOfStrings encoding: encoding
+	
+		<invokeMethod: WriteAllLines>
+	];
+	
+	protocol: #writing method: 
+	
+	[## writeAllText: pathname from: aString
+	
+		<invokeMethod: WriteAllText>
+	];
+	
+	protocol: #writing method: 
+	
+	[## writeAllText: pathname from: aString encoding: encoding
+	
+		<invokeMethod: WriteAllText>
+	]
+
+

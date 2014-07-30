@@ -1,0 +1,8 @@
+	"Class methods of System.IO.TextReader"
+	
+	protocol: #'instance creation' method: 
+	
+	[## synchronizedOn: aStream
+	
+		<invokeMethod: Synchronized>
+	]

@@ -1,0 +1,32 @@
+	"Instance methods of Universal.THostSystemMagnitude"
+	
+	protocol: #comparing method:
+	
+	[## > comparand
+	
+		^(self compareTo: comparand) > 0
+	];
+			
+	protocol: #comparing method:
+	
+	[## < comparand			
+		^(self compareTo: comparand) < 0
+	];
+				
+	protocol: #comparing method:
+	
+	[## = comparand
+		^(self compareTo: comparand) = 0
+	];
+		
+	protocol: #comparing method:
+	
+	[## <= comparand
+			^(self compareTo: comparand) <= 0
+	];
+	
+	protocol: #comparing method:
+	
+	[## >= comparand
+		^(self compareTo: comparand) >= 0
+	]

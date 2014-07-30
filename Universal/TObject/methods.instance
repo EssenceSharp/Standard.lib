@@ -1,6 +1,7 @@
 	"Instance methods of TObject"
 		
 	protocol: #binding method:
+	
 	[## valueIf: aCollection else: absentBlock
 			"#green  
 				valueIf: 
@@ -26,98 +27,115 @@
 	];
 	
 	protocol: #debugging method:
+	
 	[## halt
 	
 		<primitive: #halt domain: #Object>
 	];
 		
 	protocol: #debugging method: 
+	
 	[## show
 	
 		self printString show
 	];
 		
 	protocol: #debugging method: 
+	
 	[## crShow
 	
 		self printString crShow
 	];
 		
 	protocol: #debugging method: 
+	
 	[## showCr
 	
 		self printString showCr
 	];
 		
 	protocol: #debugging method: 
+	
 	[## showCr: aValue
 
 		aValue showCr
 	];
 
 	protocol: #debugging method: 
+	
 	[## reportToConsole
 
 		self showCr
 	];
 	
 	protocol: #'double dispatching' method:
+	
 	[## addTo: aCollection
 	
 		^aCollection copyAdding: self
 	];
 
-	"protocol: #'error handling' method:
-	[## doesNotUnderstand: aMessage
-
-		^MessageNotUnderstood signalWithReceiver: self message: aMessage
-	];"
-
 	protocol: #'error handling' method:
+	
+	[## error: aString
+	
+		^Error signal: aString
+	];
+	
+	protocol: #'error handling' method:
+	
 	[## subclassResponsibility
 	
 		^SubclassResponsibilityException signal: 'A subclass failed to override an abstract method'
 	];
 	
 	protocol: #printing method:
+	
 	[## asHostSystemString 
 	
 		<invokeMethod: #ToString>
 	];
 	
 	protocol: #printing method:
+	
 	[## printString
 	
 		^self asHostSystemString asString
 	];
 	
 	protocol: #reflection method:
+	
 	[## performing: selector
 	
 		^MessageSend receiver: self selector: selector
 	];
 	
 	protocol: #testing method:
+	
 	[## isBehavior
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isBoolean
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isCharacter
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isClass
 		^false
 	];
 
 	protocol: #testing method:
+	
 	[## isFalse
 
 		"Answer whether the receiver is false."
@@ -126,36 +144,42 @@
 	];
 	
 	protocol: #testing method:
+	
 	[## isImmutable
 	
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isInteger
 	
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isMetaclass
 	
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isNumber
 	
 		^false
 	];
 	
 	protocol: #testing method:
+	
 	[## isSymbol
 	
 		^false
 	];
 
 	protocol: #testing method:
+	
 	[## isTrue
 
 		"Answer whether the receiver is true."

@@ -1,3 +1,4 @@
 
-	accessPrivilege: #Public;
-	value: 'System.Exception, mscorlib' asHostSystemType
+	self
+		accessPrivilege: #Public;
+		value: 'System.Exception, mscorlib' asHostSystemType

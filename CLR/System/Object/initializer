@@ -1,0 +1,12 @@
+	"Initialization of class System.Object"
+	
+	"This method is defined here, instead of in methods.instance, so that it 
+	won't be added to the system before the Exception classes have been defined
+	and fully initialized."
+	
+	self protocol: #'error handling' method:
+	
+	[## doesNotUnderstand: aMessage
+
+		^MessageNotUnderstood signalWithReceiver: self message: aMessage
+	]

@@ -1,0 +1,17 @@
+	"Instance methods of System.IO.BinaryReader"
+	
+	protocol: #reading method:
+	
+	[## readInto: buffer at: index for: byteCount
+	
+		<invokeMethod: Read>
+	];
+	
+	protocol: #positioning method:
+	
+	[## seek: offset relativeTo: seekOrigin
+	
+		<invokeMethod: Seek>
+	]
+	
+

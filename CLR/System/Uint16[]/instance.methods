@@ -1,6 +1,0 @@
-	"Instance methods of System.UInt16[]"
-	
-	protocol: #converting method:
-	[## asArray
-		^Smalltalk.HalfWordArray value: self
-	]

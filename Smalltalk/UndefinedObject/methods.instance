@@ -1,0 +1,15 @@
+	"Instance methods for UndefinedObject"
+
+	protocol: #printing method:
+	
+	[## asHostSystemString 
+	
+		^'nil'
+	];
+		
+	protocol: #printing method:
+	
+	[## printString
+	
+		^'nil'
+	]

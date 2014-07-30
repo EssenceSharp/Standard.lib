@@ -1,5 +1,0 @@
-	"Initialization of the instance architecture, initial state and module memberships of Block." 
-	
-	superclass: CompiledCode;
-	instanceArchitecture: #Block;
-	uses: TCullable

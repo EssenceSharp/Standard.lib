@@ -1,0 +1,8 @@
+	"Instance methods of System.Double[]"
+	
+	protocol: #converting method:
+	
+	[## asArray
+	
+		^Smalltalk.DoubleArray value: self
+	]

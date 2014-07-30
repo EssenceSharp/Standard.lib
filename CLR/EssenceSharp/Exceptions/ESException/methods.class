@@ -1,0 +1,22 @@
+	"Class methods of EssenceSharp.Exceptions.ESException"
+
+	protocol: #'instance creation' method: 
+	
+	[## exceptionObject: esExceptionObject
+	
+		<invokeMethod: new>
+	];
+
+	protocol: #'instance creation' method: 
+	
+	[## exceptionObject: esExceptionObject messageText: aString
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method: 
+	
+	[## exceptionObject: esExceptionObject  messageText: aString innerException: innerException
+	
+		<invokeMethod: new>
+	]

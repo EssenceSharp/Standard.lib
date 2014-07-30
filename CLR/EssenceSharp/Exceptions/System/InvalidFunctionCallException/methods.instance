@@ -1,0 +1,29 @@
+	"Instance methods of EssenceSharp.Exceptions.System.InvalidFunctionCallException"
+	
+	protocol: #accessing method:
+	
+	[## expectedArgCount
+	
+		<getProperty: ExpectedArgCount>
+	];
+	
+	protocol: #accessing method:
+	
+	[## actualArgCount
+	
+		<getProperty: ActualArgCount>
+	];
+	
+	protocol: #accessing method:
+	
+	[## expectedFunctionType
+	
+		<getProperty: ExpectedFunctionType>
+	];
+	
+	protocol: #accessing method:
+	
+	[## actualFunctionType
+	
+		<getProperty: ActualFunctionType>
+	]

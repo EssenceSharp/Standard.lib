@@ -1,0 +1,116 @@
+	"Instance methods of Exception"
+	
+	protocol: #accessing method:
+	
+	[## baseException 
+	
+		^systemException baseException
+	];
+	
+	protocol: #accessing method:
+	
+	[## description
+	
+		^systemException description
+	];
+
+	protocol: #accessing method:
+	
+	[## exceptionObject 
+		^self
+	];
+	
+	protocol: #accessing method:
+	
+	[## innerException 
+		^systemException innerException
+	];
+	
+	protocol: #accessing method:
+	
+	[## messageText
+		^systemException messageText
+	];
+		
+	protocol: #accessing method:
+	
+	[## messageText: aString 
+		^systemException messageText: aString 
+	];
+	
+	protocol: #accessing method:
+	
+	[## systemException
+	
+		^systemException
+	];
+	
+	protocol: #accessing method:
+	
+	[## systemException: aSystemException
+	
+		systemException := aSystemException
+	];
+	
+	protocol: #querying method:
+	
+	[## stackTrace 
+	
+		^systemException stackTrace
+	];
+		
+	protocol: #accessing method:
+	
+	[## tag 
+	
+		^systemException tag
+	];
+	
+	protocol: #accessing method:
+	
+	[## tag: aValue 
+	
+		^systemException tag: aValue 
+	];
+		
+	protocol: #handling method:
+	
+	[## defaultAction 
+	
+		^systemException defaultAction
+	];
+		
+	protocol: #handling method:
+	
+	[## pass 
+	
+		^systemException pass
+	];
+	
+	protocol: #querying method:
+	
+	[## satisfiesHandlingConstraint: anExceptionSelector
+	
+		^self isKindOf: anExceptionSelector
+	];
+		
+	protocol: #signalling method:
+	
+	[## signal
+	
+		^systemException signal
+	];
+		
+	protocol: #signalling method:
+	
+	[## signal: messageText
+	
+		^systemException signal: messageText
+	];
+	
+	protocol: #testing method:
+	
+	[## isResumable 
+	
+		^systemException isResumable
+	]

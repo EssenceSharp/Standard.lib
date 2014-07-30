@@ -1,0 +1,29 @@
+	"Instance methods of System.IO.TextReader"
+	
+	protocol: #reading method:
+	
+	[## readInto: buffer at: index for: charCount
+	
+		<invokeMethod: Read>
+	];
+
+	protocol: #'reading-asynchronous' method:
+	
+	[## readAsyncInto: buffer at: index for: charCount
+	
+		<invokeMethod: ReadAsync>
+	];
+	
+	protocol: #reading method:
+	
+	[## readBlockInto: buffer at: index for: charCount
+	
+		<invokeMethod: ReadBlock>
+	];
+
+	protocol: #'reading-asynchronous' method:
+	
+	[## readBlockAsyncInto: buffer at: index for: charCount
+	
+		<invokeMethod: ReadBlockAsync>
+	]

@@ -1,0 +1,16 @@
+	"Instance methods of System.IO.FileSystemWatcher"
+	
+	protocol: #x method:
+	
+	[## waitForChange: changeType
+	
+		<invokeMethod: WaitForChanged>
+	];
+	
+	protocol: #x method:
+	
+	[## waitForChange: changeType withMillisecondTimeout: milliseconds
+	
+		<invokeMethod: WaitForChanged>
+	]
+	

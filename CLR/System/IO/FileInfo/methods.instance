@@ -1,0 +1,85 @@
+	"Instance methods of System.IO.FileInfo"
+	
+	protocol: #opening method:
+	
+	[## open: fileMode
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #opening method:
+	
+	[## open: fileMode access: fileAccess
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #opening method:
+	
+	[## open: fileMode access: fileAccess share: fileShare
+	
+		<invokeMethod: Open>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyTo: destinationPathnameString
+	
+		<invokeMethod: CopyTo>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyTo: destinationPathnameString overwrite: aBoolean
+	
+		<invokeMethod: CopyTo>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyTo: targetPathnameString backingUpTo: backupPathnameString
+	
+		<invokeMethod: Replace>
+	];
+	
+	protocol: #operations method:
+	
+	[## copyTo: targetPathnameString backingUpTo: backupPathnameString ignoreMetadataErrors: ignoreMetadataErrors
+	
+		<invokeMethod: Replace>
+	];
+	
+	protocol: #operations method:
+	
+	[## moveTo: destinationPathnameString
+	
+		<invokeMethod: MoveTo>
+	];
+	
+	protocol: #operations method:
+	
+	[## setAccessControlTo: directorySecurity
+	
+		<invokeMethod: SetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControlType: accessControlSectionType
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #testing method: 
+	
+	[## isDirectory
+	
+		^false
+	]

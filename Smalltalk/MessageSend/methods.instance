@@ -1,12 +1,14 @@
 	"Instance methods of MessageSend"
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## addAsHandlerOf: anAnnouncementClass from: anAnnouncer
 	
 		^anAnnouncer when: anAnnouncementClass do: self
 	];
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## asAnnouncementSubscription
 		^MessageSendAnnouncementSubscription new 
 			subscriber: self receiver;
@@ -14,12 +16,14 @@
 	];
 	
 	protocol: #'announcement-subscriptions' method:
+	
 	[## removeAsHandlerOf: anAnnouncementClass from: anAnnouncer
 	
 		^anAnnouncer when: anAnnouncementClass doNotDo: self
 	];
 	
 	protocol: #comparing method: 
+	
 	[## = comparand
 	
 		self == comparand ifTrue: [^true].

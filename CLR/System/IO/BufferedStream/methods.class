@@ -1,0 +1,16 @@
+	"Class methods of System.IO.BufferedStream"
+	
+	protocol: #'instance creaion' method:
+	
+	[## on: aStream
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creaion' method:
+	
+	[## on: aStream size: bufferSize
+	
+		<invokeMethod: new>
+	]
+	

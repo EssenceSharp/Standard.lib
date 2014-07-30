@@ -10,9 +10,9 @@
 
 	protocol: #'system primitives' method:
 
-	[## homeMethod
+	[## rootContext
 
-		<primitive: homeMethod domain: Method>
+		<primitive: rootContext domain: Method>
 	];
 
 	protocol: #'system primitives' method:

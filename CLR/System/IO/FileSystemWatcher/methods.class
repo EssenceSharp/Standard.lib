@@ -1,0 +1,15 @@
+	"Class methods of System.IO.FileWatcher"
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathnameString
+		
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## pathname: pathnameString pattern: filter
+		
+		<invokeMethod: new>
+	]

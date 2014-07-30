@@ -1,0 +1,8 @@
+	"Instance methods of System.IO.StringWriter"
+	
+	protocol: #accessing method:
+	
+	[## stringBuilder
+	
+		<invokeMethod: GetStringBuilder>
+	]

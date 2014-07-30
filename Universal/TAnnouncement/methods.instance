@@ -1,1 +1,1 @@
-	"Instance methods for TAnnouncement"	protocol: #accessing method:	[## eventName			^self class eventName	];	protocol: #converting method:	[## asAnnouncement			^ self	]
+	"Instance methods for TAnnouncement"	protocol: #accessing method:		[## eventName			^self class eventName	];	protocol: #converting method:		[## asAnnouncement				^ self	]

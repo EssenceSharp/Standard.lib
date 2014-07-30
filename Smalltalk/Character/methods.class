@@ -1,6 +1,42 @@
 	"Class methods of Character"
 	
+	protocol: #'instance accessing' method:
+	
+	[## codePoint: anInteger
+	
+		^anInteger asCharacter
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## cr
+	
+		^CR
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## lf
+	
+		^LF
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## space
+	
+		^$ 
+	];
+	
+	protocol: #'instance accessing' method:
+	
+	[## tab
+	
+		^Tab
+	];
+	
 	protocol: #querying method:
+	
 	[## unicodeCategory: aCharacter
 		<invokeMethod: #GetUnicodeCategory>
 	]

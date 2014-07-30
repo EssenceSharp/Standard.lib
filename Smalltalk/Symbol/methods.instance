@@ -1,0 +1,145 @@
+	"Instance methods of Symbol"
+	
+	protocol: #converting method:
+	
+	[## asHostSystemString
+	
+		<getProperty: #PrimitiveValue>
+	];
+	
+	protocol: #converting method:
+	
+	[## asString
+	
+		<invokeMethod: #asESString>
+	];
+	
+	protocol: #converting method:
+	
+	[## asSymbol
+	
+		^self
+	];
+	
+	protocol: #evaluating method:
+	
+	[## cull: arg1
+	
+		^self value: arg1
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2
+	
+		^self numArgs = 1
+			ifTrue: [self value: arg1 value: arg2]
+			ifFalse: [self cull: arg1]
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2 cull: arg3
+	
+		^self numArgs = 2
+			ifTrue: [self value: arg1 value: arg2 value: arg3]
+			ifFalse: [self cull: arg1 cull: arg2]
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2 cull: arg3 cull: arg4
+	
+		^self numArgs = 3
+			ifTrue: [self value: arg1 value: arg2 value: arg3 value: arg4]
+			ifFalse: [self cull: arg1 cull: arg2 cull: arg3]
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5
+	
+		^self numArgs = 4
+			ifTrue: [self value: arg1 value: arg2 value: arg3 value: arg4 value: arg5]
+			ifFalse: [self cull: arg1 cull: arg2 cull: arg3 cull: arg4]
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5 cull: arg6
+	
+		^self numArgs = 5
+			ifTrue: [self value: arg1 value: arg2 value: arg3 value: arg4 value: arg5 value: arg6]
+			ifFalse: [self cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5]
+	];
+			
+	protocol: #evaluating method:
+	
+	[## cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5 cull: arg6 cull: arg7
+	
+		^self numArgs = 6
+			ifTrue: [self value: arg1 value: arg2 value: arg3 value: arg4 value: arg5 value: arg6 value: arg7]
+			ifFalse: [self cull: arg1 cull: arg2 cull: arg3 cull: arg4 cull: arg5 cull: arg6]
+	];
+	
+	protocol: #evaluating method:
+	
+	[## value: receiver
+	
+		^receiver perform: self
+	];
+	
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1
+	
+		^receiver perform: self with: arg1
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2
+	
+		^receiver perform: self with: arg1 with: arg2
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2 value: arg3
+	
+		^receiver perform: self with: arg1 with: arg2 with: arg3
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2 value: arg3 value: arg4
+	
+		^receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2 value: arg3 value: arg4 value: arg5
+	
+		^receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2 value: arg3 value: arg4 value: arg5 value: arg6
+	
+		^receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5 with: arg6
+	];
+
+	protocol: #evaluating method:
+	
+	[## value: receiver value: arg1 value: arg2 value: arg3 value: arg4 value: arg5 value: arg6 value: arg7
+	
+		^receiver perform: self with: arg1 with: arg2 with: arg3 with: arg4 with: arg5 with: arg6 with: arg7
+	];
+	
+	protocol: #testing method:
+	
+	[## isSymbol
+		^true
+	]

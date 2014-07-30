@@ -1,0 +1,8 @@
+	"Instance methods of System.Byte[]"
+	
+	protocol: #converting method:
+	
+	[## asArray
+	
+		^Smalltalk.ByteArray value: self
+	]

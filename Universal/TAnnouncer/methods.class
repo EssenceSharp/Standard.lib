@@ -1,6 +1,7 @@
 	"Class methods for TAnnouncer"
 
 	protocol: #'instance creation' method:
+	
 	[## new
 	
 		^self basicNew initialize

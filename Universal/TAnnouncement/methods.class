@@ -1,17 +1,22 @@
 	"Class methods for TAnnouncement"
 
 	protocol: #accessing method:
+	
 	[## eventName
 	
 		^self name
 	];
 	
 	protocol: #converting method:
+	
 	[## asAnnouncement
+	
 		^ self new
 	];
 
 	protocol: #testing method:
+	
 	[## handles: anAnnouncement
+	
 		^ anAnnouncement isKindOf: self 
 	]

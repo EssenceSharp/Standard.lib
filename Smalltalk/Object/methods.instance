@@ -1,0 +1,111 @@
+	"Instance methods for Object"
+			
+	protocol: #accessing method: 
+	
+	[## class
+
+		"Answer the class of the receiver"
+		
+		<primitive: class domain: Object>
+	];
+	
+	protocol: #accessing method:
+	
+	[## value
+		^self
+	];
+	
+	protocol: #accessing method: 
+	
+	[## yourself 
+
+		"Answer the receiver"
+		
+		^self
+	];
+	
+	protocol: #'control flow' method:
+	
+	[## ifNil: nilAction
+
+		"If the receiver is nil, answer the result of evaluating <nilAction>. 
+		Otherwise, answer the receiver."
+		
+		^self
+	];
+			
+	protocol: #'control flow' method: 
+	
+	[## ifNotNil: notNilAction
+
+		"If the receiver is not nil, answer the result of evaluating <notNilAction>. 
+		Otherwise, answer nil."
+		
+		<primitive: #ifNotNil: domain: Object>
+	];
+
+	protocol: #'control flow' method: 
+	
+	[## ifNil: nilAction ifNotNil: notNilAction
+
+		"If the receiver is nil, answer the result of evaluating <nilAction>. 
+		Otherwise, answer the result of evaluating <notNilAction>."
+		
+		<primitive: #ifNil:ifNotNil: domain: Object>
+	];
+
+	protocol: #copying method:
+	
+	[## copy
+		| copy |
+		copy := self shallowCopy.
+		copy postCopy.
+		^copy
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## initialize
+
+		"Initialize the receiver's state"
+
+		^self
+	];
+	
+	protocol: #'object creation' method: 
+	
+	[## -> aValue
+
+		"Answer a new Association whose key is the receiver and whose value is <aValue>"
+		
+		<primitive: #-> domain: Object>
+	];
+
+	protocol: #private method:
+	
+	[## postCopy
+		"By default, do nothing"
+		
+	];
+			
+	protocol: #testing method:
+	
+	[## isNil
+
+		"Answer whether the receiver is nil"
+		
+		^false
+	];
+			
+	protocol: #testing method:
+	
+	[## notNil
+
+		"Answer whether the receiver is not nil"
+		
+		^true
+	]
+
+
+
+		

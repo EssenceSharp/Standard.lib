@@ -1,0 +1,235 @@
+	"Class methods of System.IO.Directory"
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString
+	
+		<invokeMethod: CreateDirectory>
+	];
+	
+	protocol: #creating method:
+	
+	[## create: pathnameString withSecurity: directorySecurity
+	
+		<invokeMethod: CreateDirectory>
+	];
+	
+	protocol: #deleting method:
+	
+	[## delete: pathnameString
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #deleting method:
+	
+	[## delete: pathnameString recurse: aBoolean
+	
+		<invokeMethod: Delete>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl: pathnameString
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## accessControl: pathnameString type: accessControlSectionType
+	
+		<invokeMethod: GetAccessControl>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectoriesIn: pathnameString 
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectoriesIn: pathnameString matching: patternString
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDirectoriesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFilesIn: pathnameString 
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFilesIn: pathnameString matching: patternString
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFilesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntriesIn: pathnameString 
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntriesIn: pathnameString matching: patternString
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## allFileSystemEntriesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: EnumerateFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectoryPathnamesIn: pathnameString 
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectoryPathnamesIn: pathnameString matching: patternString
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllDirectoryPathnamesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetDirectories>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFilePathnamesIn: pathnameString 
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFilePathnamesIn: pathnameString matching: patternString
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFilePathnamesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetFiles>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntriesIn: pathnameString 
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntriesIn: pathnameString matching: patternString
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #querying method:
+	
+	[## arrayOfAllFileSystemEntriesIn: pathnameString matching: patternString searchOption: searchOption
+	
+		<invokeMethod: GetFileSystemEntries>
+	];
+	
+	protocol: #operations method:
+	
+	[## moveFrom: sourcePathnameString to: destinationPathnameString
+	
+		<invokeMethod: Move>
+	];
+	
+	protocol: #operations method:
+	
+	[## setAccessControl: pathnameString to: directorySecurity
+	
+		<invokeMethod: SetAccessControl>
+	];
+	
+	protocol: #operations method:
+	
+	[## setCreationTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetCreationTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setCreationTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetCreationTimeUtc>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastAccessTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastAccessTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastAccessTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastAccessTimeUtc>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastWriteTime: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastWriteTime>
+	];
+	
+	protocol: #operations method:
+	
+	[## setLastWriteTimeUT: pathnameString to: aDateTime
+	
+		<invokeMethod: SetLastWriteTimeUtc>
+	]
+
+
+
+
+
+
+
+
+
+

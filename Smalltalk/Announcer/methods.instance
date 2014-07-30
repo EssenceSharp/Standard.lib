@@ -1,1 +1,1 @@
-	"Instance methods for Announcer"	protocol: #'accessing' method:	[## subscriptions				^registry	];	protocol: #'accessing' method:	[## subscriptions: anAnnouncementSubscriptionRegistry				registry := anAnnouncementSubscriptionRegistry 	]
+	"Instance methods for Announcer"	protocol: #'accessing' method:		[## subscriptions				^registry	];	protocol: #'accessing' method:		[## subscriptions: anAnnouncementSubscriptionRegistry				registry := anAnnouncementSubscriptionRegistry 	]

@@ -1,0 +1,4 @@
+
+	self
+		accessPrivilege: #Public;
+		value: 'Essence# | Acts | Alpha (Build 16)'

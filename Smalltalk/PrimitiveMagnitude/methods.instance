@@ -1,0 +1,10 @@
+	"Instance methods of PrimitiveMagnitude"
+	
+	protocol: #querying method:
+	
+	[## between: minValue and: maxValue
+	
+		"Answer whether the receiver is greater than or equal to <minValue> and also less than or equal to <maxValue>"
+		
+		^(self < minValue or: [maxValue < self]) not
+	]

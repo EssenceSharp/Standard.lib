@@ -1,3 +1,4 @@
 
-	accessPrivilege: #Public;
-	value: 'System.SByte, mscorlib' asHostSystemType
+	self
+		accessPrivilege: #Public;
+		value: 'System.SByte, mscorlib' asHostSystemType

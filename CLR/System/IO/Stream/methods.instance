@@ -1,0 +1,93 @@
+	"Instance methods of class System.IO.Stream"
+	
+	protocol: #positioning method:
+	
+	[## seek: offset relativeTo: seekOrigin
+	
+		<invokeMethod: Seek>
+	];
+	
+	protocol: #reading method:
+	
+	[## readInto: buffer at: index for: byteCount
+	
+		<invokeMethod: Read>
+	];
+	
+	protocol: #'reading-asynchronous' method:
+	
+	[## readAsyncInto: buffer at: index for: byteCount
+	
+		<invokeMethod: ReadAsync>
+	];
+	
+	protocol: #'reading-asynchronous' method:
+	
+	[## readAsyncInto: buffer at: index for: byteCount withCancellationToken: cancellationToken
+	
+		<invokeMethod: ReadAsync>
+	];
+	
+	protocol: #'reading-asynchronous' method:
+	
+	[## beginReadingInto: buffer at: index for: byteCount asyncCallback: asyncCallback context: context
+	
+		<invokeMethod: BeginRead>
+	];
+	
+	protocol: #utilities method:
+	
+	[## copyTo: targetStream bufferSize: aSize
+	
+		<invokeMethod: CopyTo>
+	];
+
+	protocol: #'utilities-asynchronous' method:
+	
+	[## copyToAsync: targetStream bufferSize: aSize
+	
+		<invokeMethod: CopyToAsync>
+	];
+
+	protocol: #'utilities-asynchronous' method:
+	
+	[## copyToAsync: targetStream bufferSize: aSize withCancellationToken: cancellationToken
+	
+		<invokeMethod: CopyToAsync>
+	];
+
+	protocol: #'utilities-asynchronous' method:
+	
+	[## flushAsyncWithCancellationToken: cancellationToken
+	
+		<invokeMethod: FlushAsync>
+	];
+	
+	protocol: #writing method:
+	
+	[## writeFrom: buffer at: index for: byteCount
+	
+		<invokeMethod: Write>
+	];
+	
+	protocol: #'writing-asynchronous' method:
+	
+	[## writeAsyncFrom: buffer at: index for: byteCount
+	
+		<invokeMethod: WriteAsync>
+	];
+	
+	protocol: #'writing-asynchronous' method:
+	
+	[## writeAsyncFrom: buffer at: index for: byteCount withCancellationToken: cancellationToken
+	
+		<invokeMethod: WriteAsync>
+	];
+	
+	protocol: #'writing-asynchronous' method:
+	
+	[## beginWritingFrom: buffer at: index for: byteCount asyncCallback: asyncCallback context: context
+	
+		<invokeMethod: BeginWrite>
+	]
+

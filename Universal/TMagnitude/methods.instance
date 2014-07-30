@@ -1,0 +1,49 @@
+	"Instance methods of TMagnitude"
+	
+	protocol: #comparing method:
+	
+	[## > comparand
+	
+		^comparand < self
+	];
+			
+	protocol: #comparing method:
+	
+	[## < comparand
+	
+		"Most subclasses will implement #< as a primitive, so this is the fallback implementation."
+			
+		^(self compareTo: comparand) < 0
+	];
+				
+	protocol: #comparing method:
+	
+	[## = comparand
+	
+		"Most subclasses will implement #= as a primitive, so this is the fallback implementation."
+	
+		^(self compareTo: comparand) = 0
+	];
+		
+	protocol: #comparing method:
+	
+	[## <= comparand
+	
+		^(self > comparand) not
+	];
+	
+	protocol: #comparing method:
+	
+	[## >= comparand
+	
+		^(self < comparand) not
+	];
+				
+	protocol: #querying method:
+	
+	[## between: minValue and: maxValue
+	
+		"Answer whether the receiver is greater than or equal to <minValue> and also less than or equal to <maxValue>"
+		
+		^(self < minValue or: [maxValue < self]) not
+	]

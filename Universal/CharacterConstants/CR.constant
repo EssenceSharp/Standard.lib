@@ -1,0 +1,1 @@
+	self value: 13 asCharacter

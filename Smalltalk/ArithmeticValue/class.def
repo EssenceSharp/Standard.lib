@@ -1,0 +1,4 @@
+	"Configuration of the instance architecture, initial state and module memberships of ArithmeticValue." 
+	
+	superclass: PrimitiveMagnitude;
+	instanceArchitecture: #Abstract

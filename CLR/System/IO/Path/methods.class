@@ -1,0 +1,78 @@
+	"Class methods of System.IO.Path"
+	
+	protocol: #extensions method:
+	
+	[## changeExtensionOf: pathname to: extension
+	
+		<invokeMethod: ChangeExtension>
+	];
+	
+	protocol: #extensions method:
+	
+	[## extensionOf: pathname
+	
+		<invokeMethod: GetExtension>
+	];
+	
+	protocol: #'path composition' method:
+	
+	[## combine: prefix with: suffix
+	
+		<invokeMethod: Combine>
+	];
+	
+	protocol: #'path composition' method:
+	
+	[## combine: prefix with: suffix
+	
+		<invokeMethod: Combine>
+	];
+	
+	protocol: #'path composition' method:
+	
+	[## combine: prefix with: infix with: suffix
+	
+		<invokeMethod: Combine>
+	];
+	
+	protocol: #'path composition' method:
+	
+	[## combine: prefix with: leftInfix with: rightInfix with: suffix
+	
+		<invokeMethod: Combine>
+	];
+	
+	protocol: #'path composition' method:
+	
+	[## combineAll: pathElementArray
+	
+		<invokeMethod: Combine>
+	];
+	
+	protocol: #'path decomposition' method:
+	
+	[## directoryPrefixOf: pathname
+	
+		<invokeMethod: GetDirectoryName>
+	];
+	
+	protocol: #'path decomposition' method:
+	
+	[## suffixOf: pathname
+	
+		<invokeMethod: GetFileName>
+	];
+	
+	protocol: #'path decomposition' method:
+	
+	[## suffixWithoutExtensionOf: pathname
+	
+		<invokeMethod: GetFileNameWithoutExtension>
+	];
+	
+	protocol: #'path decomposition' method:
+	
+	[## absolutePathOf: pathname
+	
+		<invokeMethod: GetFullPath>
+	]

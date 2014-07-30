@@ -1,0 +1,7 @@
+	"Instance methods of System.Decimal[]"
+	
+	protocol: #converting method:
+	
+	[## asArray
+		^Smalltalk.QuadArray value: self
+	]

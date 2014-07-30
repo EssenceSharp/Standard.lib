@@ -1,0 +1,219 @@
+	"Instance methods of System.Collections.Generic.List`1"
+	
+	protocol: #adding method:
+	
+	[## add: anElement
+	
+		<invokeMethod: #Add>
+	];
+	
+	protocol: #adding method:
+	
+	[## addLast: anElement
+	
+		<invokeMethod: #Add>
+	];
+	
+	protocol: #adding method:
+	
+	[## addAll: aCollectionOfElements
+	
+		<invokeMethod: #AddRange>
+	];
+	
+	protocol: #adding method:
+	
+	[## add: anElement beforeIndex: index
+	
+		self primAdd: anElement beforeIndex: index - 1
+	];
+	
+	protocol: #adding method:
+	
+	[## addAll: aCollectionOfElements beforeIndex: index
+	
+		self primiAddAll: aCollectionOfElements beforeIndex: index - 1
+	];
+
+	protocol: #converting method:
+	
+	[## asImmutable
+	
+		<invokeMethod: #AsReadOnly>
+	];
+
+	protocol: #copying method:
+	
+	[## copyFrom: startIndex for: length
+	
+		^self primCopyFrom: startIndex - 1 for: length
+	];
+	
+	protocol: #copying method:
+	
+	[## copyFrom: startIndex to: endIndex
+	
+		^self primCopyFrom: startIndex - 1 for: endIndex - startIndex + 1
+	];
+	
+	protocol: #moving method:
+	
+	[## moveAllInto: anArray
+	
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #moving method:
+	
+	[## moveAllInto: anArray startingAt: targetIndex
+	
+		^self primtMoveAllInto: anArray startingAt: targetIndex - 1
+	];
+	
+	protocol: #moving method:
+	
+	[## moveAllStartingFrom: sourceBeginIndex into: anArray startingAt: targetIndex for: length
+	
+		^self primMoveAllStartingFrom: sourceBeginIndex - 1 into: anArray startingAt: targetIndex - 1 for: length
+	];
+	
+	protocol: #primitives method:
+	
+	[## primiAdd: anElement beforeIndex: index
+		"Index is zero-based"
+		
+		<invokeMethod: #Insert>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primiAddAll: aCollectionOfElements beforeIndex: index
+		"Index is zero-based"
+		
+		<invokeMethod: #InsertRange>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primCopyFrom: startIndex for: length
+		"Index is zero-based"
+		
+		<invokeMethod: #GetRange>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primIndexOf: anElement
+		"Index is zero-based"
+		
+		<invokeMethod: #IndexOf>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primIndexOf: anElement from: startingIndex
+		"Index is zero-based"
+		
+		<invokeMethod: #IndexOf>
+	];
+	
+	protocol: #primitives method:
+	[## primIndexOf: anElement from: startingIndex for: length
+		"Index is zero-based"
+		<invokeMethod: #IndexOf>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primtMoveAllInto: anArray startingAt: targetIndex
+		"Index is zero-based"
+		
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primMoveAllStartingFrom: sourceBeginIndex into: anArray startingAt: targetIndex for: length
+		"Index is zero-based"
+		
+		<invokeMethod: #CopyTo>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primRemove: anElement
+		<invokeMethod: #Remove>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primRemoveAt: index
+		"Index is zero-based"
+		
+		<invokeMethod: #RemoveAt>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primRemoveFrom: startindex for: length
+		"Index is zero-based"
+		
+		<invokeMethod: #RemoveRange>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primReverseFrom: startIndex for: length
+		"Index is zero-based"
+		
+		<invokeMethod: #Reverse>
+	];
+	
+	protocol: #querying method:
+	
+	[## includes: anElement
+	
+		<invokeMethod: #Contains>
+	];
+	
+	protocol: #removing method:
+	
+	[## removeAt: index
+	
+		^self primRemoveAt: index - 1
+	];
+	
+	protocol: #removing method:
+	
+	[## removeAtIndex: index
+	
+		^self primRemoveAt: index - 1
+	];
+	
+	protocol: #removing method:
+	
+	[## removeAll
+	
+		<invokeMethod: #Clear>
+	];
+	
+	protocol: #removing method:
+	
+	[## removeFrom: startIndex to: endIndex
+	
+		^self primRemoveFrom: startIndex - 1 for: (endIndex - startIndex) + 1
+	];
+	
+	protocol: #reversing method:
+	
+	[## reverse
+	
+		<invokeMethod: #Reverse>
+	];
+	
+	protocol: #reversing method:
+	
+	[## reverseFrom: startIndex to: endIndex
+	
+		self primReverseFrom: startIndex - 1 for: (endIndex - startIndex) + 1
+	]

@@ -1,0 +1,15 @@
+	"Class methods of System.IO.DriveInfo"
+	
+	protocol: #'instance creation' method:
+	
+	[## for: driveName
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #querying method:
+	
+	[## allDrives
+	
+		<invokeMethod: GetDrives>
+	]

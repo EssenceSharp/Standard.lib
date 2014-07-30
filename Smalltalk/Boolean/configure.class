@@ -1,4 +1,0 @@
-	"Initialization of the instance architecture, initial state and module memberships of Boolean." 
-	
-	superclass: PrimitiveValue;
-	instanceArchitecture: #Abstract
