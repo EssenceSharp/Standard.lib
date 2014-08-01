@@ -1,3 +1,4 @@
 	"Configuration of System.Threading.Tasks.TaskExtensions"
 	
+	assemblyName: #System.Core;
 	instanceArchitecture: #HostSystemObject

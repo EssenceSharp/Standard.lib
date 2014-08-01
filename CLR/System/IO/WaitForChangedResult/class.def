@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.WaitForChangedResult"
 	
+	assemblyName: #System;
 	instanceArchitecture: #HostSystemObject

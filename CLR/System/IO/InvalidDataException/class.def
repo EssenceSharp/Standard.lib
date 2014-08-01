@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.InvalidDataException"
 	
+	assemblyName: #System;
 	instanceArchitecture: #HostSystemObject

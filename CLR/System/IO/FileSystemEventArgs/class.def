@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.FileSystemEventArgs"
 	
+	assemblyName: #System;
 	instanceArchitecture: #HostSystemObject

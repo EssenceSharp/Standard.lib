@@ -1,4 +1,0 @@
-	"Configuration of System.Threading.Semaphore (a deprecated class)"
-	
-	hostSystemName: #Semaphore;
-	instanceArchitecture: #HostSystemObject

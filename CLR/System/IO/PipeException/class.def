@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.PipeException"
 	
+	assemblyName: #System.ServiceModel;
 	instanceArchitecture: #HostSystemObject

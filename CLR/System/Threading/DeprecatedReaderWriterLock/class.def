@@ -1,4 +1,0 @@
-	"Configuration of System.Threading.ReaderWriterLock (a deprecated class)"
-	
-	hostSystemName: #ReaderWriterLock;
-	instanceArchitecture: #HostSystemObject

@@ -1,4 +1,4 @@
-	"Class methods of System.Threading.Tasks.ConcurrentExclusiveScheduledPair"
+	"Class methods of System.Threading.Tasks.ConcurrentExclusiveSchedulerPair"
 	
 	protocol: #'instance creation' method:
 	

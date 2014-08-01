@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.RenamedEventArgs"
 	
+	assemblyName: #System;
 	instanceArchitecture: #HostSystemObject

@@ -3,4 +3,4 @@
 	superclass: System.Collection;
 	hostSystemNamespace: #System.Collections.Generic;
 	hostSystemName: 'HashSet`1';
-	assemblyName: 'System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+	assemblyName: #System.Core

@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.ErrorEventArgs"
 	
+	assemblyName: #System;
 	instanceArchitecture: #HostSystemObject

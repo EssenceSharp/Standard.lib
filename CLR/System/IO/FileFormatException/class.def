@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.FileFormatException"
 	
+	assemblyName: #Windows.Base;
 	instanceArchitecture: #HostSystemObject
