@@ -163,6 +163,28 @@
 			do: [:ex | false]
 	];
 	
+	protocol: #converting method:
+	
+	[## asString 
+		"Answer a String containing the same characters as the receiver, in the same order.
+		Fail if any of the elements of the receiver are not characters."
+		
+		| size string |
+		
+		size := self size.
+		string := String new: size.
+		1 to: size do: [:index | string at: index put: (self at: index)].
+		^string
+		
+	];
+	
+	protocol: #converting method:
+	
+	[## asSymbol
+	
+		^self asString asSymbol
+	];
+	
 	protocol: #copying method:
 	
 	[## copyReplacing: map

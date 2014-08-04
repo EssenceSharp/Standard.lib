@@ -1,0 +1,120 @@
+	"Instance methods of TGettableStream"
+
+	protocol: #accessing method:
+	
+	[## species
+	
+		^self class
+	];
+	
+	protocol: #enumerating method:
+	
+	[## do: enumerator1
+	
+		[self atEnd] whileFalse: [enumerator1 value: self next]
+	];
+
+	protocol: #enumerating method:
+	
+	[## projectionClass
+	
+		^OrderedCollection
+	];
+	
+	protocol: #operations method:
+	
+	[## next
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method: 
+	
+	[## next: amount
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method:
+	
+	[## nextMatchFor: anObject
+	
+		^self next = anObject
+	];
+	
+	protocol: #operations method:
+	
+	[## peek
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method:
+	
+	[## peekFor: anObject
+	
+		^self = anObject
+	];
+	
+	protocol: #operations method:
+	
+	[## skip: positionDelta
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method:
+	
+	[## skipTo: anObject
+	
+		[self atEnd] whileFalse: [self next = anObject ifTrue: [^true]].
+		^false
+	];
+	
+	protocol: #operations method:
+	
+	[## upTo: anObject
+	
+		| list |
+		list := self selectionClass new.
+		[self atEnd] whileFalse: [| element | (element := self next) = anObject ifTrue: [^list] ifFalse: [list add: element]].
+		^self canonicalSequenceFor: list
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## nextLine
+	
+		| line ch |
+		
+		self atEnd ifTrue: [^nil].
+		
+		line := self selectionClass new: 80.
+		
+		[ch := self next.
+		ch = CR
+			ifTrue: 
+				[ch := self peek.
+				ch = LF ifTrue: [self next].
+				^line asString]
+			ifFalse: 
+				[ch = LF 
+					ifTrue: [^line asString]
+					ifFalse: [line add: ch]].
+		self atEnd] whileFalse.
+		^line asString
+	];
+	
+	protocol: #private method:
+	
+	[## canonicalSequenceFor: aCollection
+	
+		^aCollection
+	];
+	
+	protocol: #testing method:
+	
+	[## atEnd
+	
+		^self subclassResponsibility
+	]	

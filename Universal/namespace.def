@@ -16,4 +16,5 @@
 	recursively throughout the namespace import graph, but excluding any namespaces not imported as public.  
 	Cycles are handled correctly--they do not cause an error or an infinite loop."
 	
+	import: #Smalltalk withAccess: #InHierarchy;
 	import: #CLR.System.Type withAccess: #Public

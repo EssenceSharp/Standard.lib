@@ -1,0 +1,48 @@
+	"Instance methods of TReadStream"
+	
+	protocol: #operations method:
+	
+	[## next
+	
+		| position contents next |
+		
+		position := self position.
+		contents := self basicContents.
+		position >= contents size ifTrue: [^nil].
+		position := position + 1.
+		next := contents at: position.
+		self position: position.
+		^next
+	];
+	
+	protocol: #operations method: 
+	
+	[## next: amount
+	
+		| contents position size array index |
+		
+		amount negative ifTrue: [InvalidArgumentException signal: 'The argument to ', self class name, '>>next: must not be negative'].
+		
+		contents := self basicContents.
+		position := self position.
+		size := contents size - position min: amount.
+		array := Array new: size.
+		index := 0.
+		[index < size] whileTrue: [array at: (index := index + 1) put: (contents at: (position := position + 1))].
+		self position: position.
+		^array
+	];
+	
+	protocol: #operations method:
+	
+	[## peek
+	
+		| position contents next |
+		
+		position := self position.
+		contents := self basicContents.
+		position >= contents size ifTrue: [^nil].
+		position := position + 1.
+		^contents at: position
+	]
+

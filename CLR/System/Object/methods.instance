@@ -11,6 +11,8 @@
 	
 	[## asMutable
 	
+		<invokeMethod: #AsMutable>
+		
 		^self
 	];
 	
@@ -25,13 +27,16 @@
 	
 	[## reportToConsole
 	
-			Console writeLine: 'HostSystemObject:'.
-			Console write: 9 asCharacter.
-			Console write: 'type = '.
-			Console writeLine: self hostSystemType assemblyQualifiedName.
-			Console write: 9 asCharacter.
-			Console write: 'value = '.
-			Console writeLine: self asHostSystemString
+		<invokeMethod: #ReportToConsole>
+		
+		Transcript
+			showCr: 'HostSystemObject:';
+			tab;
+			show: 'type = ';
+			showCr: self hostSystemType assemblyQualifiedName;
+			tab;
+			show: 'value = ';
+			showCr: self asHostSystemString
 	];
 
 	protocol: #'events-subscribing' method:
@@ -46,4 +51,22 @@
 	[## when: anAnnouncementClass doNotDo: anAction
 	
 		^self onEvent: anAnnouncementClass eventName doNotDo: anAction
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## initialize
+		
+		<invokeMethod: #Initialize>
+		
+		^self
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## release
+		
+		<invokeMethod: #Release>
+		
+		^self
 	]

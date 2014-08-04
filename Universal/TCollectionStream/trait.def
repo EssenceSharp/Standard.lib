@@ -1,0 +1,4 @@
+	"Configuration of TCollectionStream"
+	
+	uses: TSequencedStream
+	

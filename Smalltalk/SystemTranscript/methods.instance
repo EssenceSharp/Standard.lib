@@ -1,0 +1,58 @@
+	"Instance methods of SystemTranscript"
+	
+	protocol: #accessing method:
+	
+	[## delegate 
+	
+		^delegate
+	];
+	
+	protocol: #accessing method:
+	
+	[## delegate: aPuttableStream
+	
+		delegate := aPuttableStream
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPut: aCharacter
+	
+		delegate nextPut: aCharacter
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPutAll: aCollection
+	
+		delegate nextPutAll: aCollection
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## cr
+	
+		delegate cr
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## crShow: aString
+	
+		delegate cr; nextPutAll: aString
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## show: aString
+	
+		delegate nextPutAll: aString
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## showCr: aString
+	
+		delegate nextPutAll: aString; cr
+	]
+	

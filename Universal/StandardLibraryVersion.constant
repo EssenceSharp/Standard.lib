@@ -1,4 +1,4 @@
 
-	self
-		accessPrivilege: #Public;
-		value: 'Essence# | Acts | Alpha (Build 16)'
+	self accessPrivilege: #Public.
+		
+	'Essence# | 0.0.0.20 | Nile | Alpha (Build 20)'

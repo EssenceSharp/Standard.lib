@@ -1,1 +1,4 @@
-	self value: 9 asCharacter
+
+	self accessPrivilege: #Public.
+	
+	9 asCharacter

@@ -1,4 +1,5 @@
 	"Initialization of the instance architecture, initial state and module memberships of Collection." 
 
 	superclass: Object;
-	instanceArchitecture: #Abstract
+	instanceArchitecture: #Abstract;
+	uses: TEnumerable

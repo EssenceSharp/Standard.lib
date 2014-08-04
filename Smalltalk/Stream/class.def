@@ -1,0 +1,7 @@
+	"Configuration of class Stream"
+	
+	superclass: Object;
+	instanceArchitecture: #Abstract;
+	uses: TSequencedStream
+	
+	

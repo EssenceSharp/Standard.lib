@@ -32,7 +32,7 @@
 	
 	[## tab
 	
-		^Tab
+		^TAB
 	];
 	
 	protocol: #querying method:

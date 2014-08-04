@@ -1,4 +1,5 @@
 	"Configuration of the instance architecture, initial state and module memberships of CLR.System.Collection" 
 	
 	superclass: System.Object;
-	instanceArchitecture: #Abstract
+	instanceArchitecture: #Abstract;
+	uses: TEnumerable

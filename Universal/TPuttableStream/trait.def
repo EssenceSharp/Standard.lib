@@ -1,0 +1,5 @@
+	"Configuration of TPuttableStream"
+	
+	import: CharacterConstants withAccess: #InHierarchy
+
+	

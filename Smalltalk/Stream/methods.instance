@@ -1,0 +1,8 @@
+	"Instance methods of Stream"
+	
+	protocol: #operations method:
+	
+	[## close
+		
+		self release	
+	]

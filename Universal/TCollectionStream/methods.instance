@@ -1,0 +1,65 @@
+	"Instance methods of TCollectionStream"
+	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		^self basicContents
+	];
+
+	protocol: #enumerating method:
+	
+	[## projectionClass
+	
+		^self basicContents projectionClass
+	];
+
+	protocol: #enumerating method:
+	
+	[## selectionClass
+	
+		^self basicContents selectionClass
+	];
+
+	protocol: #'operational state' method:
+	
+	[## close
+		"By default, do nothing"
+		
+	];
+
+	protocol: #positioning method:
+	
+	[## setToEnd
+	
+		self position: self basicContents size
+	];
+	
+	protocol: #private method:
+	
+	[## basicContents
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #private method:
+	
+	[## increaseCapacityByAtLeast: amount
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #testing method:
+	
+	[## atEnd
+	
+		^self position >= self basicContents size
+	];
+	
+	protocol: #testing method:
+	
+	[## isEmpty
+	
+		^self basicContents isEmpty
+	]	
+

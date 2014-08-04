@@ -1,0 +1,66 @@
+	"Instance methods of TSequencedStream"
+
+	protocol: #accessing method:
+	
+	[## contents
+	
+		^self subclassResponsibility
+	];
+
+	protocol: #'operational state' method:
+	
+	[## close
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #positioning method:
+	
+	[## reset
+	
+		self position: 0
+	];
+
+	protocol: #positioning method:
+	
+	[## position
+	
+		^self subclassResponsibility
+	];
+
+	protocol: #positioning method:
+	
+	[## position: aStreamPosition
+	
+		^self subclassResponsibility
+	];
+
+	protocol: #positioning method:
+	
+	[## setToEnd
+	
+		self position: self contents size
+	];
+	
+	protocol: #private method:
+	
+	[## canonicalSequenceFor: aCollection
+	
+		^aCollection
+	];
+	
+	protocol: #operations method:
+	
+	[## skip: positionDelta
+	
+		self position: self position + positionDelta
+	];
+	
+	protocol: #testing method:
+	
+	[## isEmpty
+	
+		^self contents isEmpty
+	]
+	
+	

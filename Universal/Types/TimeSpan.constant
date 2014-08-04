@@ -1,4 +1,4 @@
 
-	self
-		accessPrivilege: #Public;
-		value: 'System.TimeSpan, mscorlib' asHostSystemType
+	self accessPrivilege: #Public.
+	
+	'System.TimeSpan, mscorlib' asHostSystemType

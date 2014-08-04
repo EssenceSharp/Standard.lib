@@ -12,6 +12,7 @@
 	protocol: #accessing method:
 	
 	[## value
+	
 		^self
 	];
 	
@@ -61,15 +62,6 @@
 		copy := self shallowCopy.
 		copy postCopy.
 		^copy
-	];
-	
-	protocol: #'initialize-release' method:
-	
-	[## initialize
-
-		"Initialize the receiver's state"
-
-		^self
 	];
 	
 	protocol: #'object creation' method: 

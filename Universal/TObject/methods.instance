@@ -1,4 +1,11 @@
 	"Instance methods of TObject"
+
+	protocol: #accessing method:
+	
+	[## species
+	
+		^self class
+	];
 		
 	protocol: #binding method:
 	
@@ -37,35 +44,35 @@
 	
 	[## show
 	
-		self printString show
+		Transcript show: self printString
 	];
 		
 	protocol: #debugging method: 
 	
 	[## crShow
 	
-		self printString crShow
+		Transcript crShow: self printString
 	];
 		
 	protocol: #debugging method: 
 	
 	[## showCr
 	
-		self printString showCr
+		Transcript showCr: self printString
 	];
 		
 	protocol: #debugging method: 
 	
 	[## showCr: aValue
 
-		aValue showCr
+		Transcript showCr: aValue printString
 	];
 
 	protocol: #debugging method: 
 	
 	[## reportToConsole
 
-		self showCr
+		Transcript show: self printString
 	];
 	
 	protocol: #'double dispatching' method:
@@ -84,9 +91,30 @@
 	
 	protocol: #'error handling' method:
 	
+	[## signalElementNotFoundError
+	
+		^ElementNotFoundError signal
+	];
+	
+	protocol: #'error handling' method:
+	
 	[## subclassResponsibility
 	
 		^SubclassResponsibilityException signal: 'A subclass failed to override an abstract method'
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## initialize
+		"By default, do nothing"
+		
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## release
+		"By default, do nothing"
+		
 	];
 	
 	protocol: #printing method:

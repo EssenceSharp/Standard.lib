@@ -1,0 +1,22 @@
+	"Instance methods of TWriteStream"
+	
+	protocol: #operations method:
+	
+	[## flush
+		"By default, do nothing"
+		
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPut: anObject
+	
+		| contents position |
+		
+		contents := self basicContents.
+		position := self position + 1.
+		position > contents size ifTrue: [contents := self increaseCapacityByAtLeast: 1].
+		contents at: position put: anObject.
+		self position: position
+	]
+	

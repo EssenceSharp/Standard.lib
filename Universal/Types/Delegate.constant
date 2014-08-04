@@ -1,4 +1,4 @@
 
-	self
-		accessPrivilege: #Public;
-		value: 'System.Delegate, mscorlib' asHostSystemType
+	self accessPrivilege: #Public.
+	
+	'System.Delegate, mscorlib' asHostSystemType

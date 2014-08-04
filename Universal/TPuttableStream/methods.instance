@@ -1,0 +1,43 @@
+	"Instance methods of TPuttableStream"
+	
+	protocol: #operations method:
+	
+	[## flush
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPut: anObject
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPutAll: aCollection
+	
+		aCollection do: [:each | self nextPut: each]
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## cr
+	
+		self nextPut: CR; nextPut: LF
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## space
+	
+		self nextPut: $ 
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## tab
+	
+		self nextPut: TAB
+	]

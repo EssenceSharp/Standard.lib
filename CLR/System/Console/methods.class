@@ -1,0 +1,22 @@
+	"Class methods of System.Console"
+	
+	protocol: #operations method:
+	
+	[## nextPut: aCharacter
+	
+		self write: aCharacter asCharacter
+	];
+	
+	protocol: #operations method:
+	
+	[## nextPutAll: aCollection
+	
+		<invokeMethod: Write>
+	];
+	
+	protocol: #'operations-text' method:
+	
+	[## cr
+	
+		<invokeMethod: WriteLine>
+	]

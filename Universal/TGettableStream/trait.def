@@ -1,0 +1,6 @@
+	"Configuration of trait TGettableStream [ANSI-defined protocol]"
+	
+	uses: TEnumerable;
+	import: CharacterConstants withAccess: #InHierarchy
+	
+	

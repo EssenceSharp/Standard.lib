@@ -1,1 +1,4 @@
-	self value: $ 
+
+	self accessPrivilege: #Public.
+	
+	$ 	"The space character"

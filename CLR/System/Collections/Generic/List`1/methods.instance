@@ -18,7 +18,9 @@
 	
 	[## addAll: aCollectionOfElements
 	
-		<invokeMethod: #AddRange>
+		^[self primAddAll: aCollectionOfElements]
+			on: InvalidCastException
+			do: [:ex | super addAll: aCollectionOfElements]
 	];
 	
 	protocol: #adding method:
@@ -83,6 +85,13 @@
 		"Index is zero-based"
 		
 		<invokeMethod: #Insert>
+	];
+	
+	protocol: #primitives method:
+	
+	[## primAddAll: aCollectionOfElements
+	
+		<invokeMethod: #AddRange>
 	];
 	
 	protocol: #primitives method:

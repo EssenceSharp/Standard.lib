@@ -1,0 +1,6 @@
+	"Configuration of SystemTranscript"
+	
+	superclass: Object;
+	instanceVariableNames: #(delegate);
+	uses: TPuttableStream;
+	import: #Console from: System as: #Console withAccess: #InHierarchy

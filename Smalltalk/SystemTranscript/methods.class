@@ -1,0 +1,10 @@
+	"Class methods of SystemTranscript"
+	
+	protocol: #'instance creation' method:
+	
+	[## new
+	
+		^self basicNew
+			delegate: Console;
+			yourself
+	]
