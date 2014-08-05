@@ -1,11 +1,4 @@
 	"Instance methods of TCollectionStream"
-	
-	protocol: #accessing method:
-	
-	[## contents
-	
-		^self basicContents
-	];
 
 	protocol: #enumerating method:
 	
@@ -21,6 +14,13 @@
 		^self basicContents selectionClass
 	];
 
+	protocol: #'initialize-release' method:
+	
+	[## initialize
+
+		self contents: #() position: 0
+	];
+
 	protocol: #'operational state' method:
 	
 	[## close
@@ -32,34 +32,20 @@
 	
 	[## setToEnd
 	
-		self position: self basicContents size
-	];
-	
-	protocol: #private method:
-	
-	[## basicContents
-	
-		^self subclassResponsibility
-	];
-	
-	protocol: #private method:
-	
-	[## increaseCapacityByAtLeast: amount
-	
-		^self subclassResponsibility
+		self position: self size
 	];
 	
 	protocol: #testing method:
 	
 	[## atEnd
 	
-		^self position >= self basicContents size
+		^self position >= self size
 	];
 	
 	protocol: #testing method:
 	
 	[## isEmpty
 	
-		^self basicContents isEmpty
+		^self size < 1
 	]	
 

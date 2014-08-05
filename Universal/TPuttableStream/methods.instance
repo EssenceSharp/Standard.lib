@@ -1,19 +1,5 @@
 	"Instance methods of TPuttableStream"
-	
-	protocol: #operations method:
-	
-	[## flush
-	
-		^self subclassResponsibility
-	];
-	
-	protocol: #operations method:
-	
-	[## nextPut: anObject
-	
-		^self subclassResponsibility
-	];
-	
+		
 	protocol: #operations method:
 	
 	[## nextPutAll: aCollection

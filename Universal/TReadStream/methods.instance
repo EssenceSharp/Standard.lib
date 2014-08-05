@@ -4,13 +4,12 @@
 	
 	[## next
 	
-		| position contents next |
+		| position next |
 		
 		position := self position.
-		contents := self basicContents.
-		position >= contents size ifTrue: [^nil].
+		position >= self size ifTrue: [^nil].
 		position := position + 1.
-		next := contents at: position.
+		next := self basicContents at: position.
 		self position: position.
 		^next
 	];
@@ -23,9 +22,9 @@
 		
 		amount negative ifTrue: [InvalidArgumentException signal: 'The argument to ', self class name, '>>next: must not be negative'].
 		
-		contents := self basicContents.
 		position := self position.
-		size := contents size - position min: amount.
+		size := self size - position min: amount.
+		contents := self basicContents.
 		array := Array new: size.
 		index := 0.
 		[index < size] whileTrue: [array at: (index := index + 1) put: (contents at: (position := position + 1))].
@@ -37,12 +36,11 @@
 	
 	[## peek
 	
-		| position contents next |
+		| position next |
 		
 		position := self position.
-		contents := self basicContents.
-		position >= contents size ifTrue: [^nil].
+		position >= self size ifTrue: [^nil].
 		position := position + 1.
-		^contents at: position
+		^self basicContents at: position
 	]
 

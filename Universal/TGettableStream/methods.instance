@@ -13,27 +13,6 @@
 	
 		[self atEnd] whileFalse: [enumerator1 value: self next]
 	];
-
-	protocol: #enumerating method:
-	
-	[## projectionClass
-	
-		^OrderedCollection
-	];
-	
-	protocol: #operations method:
-	
-	[## next
-	
-		^self subclassResponsibility
-	];
-	
-	protocol: #operations method: 
-	
-	[## next: amount
-	
-		^self subclassResponsibility
-	];
 	
 	protocol: #operations method:
 	
@@ -41,26 +20,12 @@
 	
 		^self next = anObject
 	];
-	
-	protocol: #operations method:
-	
-	[## peek
-	
-		^self subclassResponsibility
-	];
-	
+
 	protocol: #operations method:
 	
 	[## peekFor: anObject
 	
 		^self = anObject
-	];
-	
-	protocol: #operations method:
-	
-	[## skip: positionDelta
-	
-		^self subclassResponsibility
 	];
 	
 	protocol: #operations method:
@@ -103,18 +68,4 @@
 					ifFalse: [line add: ch]].
 		self atEnd] whileFalse.
 		^line asString
-	];
-	
-	protocol: #private method:
-	
-	[## canonicalSequenceFor: aCollection
-	
-		^aCollection
-	];
-	
-	protocol: #testing method:
-	
-	[## atEnd
-	
-		^self subclassResponsibility
-	]	
+	]

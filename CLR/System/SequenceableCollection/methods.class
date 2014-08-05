@@ -1,0 +1,16 @@
+	"Class methods of System.SequenceableCollection"
+	
+	protocol: #'instance creaion' method:
+	
+	[## new
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creaion' method:
+	
+	[## new: size
+	
+		<invokeMethod: new>
+	]
+	

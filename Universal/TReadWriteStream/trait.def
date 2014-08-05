@@ -1,3 +1,0 @@
-	"Configuration of trait TReadWriteStream"
-	
-	uses: TReadStream + TWriteStream

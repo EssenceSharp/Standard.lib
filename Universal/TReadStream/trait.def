@@ -1,4 +1,4 @@
 	"Configuration of TReadStream"
 	
-	uses: TCollectionStream + (TGettableStream - {#atEnd. #canonicalSequenceFor:. #projectionClass. #selectionClass. #skip:})
+	uses: TCollectionStream + TGettableStream
 	

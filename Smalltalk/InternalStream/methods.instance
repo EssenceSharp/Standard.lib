@@ -1,0 +1,57 @@
+	"Instance methods of InternalStream"
+	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		^collection
+	];
+
+	protocol: #accessing method:
+	
+	[## size
+	
+		^collection size
+	];
+	
+	protocol: #private method:
+	
+	[## basicContents
+	
+		^collection
+	];
+
+	protocol: #'initialize-release' method:
+	
+	[## contents: aCollection position: aStreamPosition
+		self collection: aCollection.
+		self position: (aStreamPosition min: collection size)
+	];
+	
+	protocol: #positioning method:
+	
+	[## position
+	
+		^position
+	];
+
+	protocol: #positioning method:
+	
+	[## position: aStreamPosition
+	
+		position := aStreamPosition
+	];
+	
+	protocol: #private method:
+	
+	[## canonicalSequenceFor: aCollection
+	
+		^aCollection
+	];
+	
+	protocol: #private method:
+	
+	[## collection: aCollection
+	
+		collection := aCollection ifNil: [#()]
+	]

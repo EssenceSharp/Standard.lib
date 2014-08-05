@@ -1,0 +1,40 @@
+	"Instance methods of WriteStream"
+	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		^collection size > size
+			ifTrue: [collection copyFrom: 1 to: size]
+			ifFalse: [collection]
+	];
+
+	protocol: #accessing method:
+	
+	[## size
+	
+		^size
+	];
+	
+	protocol: #positioning method:
+	
+	[## position: aStreamPosition
+	
+		position := aStreamPosition.
+		size := size ifNil: [position] ifNotNil: [size max: position]
+	];
+	
+	protocol: #private method:
+	
+	[## collection: aCollection
+	
+		collection := aCollection ifNotNil: [aCollection asMutable] ifNil: [Array new]
+	];
+	
+	protocol: #private method:
+	
+	[## increaseCapacityByAtLeast: positiveDelta
+	
+		collection := collection copyWithSize: (collection size * 2 max: positiveDelta).
+		^collection
+	]

@@ -1,0 +1,8 @@
+	"Instance methods of ReadWriteStream"
+	
+	protocol: #'initialize-release' method:
+	
+	[## contents: aCollection position: aStreamPosition
+		super contents: aCollection position: aStreamPosition.
+		size := aCollection size
+	]

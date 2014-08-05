@@ -1,6 +1,6 @@
 	"Configuration of trait TGettableStream [ANSI-defined protocol]"
 	
-	uses: TEnumerable;
+	uses: TEnumerable - #(projectionClass selectionClass);
 	import: CharacterConstants withAccess: #InHierarchy
 	
 	

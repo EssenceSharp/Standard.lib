@@ -1,0 +1,27 @@
+	"Class methods of TCollectionStream"
+	
+	protocol: #'instance creation' method:
+	
+	[## new
+	
+		^self basicNew initialize
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## on: aCollection
+	
+		^self basicNew 
+			contents: aCollection
+			position: 0
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## with: aCollection
+	
+		^self basicNew
+			contents: aCollection
+			position: aCollection size
+
+	]	

@@ -1,0 +1,4 @@
+	"Configuration of ReadWriteStream"
+	
+	superclass: WriteStream;
+	uses: TReadStream

@@ -1,0 +1,6 @@
+	"Configuration of class ReadStream"
+	
+	superclass: InternalStream;
+	uses: TReadStream
+	
+	
