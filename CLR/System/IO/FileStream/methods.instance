@@ -1,0 +1,8 @@
+	"Instance methods of System.IO.FileStream"
+	
+	protocol: #accessing method:
+	
+	[## externalType
+	
+		^#binary
+	]

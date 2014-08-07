@@ -1,3 +1,4 @@
 	"Configuration of class System.IO.TextWriter"
 	
-	instanceArchitecture: #HostSystemObject
+	instanceArchitecture: #HostSystemObject;
+	uses: TSequencedStream + TPuttableStream

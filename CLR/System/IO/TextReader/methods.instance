@@ -1,5 +1,59 @@
 	"Instance methods of System.IO.TextReader"
 	
+	protocol: #enumerating method:
+	
+	[## projectionClass
+	
+		^OrderedCollection
+	];
+	
+	protocol: #enumerating method:
+	
+	[## selectionClass
+	
+		^OrderedCollection
+	];
+	
+	protocol: #private method:
+	
+	[## canonicalSequenceFor: aCollection
+	
+		^aCollection asString
+	];
+	
+	protocol: #reading method:
+	
+	[## next
+	
+		<invokeMethod: Read>
+	];
+	
+	protocol: #reading method:
+	
+	[## next: amount
+	
+		| string size |
+		
+		string := Smalltalk.String new: amount.
+		size := self readBlockInto: string asHostSystemArray at: 0 for: amount.
+		string setSize: size.
+		^string
+	];
+	
+	protocol: #'reading' method:
+	
+	[## nextLine
+	
+		<invokeMethod: ReadLine>
+	];
+	
+	protocol: #reading method:
+	
+	[## peek
+	
+		<invokeMethod: Peek>
+	];
+	
 	protocol: #reading method:
 	
 	[## readInto: buffer at: index for: charCount
@@ -20,10 +74,27 @@
 	
 		<invokeMethod: ReadBlock>
 	];
+	
+	protocol: #reading method:
+	
+	[## upToEnd
+	
+		<invokeMethod: ReadToEnd>
+	];
 
 	protocol: #'reading-asynchronous' method:
 	
 	[## readBlockAsyncInto: buffer at: index for: charCount
 	
 		<invokeMethod: ReadBlockAsync>
+	];
+
+	protocol: #testing method:
+	
+	[## atEnd
+	
+		| next |
+		next := self next.
+		self skip: -1.
+		^next = -1
 	]

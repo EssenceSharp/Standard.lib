@@ -14,21 +14,7 @@
 		[self atEnd] whileFalse: [enumerator1 value: self next]
 	];
 	
-	protocol: #operations method:
-	
-	[## nextMatchFor: anObject
-	
-		^self next = anObject
-	];
-
-	protocol: #operations method:
-	
-	[## peekFor: anObject
-	
-		^self = anObject
-	];
-	
-	protocol: #operations method:
+	protocol: #positioning method:
 	
 	[## skipTo: anObject
 	
@@ -36,17 +22,7 @@
 		^false
 	];
 	
-	protocol: #operations method:
-	
-	[## upTo: anObject
-	
-		| list |
-		list := self selectionClass new.
-		[self atEnd] whileFalse: [| element | (element := self next) = anObject ifTrue: [^list] ifFalse: [list add: element]].
-		^self canonicalSequenceFor: list
-	];
-	
-	protocol: #'operations-text' method:
+	protocol: #'reading' method:
 	
 	[## nextLine
 	
@@ -68,4 +44,117 @@
 					ifFalse: [line add: ch]].
 		self atEnd] whileFalse.
 		^line asString
+	];
+	
+	protocol: #reading method:
+	
+	[## nextIfMatches: anObject
+	
+		| next |
+		
+		next := self peek.
+		^next = anObject 
+			ifTrue: 
+				[self next. 
+				true]
+			ifFalse: 
+				[false]
+	];
+	
+	protocol: #reading method:
+	
+	[## nextIfSatisfies: predicate
+	
+		| next |
+		
+		next := self peek.
+		^(predicate value: next)
+			ifTrue: 
+				[self next. 
+				true]
+			ifFalse: 
+				[false]
+	];
+	
+	protocol: #reading method:
+	
+	[## nextMatchFor: anObject
+	
+		^self next = anObject
+	];
+	
+	protocol: #reading method:
+	
+	[## nextSatisfies: predicate
+	
+		^predicate value: self next
+	];
+	
+	protocol: #reading method: 
+	
+	[## nextUntil: predicate
+	
+		| list |
+		list := self selectionClass new.
+		[self atEnd]
+			whileFalse: 
+				[| next |
+				next := self peek.
+				(predicate value: next) ifTrue: [^self canonicalSequenceFor: list].
+				list add: self next]
+	];
+	
+	protocol: #reading method: 
+	
+	[## nextWhile: predicate
+	
+		| list |
+		list := self selectionClass new.
+		[self atEnd]
+			whileFalse: 
+				[| next |
+				next := self peek.
+				(predicate value: next) ifFalse: [^self canonicalSequenceFor: list].
+				list add: self next]
+	];
+
+	protocol: #reading method:
+	
+	[## peekFor: anObject
+	
+		^self = anObject
+	];
+	
+	protocol: #reading method: 
+	
+	[## skipUntil: predicate
+	
+		[self atEnd]
+			whileFalse: 
+				[| next |
+				next := self peek.
+				(predicate value: next) ifTrue: [^next].
+				self next]
+	];
+	
+	protocol: #reading method: 
+	
+	[## skipWhile: predicate
+	
+		[self atEnd]
+			whileFalse: 
+				[| next |
+				next := self peek.
+				(predicate value: next) ifFalse: [^next].
+				self next]
+	];
+	
+	protocol: #reading method:
+	
+	[## upTo: anObject
+	
+		| list |
+		list := self selectionClass new.
+		[self atEnd] whileFalse: [| element | (element := self next) = anObject ifTrue: [^list] ifFalse: [list add: element]].
+		^self canonicalSequenceFor: list
 	]

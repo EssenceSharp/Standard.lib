@@ -213,27 +213,6 @@
 
 	protocol: #'system primitives' method:
 
-	[## show
-
-		<primitive: show domain: Object>
-	];
-
-	protocol: #'system primitives' method:
-
-	[## crShow
-
-		<primitive: crShow domain: Object>
-	];
-
-	protocol: #'system primitives' method:
-
-	[## showCr
-
-		<primitive: showCr domain: Object>
-	];
-
-	protocol: #'system primitives' method:
-
 	[## changeClassToThatOf: other 
 
 		<primitive: #changeClassToThatOf: domain: Object>

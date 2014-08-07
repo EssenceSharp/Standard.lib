@@ -1,4 +1,18 @@
 	"Instance methods of System.IO.TextWriter"
+		
+	protocol: #writing method:
+	
+	[## cr
+	
+		<invokeMethod: WriteLine>
+	];
+	
+	protocol: #writing method:
+	
+	[## nextPut: aChar 
+	
+		<invokeMethod: Write>
+	];
 	
 	protocol: #writing method:
 	

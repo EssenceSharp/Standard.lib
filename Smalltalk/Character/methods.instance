@@ -177,21 +177,21 @@
 	
 	protocol: #testing method:
 	
-	[## isLetterOrDigit
+	[## isAlphaNumeric
 	
 		^Character isLetterOrDigit: self
 	];
 	
 	protocol: #testing method:
 	
-	[## isLower
+	[## isLowercase
 	
 		^Character isLower: self
 	];
 	
 	protocol: #testing method:
 	
-	[## isLowSurrogate
+	[## isLowercaseSurrogate
 	
 		^Character isLowSurrogate: self
 	];
@@ -233,7 +233,7 @@
 	
 	protocol: #testing method:
 	
-	[## isUpper
+	[## isUppercase
 	
 		^Character isUpper: self
 	];

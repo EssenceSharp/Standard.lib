@@ -14,7 +14,7 @@
 		self position: self contents size
 	];
 
-	protocol: #operations method:
+	protocol: #positioning method:
 	
 	[## skip: positionDelta
 	
@@ -25,7 +25,7 @@
 	
 	[## isEmpty
 	
-		^self contents isEmpty
+		^self size < 1
 	]
 	
 	

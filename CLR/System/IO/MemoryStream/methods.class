@@ -1,5 +1,12 @@
 	"Class methods of System.IO.MemoryStream"
 	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		<invokeMethod: GetBuffer>
+	];
+	
 	protocol: #'instance creation' method: 
 	
 	[## on: byteArray

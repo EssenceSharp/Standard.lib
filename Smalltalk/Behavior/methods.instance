@@ -92,6 +92,20 @@
 		<invokeMethod: #instanceTypeWithAll>
 	];
 	
+	protocol: #'inheritance hierachry' method:
+	
+	[## subclassesDo: enumerator1
+	
+		<invokeMethod: subclassesDo>
+	];
+	
+	protocol: #'inheritance hierachry' method:
+	
+	[## allSubclassesDo: enumerator1
+	
+		<invokeMethod: allSubclassesDo>
+	];
+	
 	protocol: #'instance creation' method:
 	
 	[## basicNew

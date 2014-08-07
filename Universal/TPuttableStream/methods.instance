@@ -1,27 +1,27 @@
 	"Instance methods of TPuttableStream"
 		
-	protocol: #operations method:
+	protocol: #writing method:
 	
 	[## nextPutAll: aCollection
 	
 		aCollection do: [:each | self nextPut: each]
 	];
 	
-	protocol: #'operations-text' method:
+	protocol: #writing method:
 	
 	[## cr
 	
 		self nextPut: CR; nextPut: LF
 	];
 	
-	protocol: #'operations-text' method:
+	protocol: #writing method:
 	
 	[## space
 	
 		self nextPut: $ 
 	];
 	
-	protocol: #'operations-text' method:
+	protocol: #writing method:
 	
 	[## tab
 	

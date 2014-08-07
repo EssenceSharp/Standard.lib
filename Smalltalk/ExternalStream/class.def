@@ -1,7 +1,0 @@
-	"Configuration of class ExternalStream"
-	
-	superclass: Stream;
-	instanceArchitecture: #Abstract";
-	uses: TCollectionStream"
-	
-	

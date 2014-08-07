@@ -1,0 +1,8 @@
+	"Instance methods of Namespace"
+	
+	protocol: #accessing method:
+	
+	[## qualifiedName
+	
+		<getProperty: QualifiedName>
+	]

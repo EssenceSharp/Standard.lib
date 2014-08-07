@@ -1,10 +1,110 @@
 	"Instance methods of class System.IO.Stream"
 	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		| originalPosition contents |
+		
+		originalPosition := self position.
+		self seek: 0 relativeTo: #Begin.
+		contents := self next: self size.
+		self position: originalPosition.
+		^contents
+	];
+	
+	protocol: #accessing method:
+	
+	[## size
+	
+		<getProperty: Length>
+	];
+	
+	protocol: #enumerating method:
+	
+	[## projectionClass
+	
+		^OrderedCollection
+	];
+	
+	protocol: #enumerating method:
+	
+	[## selectionClass
+	
+		^OrderedCollection
+	];
+	
+	protocol: #positioning method:
+	
+	[## reset
+	
+		self seek: 0 relativeTo: #Begin
+	];
+	
+	protocol: #positioning method:
+	
+	[## position
+	
+		<getProperty: Position>
+	];
+	
+	protocol: #positioning method:
+	
+	[## position: streamPosition
+	
+		<setProperty: Position>
+	];
+	
 	protocol: #positioning method:
 	
 	[## seek: offset relativeTo: seekOrigin
 	
 		<invokeMethod: Seek>
+	];
+
+	protocol: #positioning method:
+	
+	[## setToEnd
+	
+		self seek: 0 relativeTo: #End
+	];
+	
+	protocol: #private method:
+	
+	[## canonicalSequenceFor: aCollection
+	
+		^aCollection asByteArray
+	];
+	
+	protocol: #reading method:
+	
+	[## next
+	
+		<invokeMethod: ReadByte>
+	];
+	
+	protocol: #reading method: 
+	
+	[## next: amount
+	
+		| array |
+		
+		amount negative ifTrue: [InvalidArgumentException signal: 'The argument to ', self class name, '>>next: must not be negative'].
+		
+		array := Smalltalk.ByteArray new: amount.
+		self readInto: array asHostSystemArray at: 0 for: amount.
+		^array
+	];
+	
+	protocol: #reading method:
+	
+	[## peek
+	
+		| element |
+		
+		element := self next.
+		self skip: -1.
+		^element
 	];
 	
 	protocol: #reading method:
@@ -35,6 +135,13 @@
 		<invokeMethod: BeginRead>
 	];
 	
+	protocol: #testing method:
+	
+	[## atEnd
+	
+		^self position >= self size
+	];
+	
 	protocol: #utilities method:
 	
 	[## copyTo: targetStream bufferSize: aSize
@@ -61,6 +168,20 @@
 	[## flushAsyncWithCancellationToken: cancellationToken
 	
 		<invokeMethod: FlushAsync>
+	];
+	
+	protocol: #writing method:
+	
+	[## nextPut: aByte
+	
+		<invokeMethod: WriteByte>
+	];
+		
+	protocol: #operations method:
+	
+	[## nextPutAll: aCollection
+	
+		self writeFrom: aCollection asHostSystemArray at: 0 for: aCollection size
 	];
 	
 	protocol: #writing method:

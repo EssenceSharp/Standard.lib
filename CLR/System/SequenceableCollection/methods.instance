@@ -180,6 +180,36 @@
 	
 	protocol: #converting method:
 	
+	[## asByteArray
+		"Answer a ByteArray containing the same elements as the receiver, in the same order.
+		Fail if any of the elements of the receiver are not integers in the value range of an unsigned byte."
+		
+		| size byteArray |
+		
+		size := self size.
+		byteArray := Smalltalk.ByteArray new: size.
+		1 to: size do: [:index | byteArray at: index put: (self at: index)].
+		^byteArray
+		
+	];
+	
+	protocol: #converting method:
+	
+	[## asString 
+		"Answer a String containing the same characters as the receiver, in the same order.
+		Fail if any of the elements of the receiver are not characters."
+		
+		| size string |
+		
+		size := self size.
+		string := Smalltalk.String new: size.
+		1 to: size do: [:index | string at: index put: (self at: index)].
+		^string
+		
+	];
+	
+	protocol: #converting method:
+	
 	[## asSymbol
 	
 		^self asString asSymbol
@@ -1085,4 +1115,39 @@
 		copy := self copy.
 		copy reverse.
 		^copy
+	];
+	
+	protocol: #streaming method:
+	
+	[## appendStream
+	
+		^WriteStream with: self
+	];
+	
+	protocol: #streaming method:
+	
+	[## readAppendStream
+	
+		^ReadWriteStream with: self
+	];
+	
+	protocol: #streaming method:
+	
+	[## readStream
+	
+		^ReadStream on: self
+	];
+	
+	protocol: #streaming method:
+	
+	[## readWriteStream
+	
+		^ReadWriteStream on: self
+	];
+	
+	protocol: #streaming method:
+	
+	[## writeStream
+	
+		^WriteStream on: self
 	]

@@ -1,5 +1,108 @@
 	"Class methods of System.IO.File"
 	
+	"ANSI <FileStream factory> Protocol"
+	
+	protocol: #'ANSI FileStream factory protocol' method:
+	
+	[## read: filePathname
+	
+		^self read: filePathname type: #text
+	];
+	
+	protocol: #'ANSI FileStream factory protocol' method:
+	
+	[## read: filePathname type: fileType
+	
+		| baseStream |
+		
+		baseStream := FileStream 
+				pathname: filePathname 
+				mode: #Open	"File must exist" 
+				access: #Read 	"File will be readable, but not writable"
+				share: #Read.	"Other processes will be permitted to also read from the file"
+
+		^fileType 
+		
+			valueIf:
+		
+				#{
+			
+				#text -> [StreamReader on: baseStream].
+			
+				#binary -> [baseStream]
+				
+				}
+			
+			else: [InvalidArgumentException signal: 'Unsupported file type: ', fileType printString]
+			
+	];
+	
+	protocol: #'ANSI FileStream factory protocol' method:
+	
+	[## write: filePathname
+	
+		^self write: filePathname mode: #create check: false type: #text
+	];
+	
+	protocol: #'ANSI FileStream factory protocol' method:
+	
+	[## write: filePathname mode: fileOpeningPolicy
+	
+		^self write: filePathname mode: fileOpeningPolicy check: false type: #text
+	];
+	
+	protocol: #'ANSI FileStream factory protocol' method:
+	
+	[## write: filePathname mode: fileOpeningPolicy check: enforceExistentialConstraint type: fileType
+	
+		| baseStream mode setToEnd truncate |
+		
+		setToEnd := false.
+		truncate := false.
+		
+		mode := fileOpeningPolicy
+		
+			valueIf:
+			
+				#{
+				
+				#create -> [enforceExistentialConstraint ifTrue: [#CreateNew] ifFalse: [#Create]].
+				
+				#append -> 
+					[setToEnd := true. 
+					enforceExistentialConstraint ifTrue: [#Open] ifFalse: [#OpenOrCreate]].
+				
+				#truncate -> [enforceExistentialConstraint ifTrue: [#Truncate] ifFalse: [truncate := true. #Create]]
+				
+				}
+				
+			else: [InvalidArgumentException signal: 'Unsupported file opening mode: ', fileOpeningPolicy printString].
+			
+		baseStream := FileStream 
+				pathname: filePathname 
+				mode: mode		"Must the file exist?" 
+				access: #ReadWrite 	"File will be readable and writable"
+				share: #Read.		"Other processes will be permitted to read from the file"
+				
+		setToEnd ifTrue: [baseStream setToEnd].
+		truncate ifTrue: [baseStream setLength: 0].
+
+		^fileType 
+		
+			valueIf:
+		
+				#{
+			
+				#text -> [StreamWriter on: baseStream].
+			
+				#binary -> [baseStream]
+			
+				}
+			
+			else: [InvalidArgumentException signal: 'Unsupported file type: ', fileType printString]
+			
+	];
+	
 	protocol: #creating method:
 	
 	[## create: pathnameString

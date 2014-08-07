@@ -1,0 +1,70 @@
+	"Instance methods of System.IO.StreamWriter"
+	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		| readStream contents |
+		
+		readStream := StreamReader on: self baseStream.
+		[contents := readStream contents] 
+			ensure: [readStream dispose: false].
+		^contents
+	
+	];
+	
+	protocol: #accessing method:
+	
+	[## size
+	
+		^self baseStream size
+	];
+	
+	protocol: #accessing method:
+	
+	[## externalType
+	
+		^#text
+	];
+	
+	protocol: #accessing method:
+	
+	[## name
+	
+		^self baseStream name
+	];
+	
+	protocol: #positioning method:
+	
+	[## reset
+	
+		self baseStream reset
+	];
+	
+	protocol: #positioning method:
+	
+	[## skip: positionDelta
+	
+		self baseStream seek: positionDelta relativeTo: #Current
+	];
+	
+	protocol: #positioning method:
+	
+	[## position
+	
+		^self baseStream position
+	];
+	
+	protocol: #positioning method:
+	
+	[## position: streamPosition
+	
+		self baseStream position: streamPosition
+	];
+
+	protocol: #positioning method:
+	
+	[## setToEnd
+	
+		self baseStream setToEnd
+	]

@@ -1,3 +1,4 @@
 	"Configuration of class Transcript"
 	
+	superclass: Object;
 	uses: TTranscript + (TWriteStream @ {#cr -> #newLine})

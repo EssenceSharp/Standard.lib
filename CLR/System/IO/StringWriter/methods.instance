@@ -2,6 +2,20 @@
 	
 	protocol: #accessing method:
 	
+	[## contents
+	
+		^self toString
+	];
+	
+	protocol: #accessing method:
+	
+	[## size
+	
+		^self contents size
+	];
+	
+	protocol: #accessing method:
+	
 	[## stringBuilder
 	
 		<invokeMethod: GetStringBuilder>

@@ -1,13 +1,13 @@
 	"Instance methods of TWriteStream"
 	
-	protocol: #operations method:
+	protocol: #'operational state' method:
 	
 	[## flush
 		"By default, do nothing"
 		
 	];
 	
-	protocol: #operations method:
+	protocol: #writing method:
 	
 	[## nextPut: anObject
 	

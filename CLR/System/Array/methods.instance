@@ -9,4 +9,12 @@
 		index := 0.
 		self do: [:element | array at: (index := index + 1) put: element].
 		^array
+	];
+	
+	protocol: #converting method:
+	
+	[## asHostSystemArray
+		
+		^self
 	]
+

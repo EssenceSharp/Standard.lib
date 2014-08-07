@@ -1,4 +1,4 @@
-	"Published system primitives for List`1[[System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+	"Published system primitives for List`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
 	"**** Code generated in order to document built-in system primitives (which may or may not be used by any classes.) So, although the library loader ignores this file, DO NOT MODIFY IT! ****"
 
 	protocol: #'system primitives' method:

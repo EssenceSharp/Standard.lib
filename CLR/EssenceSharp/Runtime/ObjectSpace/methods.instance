@@ -1,0 +1,8 @@
+	"Instance methods of EssenceSharp.Runtime.ObjectSpace"
+	
+	protocol: #'system reflection' method:
+	
+	[## rootClassesDo: enumerator1
+	
+		Class subclassesDo: [:class | enumerator1 value: (class canonicalInstance)]
+	]

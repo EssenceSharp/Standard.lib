@@ -1,3 +1,4 @@
 	"Configuration of System.IO.TextReader"
 	
-	instanceArchitecture: #HostSystemObject
+	instanceArchitecture: #HostSystemObject;
+	uses: TSequencedStream + TGettableStream

@@ -1,6 +1,6 @@
 	"Instance methods of TReadStream"
 	
-	protocol: #operations method:
+	protocol: #reading method:
 	
 	[## next
 	
@@ -14,7 +14,7 @@
 		^next
 	];
 	
-	protocol: #operations method: 
+	protocol: #reading method: 
 	
 	[## next: amount
 	
@@ -32,7 +32,7 @@
 		^array
 	];
 	
-	protocol: #operations method:
+	protocol: #reading method:
 	
 	[## peek
 	

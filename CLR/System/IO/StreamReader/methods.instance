@@ -1,0 +1,80 @@
+	"Instance methods of System.IO.StreamReader"
+	
+	protocol: #accessing method:
+	
+	[## contents
+	
+		| originalPosition contents |
+		
+		originalPosition := self position.
+		self baseStream seek: 0 relativeTo: #Begin.
+		contents := self next: self size.
+		self position: originalPosition.
+		^contents
+	];
+	
+	protocol: #accessing method:
+	
+	[## externalType
+	
+		^#text
+	];
+	
+	protocol: #accessing method:
+	
+	[## name
+	
+		^self baseStream name
+	];
+	
+	protocol: #accessing method:
+	
+	[## size
+	
+		^self baseStream size
+	];
+	
+	protocol: #positioning method:
+	
+	[## reset
+	
+		self baseStream reset
+	];
+	
+	protocol: #positioning method:
+	
+	[## position
+	
+		^self baseStream position
+	];
+	
+	protocol: #positioning method:
+	
+	[## position: streamPosition
+	
+		self baseStream position: streamPosition
+	];	
+
+	protocol: #positioning method:
+	
+	[## setToEnd
+	
+		self baseStream setToEnd
+	];
+	
+	protocol: #positioning method:
+	
+	[## skip: positionDelta
+	
+		self baseStream seek: positionDelta relativeTo: #Current
+	];
+	
+	protocol: #testing method:
+	
+	[## atEnd
+	
+		<getProperty: EndOfStream>
+	]
+	
+		
+
