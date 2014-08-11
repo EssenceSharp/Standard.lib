@@ -4,5 +4,9 @@
 	
 	[## rootClassesDo: enumerator1
 	
-		Class subclassesDo: [:class | enumerator1 value: (class canonicalInstance)]
+		Class subclassesDo: [:rootMetaclass | 
+			rootMetaclass isMetaclass
+				ifTrue: [enumerator1 value: (rootMetaclass canonicalInstance)]
+		]
+		
 	]
