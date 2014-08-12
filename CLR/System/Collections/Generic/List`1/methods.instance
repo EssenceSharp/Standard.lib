@@ -81,7 +81,7 @@
 	
 	protocol: #primitives method:
 	
-	[## primiAdd: anElement beforeIndex: index
+	[## primAdd: anElement beforeIndex: index
 		"Index is zero-based"
 		
 		<invokeMethod: #Insert>

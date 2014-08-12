@@ -170,6 +170,13 @@
 	
 	protocol: #removing method:
 	
+	[## identityRemove: anElement ifAbsent: block0
+	
+		^self subclassResponsibility
+	];
+	
+	protocol: #removing method:
+	
 	[## identityRemoveAll: aCollection
 	
 		self removeAllSuchThat: [:element | aCollection identityIncludes: element]
@@ -180,6 +187,13 @@
 	[## remove: anElement
 	
 		self remove: anElement ifAbsent: [self signalElementNotFoundError]
+	];
+	
+	protocol: #removing method:
+	
+	[## remove: anElement ifAbsent: block0
+	
+		^self subclassResponsibility
 	];
 	
 	protocol: #removing method:

@@ -1,0 +1,19 @@
+	"Instance methods of System.Collections.Generic.HashSet`1"
+	
+	protocol: #removing method:
+	
+	[## identityRemove: anElement ifAbsent: block0
+	
+		^(self removeWhere: [:element | element == anElement]) > 0
+			ifTrue: [anElement]
+			ifFalse: [block0 value]
+	];
+	
+	protocol: #removing method:
+	
+	[## remove: anElement ifAbsent: block0
+	
+		^(self remove: anElement)
+			ifTrue: [anElement]
+			ifFalse: [block0 value]
+	]
