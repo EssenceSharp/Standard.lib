@@ -1,0 +1,3 @@
+	"Configuration of classTrait TMSDateTime"
+
+	import: #Duration from: Smalltalk as: #Duration withAccess: #InHierarchy

@@ -1,0 +1,136 @@
+	"Class methods of DateAndTime"
+	
+	protocol: #'instance creation' method:
+	
+	[## fromBinary: serializedDateTime
+	
+		<invokeMethod: FromBinary>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromDateAndTime: aDateAndTime withKind: aDateAndTimeKind
+	
+		<invokeMethod: SpecifyKind>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromFileTimeUT: windowsFileTime
+	
+		<invokeMethod: FromFileTimeUtc>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromTicks: ticksSinceEpoch
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromTicks: ticksSinceEpoch withKind: aDateAndTimeKind
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth calendar: aCalendar
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second offset: offset
+	
+		^BoundDateAndTime year: year month: month day: dayOfMonth hour: hour minute: minute second: second offset: offset
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second kind: dateTimeKind
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second calendar: aCalendar
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond kind: dateTimeKind
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond calendar: aCalendar
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond calendar: aCalendar kind: dateTimeKind
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year day: dayOfYear hour: hour minute: minute second: second
+	
+		^self fromTicks: ((self daysSinceEpochUpToYear: year) + dayOfYear - 1) * Duration ticksPerDay + (hour * Duration ticksPerHour) + (minute * Duration ticksPerMinute) + (second * Duration ticksPerSecond)
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year day: dayOfYear hour: hour minute: minute second: second offset: aDuration
+	
+		^BoundDateAndTime 
+			fromTicks: ((self daysSinceEpochUpToYear: year) + dayOfYear - 1) * Duration ticksPerDay + (hour * Duration ticksPerHour) + (minute * Duration ticksPerMinute) + (second * Duration ticksPerSecond)
+			offset: aDuration
+	];
+	
+	protocol: #queries method:
+	
+	[## daysInYear: year month: month
+	
+		<invokeMethod: DaysInMonth>
+	];
+	
+	protocol: #queries method:
+	
+	[## isLeapYear: year
+	
+		<invokeMethod: IsLeapYear>
+	]

@@ -1,167 +1,167 @@
 	"Instance methods of SmallInteger"
 	
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## sumWithFloat: operand
 	
 		^operand + self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## differenceFromFloat: operand
 	
 		^operand - self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## productWithFloat: operand
 	
 		^operand * self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## ratioToFloat: operand
 	
 		^operand / self asFloat
 	];		
 		
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## integerRatioToFloat: operand
 	
 		^operand quo: self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## flooredToIntegerRatioToFloat: operand
 	
 		^operand // self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## remainderFromDividingFloat: operand
 	
 		^operand rem: self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## residueFromDividingFloat: operand
 	
 		^operand \\ self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## valueAsExponentToFloat: operand
 	
 		^operand ** self asFloat
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## valueAsLogBaseToFloat: operand
 	
 		^operand log: self asFloat
 	];
 				
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## sumWithDouble: operand
 	
 		^operand + self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## differenceFromDouble: operand
 	
 		^operand - self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## productWithDouble: operand
 	
 		^operand * self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## ratioToDouble: operand
 	
 		^operand / self asDouble
 	];		
 		
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## integerRatioToDouble: operand
 	
 		^operand quo: self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## flooredToIntegerRatioToDouble: operand
 	
 		^operand // self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## remainderFromDividingDouble: operand
 	
 		^operand rem: self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## residueFromDividingDouble: operand
 	
 		^operand \\ self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## valueAsExponentToDouble: operand
 	
 		^operand ** self asDouble
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## valueAsLogBaseToDouble: operand
 	
 		^operand log: self asDouble
 	];
 			
-	protocol: #'comparing-double dispatch' method:
+	protocol: #'double dispatching' method:
 	
 	[## inverseCompareToSmallInteger: aSmallInteger
 	
 		^(aSmallInteger - self) sign
 	];
 			
-	protocol: #'comparing-double dispatch' method:
+	protocol: #'double dispatching' method:
 	
 	[## inverseCompareToCharacter: aCharacter
 	
 		^(aCharacter asInteger - self) sign
 	];
 			
-	protocol: #'comparing-double dispatch' method:
+	protocol: #'double dispatching' method:
 	
 	[## inverseCompareToFloat: aFloat
 	
 		^(aFloat - self asFloat) sign
 	];
 			
-	protocol: #'comparing-double dispatch' method:
+	protocol: #'double dispatching' method:
 	
 	[## inverseCompareToDouble: aDouble
 	

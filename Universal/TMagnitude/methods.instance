@@ -6,24 +6,6 @@
 	
 		^comparand < self
 	];
-			
-	protocol: #comparing method:
-	
-	[## < comparand
-	
-		"Most subclasses will implement #< as a primitive, so this is the fallback implementation."
-			
-		^(self compareTo: comparand) < 0
-	];
-				
-	protocol: #comparing method:
-	
-	[## = comparand
-	
-		"Most subclasses will implement #= as a primitive, so this is the fallback implementation."
-	
-		^(self compareTo: comparand) = 0
-	];
 		
 	protocol: #comparing method:
 	

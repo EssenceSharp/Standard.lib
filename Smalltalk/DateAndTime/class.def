@@ -1,0 +1,7 @@
+	"Configuration for DateAndTime"
+	
+	assemblyName: 'mscorlib';
+	hostSystemNamespace: 'System';
+	hostSystemName: 'DateTime';
+	instanceArchitecture: #HostSystemObject;
+	uses: TMSDateTime

@@ -1,0 +1,91 @@
+	"Instance methods of TGregorian"
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysInMonth: month forYearTypeCode: yearTypeCode 
+		"Answer the number of days in the month whose ordinal is <monthOrdinal>, in a year whose typeCode is <yearTypeCode>."
+
+		^(#((31 28 31 30 31 30 31 31 30 31 30 31) 
+		   (31 29 31 30 31 30 31 31 30 31 30 31)) at: yearTypeCode) at: month
+	];
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysInMonth: month inYear: year
+	
+		^self daysInMonth: month forYearTypeCode: (self typeCodeOfYear: year)
+	];
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysSinceEpochUpToMonth: monthOrdinal day: dayOfMonthOrdinal  inYear: calendarYear
+		"Answer the number of days since the receiver's epoch up to (but not including) the <dayOfMonthOrdinal>th day of the <monthOrdinal>th month of the given <calendarYear>.  
+		
+		By definition, the answer when <calendarYear> = 1 (assuming positve years are ordinal numbers,) <monthOrdinal> = 1 and <dayOfMonthOrdinal> = 1 must be zero."
+
+
+		^(self 
+			daysUpToMonth: monthOrdinal day: dayOfMonthOrdinal inYear: calendarYear)
+			+ (self daysSinceEpochUpToYear: calendarYear)
+	];
+       
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysSinceEpochUpToYear: calendarYear 
+		"Answer the count of days since the Epoch day (start of day) up to (but NOT including) the first day of the specified year."
+
+		| cardinalYear |
+		cardinalYear := calendarYear - 1.
+		^ cardinalYear * 365 
+			+ (cardinalYear // 4) 
+			- (cardinalYear // 100) 
+			+ (cardinalYear // 400)
+	];
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysUpToMonth: monthOrdinal day: dayOfMonthOrdinal forYearTypeCode: yearTypeCode
+		"Answer the number of days from the start of the year up to the given month/day. 
+		For example, the number of days from January 1 up to January 1 is 0 (assuming January 1 is the first day of the year.)"
+
+		^dayOfMonthOrdinal - 1 
+			+ (30 * (monthOrdinal - 1)) 
+			+ ((monthOrdinal // 8 + monthOrdinal) // 2) 
+			- (monthOrdinal > 2 ifTrue: [yearTypeCode - 1] ifFalse: [0])
+	];
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## daysUpToMonth: monthOrdinal day: dayOfMonthOrdinal inYear: calendarYear 
+		"Answer the number of days from the start of the year up to the given month/day. 
+		For example, the number of days from January 1 up to January 1 is 0 (assuming January 1 is the first day of the year.)"
+
+		^dayOfMonthOrdinal - 1 
+			+ (30 * (monthOrdinal - 1)) 
+			+ ((monthOrdinal // 8 + monthOrdinal) // 2) 
+			- (self leapDayCorrectionForYear: calendarYear month: monthOrdinal)
+	];
+	
+	protocol: #'fundamental algorithms' method:
+	
+	[## typeCodeOfYear: calendarYear
+		"Answer the year type code of the given <calendarYear>."
+
+		^calendarYear \\ 4 == 0 
+			ifTrue: [calendarYear \\ 100 == 0 
+						ifTrue: [calendarYear \\ 400 == 0 
+									ifTrue: [2] 
+									ifFalse: [1]] 
+						ifFalse: [2]]
+			ifFalse: [1]
+	];
+	
+	protocol: #private method:
+	
+	[## leapDayCorrectionForYear: year month: month 
+        
+		^month > 2 
+			ifTrue: [(year \\ 4 = 0 and: [year \\ 100 ~= 0 or: [year \\ 400 = 0]]) ifTrue: [1] ifFalse: [2]] 
+			ifFalse: [0]
+	]
+	

@@ -1,0 +1,123 @@
+	"Class methods of Timezone"
+	
+	protocol: #accessing method:
+	
+	[## at: tzkey
+	
+		<invokeMethod: FindSystemTimeZoneById>
+	];
+	
+	protocol: #accessing method:
+	
+	[## allInSystemRegistry
+	
+		<invokeMethod: GetSystemTimeZones>
+	];
+	
+	protocol: #accessing method:
+	
+	[## ut
+	
+		<getProperty: Utc>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromSerializedString: serializationString
+	
+		<invokeMethod: FromSerializedString>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newWithKey: key stdTimeOffset: offset name: name stdTimeName: stdTimeName
+	
+		<invokeMethod: CreateCustomTimeZone>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newWithKey: key stdTimeOffset: offset name: name stdTimeName: stdTimeName dstTimeName: dstTimeName rulesArray: rulesArray
+	
+		<invokeMethod: CreateCustomTimeZone>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newWithKey: key stdTimeOffset: offset name: name stdTimeName: stdTimeName dstTimeName: dstTimeName rulesArray: rulesArray disableDST: disableDST
+	
+		<invokeMethod: CreateCustomTimeZone>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTime: aDateTime toTimezone: aTimezone
+	
+		<invokeMethod: ConvertTime>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertTimeOfDayUT: aDateTime toTimezone: aTimezone
+	
+		<invokeMethod: ConvertTime>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTime: aDateTime fromTimezone: sourceTimezone toTimezone: destinationTimezone
+	
+		<invokeMethod: ConvertTime>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTime: aDateTime toTimezoneAt: aTimezoneKey
+	
+		<invokeMethod: ConvertTimeBySystemTimeZoneId>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertTimeOfDayUT: aDateTime toTimezoneAt: aTimezoneKey
+	
+		<invokeMethod: ConvertTimeBySystemTimeZoneId>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTime: aDateTime fromTimezoneAt: sourceTimezoneKey toTimezoneAt: destinationTimezoneKey
+	
+		<invokeMethod: ConvertTimeBySystemTimeZoneId>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTimeUT: aDateTime toTimezone: aTimezone
+	
+		<invokeMethod: ConvertTimeFromUtc>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTimeToUT: aDateTime
+	
+		<invokeMethod: ConvertTimeToUtc>
+	];
+	
+	protocol: #'timezone operations' method:
+	
+	[## convertDateAndTimeToUT: aDateTime fromTimezone: aTimezone
+	
+		<invokeMethod: ConvertTimeToUtc>
+	];
+		
+	protocol: #'instance creation' method:
+	
+	[## localTimezoneRules
+	
+		<invokeMethod: GetAdjustmentRules>
+	]
+
+
+

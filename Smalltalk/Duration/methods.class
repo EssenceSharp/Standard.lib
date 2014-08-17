@@ -1,0 +1,196 @@
+	"Class methods of Duration"
+	
+	protocol: #'comparing-instances' method:
+	
+	[## compare: left forEqualityTo: right
+	
+		<invokeMethod: Equals>
+	];
+	
+	protocol: #'comparing-instances' method:
+	
+	[## compare: left to: right
+	
+		<invokeMethod: Compare>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## days: anInteger
+	
+		<invokeMethod: FromDays>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## days: days hours: hours minutes: minutes seconds: seconds
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## days: days hours: hours minutes: minutes seconds: seconds milliseconds: milliseconds
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## hours: anInteger
+	
+		<invokeMethod: FromHours>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## hours: hours minutes: minutes seconds: seconds
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## minutes: anInteger
+	
+		<invokeMethod: FromMinutes>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## milliseconds: anInteger
+	
+		<invokeMethod: FromMilliseconds>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## seconds: anInteger
+	
+		<invokeMethod: FromSeconds>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## milliseconds: anInteger
+	
+		^self ticks: anInteger * self ticksPerMillisecond
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## microseconds: anInteger
+	
+		^self ticks: anInteger * TicksPerMicrosecond
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## ticks: anInteger
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString
+	
+		<invokeMethod: Parse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formatProvider: formatProvider
+	
+		<invokeMethod: Parse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString format: format formatProvider: formatProvider
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formats: formatarray formatProvider: formatProvider
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString format: format formatProvider: formatProvider styles: timeSpanStyles
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formats: formatarray formatProvider: formatProvider styles: timeSpanStyles
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString into: aMonad
+	
+		<invokeMethod: TryParse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formatProvider: formatProvider into: aMonad
+	
+		<invokeMethod: TryParse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formatProvider: formatProvider styles: timeSpanStyles into: aMonad
+	
+		<invokeMethod: TryParse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString format: format formatProvider: formatProvider into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formats: formatArray formatProvider: formatProvider into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString format: format formatProvider: formatProvider styles: timeSpanStyles into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formats: formatArray formatProvider: formatProvider styles: timeSpanStyles into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	];
+	
+	protocol: #'utilities-timing' method:
+	
+	[## toRun: aBlock
+	
+		| stopwatch |
+		
+		stopwatch := Stopwatch new.
+		stopwatch start.
+		aBlock value.
+		stopwatch stop.
+		^stopwatch elapsed
+	]

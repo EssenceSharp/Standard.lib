@@ -8,7 +8,14 @@
 
 		^self
 	];
-
+	
+	protocol: #constraints method:
+	
+	[## activate
+	
+		<invokeMethod: activate>
+	];
+	
 	protocol: #converting method:
 	
 	[## asBehavior 

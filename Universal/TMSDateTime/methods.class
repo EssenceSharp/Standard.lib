@@ -1,0 +1,99 @@
+	"Class methods of TMSDateTime"
+	
+	protocol: #accessing method:
+	
+	[## clockPrecision
+	
+		^Duration ticks: 1
+	];
+	
+	protocol: #'comparing-instances' method:
+	
+	[## compare: left forEqualityTo: right
+	
+		<invokeMethod: Equals>
+	];
+	
+	protocol: #'comparing-instances' method:
+	
+	[## compare: left to: right
+	
+		<invokeMethod: Compare>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromFileTime: windowsFileTime
+	
+		<invokeMethod: FromFileTime>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString
+	
+		<invokeMethod: Parse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formatProvider: formatProvider
+	
+		<invokeMethod: Parse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formatProvider: formatProvider style: dateTimeStyle
+	
+		<invokeMethod: Parse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString format: formatString formatProvider: formatProvider
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString format: formatString formatProvider: formatProvider style: dateTimeStyle
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## fromString: aString formats: formatStringArray formatProvider: formatProvider style: dateTimeStyle
+	
+		<invokeMethod: ParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString into: aMonad
+	
+		<invokeMethod: TryParse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formatProvider: formatProvider style: dateTimeStyle into: aMonad
+	
+		<invokeMethod: TryParse>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString format: formatString formatProvider: formatProvider style: dateTimeStyle into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	];
+	
+	protocol: #parsing method:
+	
+	[## tryParse: aString formats: formatStringArray formatProvider: formatProvider style: dateTimeStyle into: aMonad
+	
+		<invokeMethod: TryParseExact>
+	]

@@ -1,0 +1,15 @@
+	"Instance methods of System.Diagnostics.Stopwatch"
+	
+	protocol: #accessing method:
+	
+	[## elapsedTimeAsTicks
+	
+		<invokeMethod: GetElapsedDateTimeTicks>
+	];
+	
+	protocol: #accessing method:
+	
+	[## elapsedTimeAsClockTicks
+	
+		<invokeMethod: GetRawElapsedTicks>
+	]

@@ -1,0 +1,4 @@
+
+	self accessPrivilege: #InHierarchy.
+	
+	#(Mon Tue Wed Thu Fri Sat Sun)

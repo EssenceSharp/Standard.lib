@@ -1,0 +1,3 @@
+	"Configuration of DateAndTime class"
+	
+	uses: TMSDateTime classTrait + TGregorian

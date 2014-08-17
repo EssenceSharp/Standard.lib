@@ -16,13 +16,14 @@
 	protocol: #comparing method:
 	
 	[## = comparand
-		^(self compareTo: comparand) = 0
+		
+		<invokeMethod: Equals>
 	];
 		
 	protocol: #comparing method:
 	
 	[## <= comparand
-			^(self compareTo: comparand) <= 0
+		^(self compareTo: comparand) <= 0
 	];
 	
 	protocol: #comparing method:

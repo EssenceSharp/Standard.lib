@@ -1,0 +1,105 @@
+	"Instance methods of Duration"
+	
+	protocol: #arithmetic method:
+	
+	[## + aDurationOrDateAndTime
+	
+		<invokeMethod: Add>
+		
+		^aDurationOrDateAndTime + self
+	];
+		
+	protocol: #arithmetic method:
+	
+	[## - aDuration
+	
+		<invokeMethod: Subtract>
+	];
+		
+	protocol: #arithmetic method:
+	
+	[## * aNumber
+	
+		^self class ticks: self ticks * aNumber
+	];
+		
+	protocol: #arithmetic method:
+	
+	[## / aNumberOrDuration
+	
+		^aNumberOrDuration inverseRatioToDuration: self
+	];
+	
+	protocol: #converting method:
+	
+	[## abs
+	
+		<invokeMethod: Duration>
+	];
+	
+	protocol: #converting method:
+	
+	[## asDays
+	
+		<getProperty: TotalDays>
+	];
+	
+	protocol: #converting method:
+	
+	[## asHours
+	
+		<getProperty: TotalHours>
+	];
+	
+	protocol: #converting method:
+	
+	[## asMilliseconds
+	
+		<getProperty: TotalMilliseconds>
+	];
+	
+	protocol: #converting method:
+	
+	[## asMinutes
+	
+		<getProperty: TotalMinutes>
+	];
+	
+	protocol: #converting method:
+	
+	[## asSeconds
+	
+		<getProperty: TotalSeconds>
+	];
+	
+	protocol: #converting method:
+	
+	[## negated
+	
+		<invokeMethod: Negate>
+	];
+		
+	protocol: #'double dispatching' method:
+	
+	[## inverseRatioToDuration: aDuration
+	
+		^aDuration class ticks: aDuration ticks / self ticks
+	];
+	
+	protocol: #testing method:
+	
+	[## negative
+	
+		^self ticks < 0
+	];
+	
+	protocol: #testing method:
+	
+	[## positive
+	
+		^self ticks >= 0
+	]
+
+	
+	
+	

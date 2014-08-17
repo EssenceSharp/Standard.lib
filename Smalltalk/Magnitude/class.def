@@ -1,4 +1,5 @@
 	"Configuration of the instance architecture, initial state and module memberships of Magnitude." 
 
 	superclass: Object;
-	instanceArchitecture: #Abstract
+	instanceArchitecture: #Abstract;
+	uses: TMagnitude

@@ -1,83 +1,83 @@
 	"Instance methods for ArithmeticValue"
 	
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## sumWithSmallInteger: operand
 	
 		^(self coerce: operand) + self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## differenceFromSmallInteger: operand
 	
 		^(self coerce: operand) - self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## productWithSmallInteger: operand
 	
 		^(self coerce: operand) * self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## ratioToSmallInteger: operand
 	
 		^(self coerce: operand) / self
 	];
 	
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## sumWithFloat: operand
 	
 		^(self coerce: operand) + self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## differenceFromFloat: operand
 	
 		^(self coerce: operand) - self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## productWithFloat: operand
 	
 		^(self coerce: operand) * self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## ratioToFloat: operand
 	
 		^(self coerce: operand) / self
 	];
 	
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## sumWithDouble: operand
 	
 		^(self coerce: operand) + self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## differenceFromDouble: operand
 	
 		^(self coerce: operand) - self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## productWithDouble: operand
 	
 		^(self coerce: operand) * self
 	];
 
-	protocol: #'arithmetic-double dispatching' method:
+	protocol: #'double dispatching' method:
 	
 	[## ratioToDouble: operand
 	

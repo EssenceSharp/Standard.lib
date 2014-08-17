@@ -1,0 +1,3 @@
+	"Configuration of Duration class"
+	
+	import: #Stopwatch from: System.Diagnostics as: #Stopwatch withAccess: #Local

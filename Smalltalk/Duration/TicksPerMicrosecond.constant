@@ -1,0 +1,4 @@
+
+	self accessPrivilege: #Public.
+	
+	Duration ticksPerSecond quo: 1000000

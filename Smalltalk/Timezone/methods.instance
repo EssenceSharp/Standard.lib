@@ -1,0 +1,71 @@
+	"Instance methods of Timezone"
+	
+	protocol: #accessing method:
+	
+	[## rules
+	
+		<invokeMethod: GetAdjustmentRules>
+	];
+	
+	protocol: #accessing method:
+	
+	[## key
+	
+		<getProperty: Id>
+	];
+	
+	protocol: #accessing method:
+	
+	[## offsetOf: aDateAndTimeOrADateAndTimeOffset
+	
+		<invokeMethod: GetUtcOffset>
+	];
+	
+	protocol: #accessing method:
+	
+	[## stdTimeOffsetFromUT
+	
+		<invokeMethod: BaseUtcOffset>
+	];
+	
+	protocol: #accessing method:
+	
+	[## ambiguousTimezoneOffsetsOf: aDateTimeOrDateTimeOffset
+	
+		<invokeMethod: GetAmbiguousTimeOffsets>
+	];
+	
+	protocol: #queries method: 
+	
+	[## isAmbiguous: aDateTimeOrDateTimeOffset
+	
+		<invokeMethod: IsAmbiguousTime>
+	];
+	
+	protocol: #queries method: 
+	
+	[## isDaylightSavingTime: aDateTimeOrDateTimeOffset
+	
+		<invokeMethod: IsDaylightSavingTime>
+	];
+	
+	protocol: #queries method: 
+	
+	[## isInvalidTime: aDateTime
+	
+		<invokeMethod: IsInvalidTime>
+	];
+	
+	protocol: #testing method:
+	
+	[## isDynamic
+	
+		<getProperty: SupportsDaylightSavingTime>
+	];
+	
+	protocol: #testing method:
+	
+	[## isStatic
+	
+		^self isDynamic not
+	]

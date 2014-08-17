@@ -1,0 +1,43 @@
+	"Class methods of BoundDateAndTime"
+	
+	protocol: #'instance creation' method:
+	
+	[## fromDateAndTime: aDateAndTime
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromDateAndTime: aDateAndTime offset: aDuration
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## fromTicks: ticksSinceEpoch offset: aDuration
+	
+		<invokeMethod: new>
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second offset: aDuration
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond offset: aDuration
+	
+		<invokeMethod: new>
+	];		
+	
+	protocol: #'instance creation' method:
+	
+	[## year: year month: month day: dayOfMonth hour: hour minute: minute second: second millisecond: millisecond calendar: calendar offset: aDuration
+	
+		<invokeMethod: new>
+	]		

@@ -1,0 +1,7 @@
+	"Configuration for BoundDateAndTime"
+	
+	assemblyName: 'mscorlib';
+	hostSystemNamespace: 'System';
+	hostSystemName: 'DateTimeOffset';
+	instanceArchitecture: #HostSystemObject;
+	uses: TMSDateTime

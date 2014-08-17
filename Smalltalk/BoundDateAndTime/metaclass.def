@@ -1,0 +1,3 @@
+	"Configuration of BoundDateAndTime class"
+	
+	uses: TMSDateTime classTrait

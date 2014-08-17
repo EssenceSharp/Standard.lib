@@ -1,0 +1,8 @@
+	"Instance methods of BoundDateAndTime"
+	
+	protocol: #accessing method:
+	
+	[## utTicks
+	
+		<getProperty: UtcTicks>
+	]

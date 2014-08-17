@@ -1,0 +1,4 @@
+	"Configuration of System.Diagnostics.Stopwatch"
+	
+	assemblyName: #System;
+	instanceArchitecture: #HostSystemObject

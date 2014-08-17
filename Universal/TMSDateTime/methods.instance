@@ -1,0 +1,137 @@
+	"Instance methods of TMSDateTime"
+	
+	protocol: #accessing method:
+	
+	[## dayOfMonth
+	
+		<invokeMethod: Day>
+	];
+	
+	protocol: #accessing method:
+	
+	[## dayOfWeek
+	
+		^(self daySinceEpoch \\ 7) + 1
+	];
+	
+	protocol: #accessing method:
+	
+	[## daySinceEpoch
+	
+		^self ticks quo: 864000000000
+	];
+	
+	protocol: #accessing method:
+	
+	[## dayOfWeekName
+	
+		<getProperty: DayOfWeek>
+	];
+	
+	protocol: #accessing method:
+	
+	[## dayOfWeekAbbreviation
+	
+		^DayOfWeekAbbreviations at: self dayOfWeek + 1
+	];
+	
+	protocol: #accessing method:
+	
+	[## hour12 
+	
+		| hour |
+ 
+		hour := self hour24.
+		hour >= 12 ifTrue: [hour := hour - 12].
+		^hour < 1 ifTrue: [12] ifFalse: [hour]
+	];
+	
+	protocol: #accessing method:
+	
+	[## hour24
+	
+		<getProperty: Hour>
+	];
+	
+	protocol: #accessing method:
+	
+	[## meridianAbbreviation
+	
+		^self hour24 < 12 ifTrue: [#am] ifFalse: [#pm]
+	];
+	
+	protocol: #accessing method:
+	
+	[## monthAbbreviation
+	
+		^MonthAbbreviations at: self month
+	];
+	
+	protocol: #accessing method:
+	
+	[## monthName
+	
+		^MonthNames at: self month
+	];
+	
+	protocol: #arithmetic method:
+	
+	[## + aDuration
+	
+		<invokeMethod: Add>
+	];
+	
+	protocol: #arithmetic method:
+	
+	[## - aDurationOrDateAndTime
+	
+		<invokeMethod: Subtract>
+	];
+	
+	protocol: #converting method:
+	
+	[## asLocal
+	
+		<invokeMethod: ToLocalTime>
+	];
+	
+	protocol: #converting method:
+	
+	[## asUT
+	
+		<invokeMethod: ToUniversalTime>
+	];
+	
+	protocol: #converting method:
+	
+	[## asUTC
+	
+		"Note: This method does not actually implement a conversion to UTC. It implements a conversion to Universal Time, 
+		which is what almost all date/time libraries actually do, and is very probably what you really wanted in any case. 
+		And if you don't know the difference, then what this method does is almost certainly what you want (which is one
+		of the two reasons that what this method does is what most date/time libraries implement--including, as you can
+		see, the one provided by Microsoft.)"
+	
+		<invokeMethod: ToUniversalTime>
+	];
+
+	protocol: #converting method:
+	
+	[## offset: aDuration
+	
+		^BoundDateAndTime fromTicks: self utTicks + aDuration ticks offset: aDuration
+	];
+	
+	protocol: #formatting method:
+	
+	[## getDateTimeFormats: formatCodeChar provider: formatProvider
+	
+		<invokeMethod: GetDateTimeFormats>
+	];
+	
+	protocol: #testing method:
+	
+	[## isLeapYear
+	
+		^DateAndTime isLeapYear: self year
+	]

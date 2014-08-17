@@ -1,0 +1,52 @@
+	"Instance methods of DateAndTime"
+	
+	protocol: #accessing method:
+	
+	[## offset
+	
+		^self kind == #Utc
+			ifTrue: [Duration zero]
+			ifFalse: [Timezone local offsetOf: self]
+	];
+	
+	protocol: #accessing method:
+	
+	[## timeZone
+	
+		^self kind == #Utc
+			ifTrue: [Timezone ut]
+			ifFalse: [Timezone local]
+	];
+	
+	protocol: #accessing method:
+	
+	[## timeZoneAbbreviation
+	
+		| tz |
+		
+		tz := self timeZone.
+		^(tz isDaylightSavingTime: self)
+			ifTrue: [tz daylightName]
+			ifFalse: [tz standardName]
+	];
+	
+	protocol: #accessing method:
+	
+	[## timeZoneName
+	
+		^self timeZone displayName
+	];
+	
+	protocol: #accessing method:
+	
+	[## utTicks
+	
+		^self asUT ticks
+	];
+
+	protocol: #testing method:
+	
+	[## isDaylightSavingTime
+	
+		^self timeZone isDaylightSavingTime: self
+	]

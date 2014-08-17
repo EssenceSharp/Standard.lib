@@ -1,0 +1,7 @@
+	"Configuration for Duration"
+	
+	assemblyName: 		'mscorlib';
+	hostSystemNamespace: 	'System';
+	hostSystemName: 	'TimeSpan';
+	instanceArchitecture: 	#HostSystemObject;
+	uses: 			THostSystemMagnitude

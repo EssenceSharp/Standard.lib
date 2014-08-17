@@ -84,6 +84,14 @@
 	[## forkAt: threadPriority
 	
 		^(self newProcessAt: threadPriority) start
+	];
+	
+	protocol: #'utilities-timing' method:
+	
+	[## durationToRun
+	
+		^Duration toRun: self
 	]
+
 	
 	
