@@ -1,4 +1,5 @@
 	"Configuration of ReadWriteStream"
 	
 	superclass: WriteStream;
+	instanceVariableNames: #(readLimit);
 	uses: TReadStream

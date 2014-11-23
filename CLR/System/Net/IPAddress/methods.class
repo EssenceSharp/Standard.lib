@@ -1,0 +1,59 @@
+	"Class methods of System.Net.IPAddress"
+	
+	protocol: #utilities method:
+	
+	[## toCanonicalByteOrder: value
+	
+		<invokeMethod: HostToNetworkOrder>
+		
+	];
+	
+	protocol: #utilities method:
+	
+	[## toHostByteOrder: value
+	
+		<invokeMethod: NetworkToHostOrder>
+		
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## value: aByteArrayOrInteger
+	
+		<invokeMethod: new>
+		
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## value: aByteArrayOrInteger scopeID: scopeid
+	
+		<invokeMethod: new>
+		
+	];
+	
+	protocol: #parsing method: 
+	
+	[## fromString: addressString
+	
+		<invokeMethod: Parse>
+		
+	];
+	
+	protocol: #parsing method: 
+	
+	[## parse: addressString into: handler
+	
+		<invokeMethod: TryParse>
+		
+	];
+	
+	protocol: #testing method:
+	
+	[## isLoopback: anIPAddress
+	
+		<invokeMethod: IsLoopback>
+		
+	]
+	
+	

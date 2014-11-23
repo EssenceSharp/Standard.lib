@@ -1,0 +1,5 @@
+	"Configuration of Examples.ExamplePrimitives"
+	
+	instanceArchitecture: #HostSystemObject;
+	hostSystemNamespace: #EssenceSharp.Source.Examples
+	

@@ -1,0 +1,17 @@
+	"Instance methods of System.Net.IPEndPoint"
+	
+	protocol: #accessing method:
+	
+	[## address
+	
+		<getProperty: Address>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## port
+	
+		<getProperty: Port>
+		
+	]

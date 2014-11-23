@@ -1,2 +1,2 @@
 
-	import: Calendrical withAccess: #InHierarchy
+	importTransitive: Calendrical withAccess: #InHierarchy

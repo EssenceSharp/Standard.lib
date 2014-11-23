@@ -28,13 +28,13 @@
 	
 	[## collection: aCollection
 	
-		collection := aCollection ifNotNil: [aCollection asMutable] ifNil: [Array new]
+		collection := aCollection ifNotNil: [aCollection asMutable] ifNil: [(self newCollection: 0)]
 	];
 	
 	protocol: #private method:
 	
 	[## increaseCapacityByAtLeast: positiveDelta
 	
-		collection := collection copyWithSize: (collection size * 2 max: positiveDelta).
+		self collection: (collection copyWithSize: (collection size * 2 max: positiveDelta)).
 		^collection
 	]

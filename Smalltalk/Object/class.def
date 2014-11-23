@@ -3,5 +3,3 @@
 	superclass: nil;
 	instanceArchitecture: #Stateless;
 	uses: TObject
-
-		

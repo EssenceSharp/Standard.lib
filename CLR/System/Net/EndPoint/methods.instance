@@ -1,0 +1,17 @@
+	"Instance methods of System.Net.EndPoint"
+	
+	protocol: #accessing method:
+	
+	[## addressFamily
+	
+		<getProperty: AddressFamily>
+		
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## newFromSocketAddress: socketAddress
+	
+		<invokeMethod: Create>
+		
+	]

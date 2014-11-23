@@ -1,0 +1,65 @@
+	"Class methods of System.Net.Dns"
+	
+	protocol: #'resolving-async' method:
+	
+	[## beginGetHostAddresses: hostNameOrAddress asyncCallBack: requestCallback state: state
+	
+		<invokeMethod: BeginGetHostAddresses>
+		
+	];
+	
+	protocol: #'resolving-async' method:
+	
+	[## beginGetHostEntry: hostNameOrIPAddress asyncCallBack: requestCallback state: state
+	
+		<invokeMethod: BeginGetHostEntry>
+		
+	];
+	
+	protocol: #'resolving-async' method:
+	
+	[## endGetHostAddresses: asyncResult
+	
+		<invokeMethod: EndGetHostAddresses>
+		
+	];
+	
+	protocol: #'resolving-async' method:
+	
+	[## endGetHostEntry: asyncResult
+	
+		<invokeMethod: EndGetHostEntry>
+		
+	];
+	
+	protocol: #'resolving-async' method:
+	
+	[## getHostAddressesAsync: hostNameOrAddress
+	
+		<invokeMethod: GetHostAddressesAsync>
+		
+	];
+	
+	protocol: #'resolving-async' method:
+	
+	[## getHostEntryAsync: hostNameOrAddress
+	
+		<invokeMethod: GetHostEntryAsync>
+		
+	];
+	
+	protocol: #resolving method:
+	
+	[## getHostAddresses: hostNameOrAddress
+	
+		<invokeMethod: GetHostAddresses>
+		
+	];
+	
+	protocol: #resolving method:
+	
+	[## getHostEntry: hostNameOrAddress
+	
+		<invokeMethod: GetHostEntry>
+		
+	]

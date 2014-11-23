@@ -53,5 +53,5 @@
 	
 	[## collection: aCollection
 	
-		collection := aCollection ifNil: [#()]
+		collection := aCollection ifNil: [(self newCollection: 0)]
 	]

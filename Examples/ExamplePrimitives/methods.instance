@@ -1,0 +1,15 @@
+	"Instance methods of Examples.Metronome"
+		
+	protocol: #examples method: 
+	
+	[## fortyTwo
+	
+		<primitive: #fortyTwo domain: #Examples>
+	];
+	
+	protocol: #accessing method:
+	
+	[## name
+	
+		<invokeMethod: #name>
+	]

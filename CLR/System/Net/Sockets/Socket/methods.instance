@@ -1,0 +1,689 @@
+	"Instance methods of System.Net.Sockets.Socket"
+	
+	protocol: #accessing method:
+	
+	[## bindTo: endPoint 
+	
+		<invokeMethod: BeginSendTo>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## getSocketOptionAt: socketOptionLevel named: socketOptionName
+	
+		<invokeMethod: GetSocketOption>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## getSocketOptionAt: socketOptionLevel named: socketOptionName into: byteArray
+	
+		<invokeMethod: GetSocketOption>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## getSocketOptionAt: socketOptionLevel named: socketOptionName expectedSize: byteCount
+	
+		<invokeMethod: GetSocketOption>
+		
+	];
+	
+	protocol: #accessing method:
+
+	[## setIoControlCode: ioControlCode inValue: inValueByteArray outValue: outValueByteArray
+	
+		<invokeMethod: IOControl>
+		
+	];
+	
+	protocol: #accessing method:
+
+	[## listen: backlog
+	
+		<invokeMethod: Listen>
+		
+	];
+	
+	protocol: #accessing method:
+
+	[## pollWithTimeout: microseconds selectMode: selectMode
+	
+		<invokeMethod: Poll>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## setIPProtectionLevel: ipProtectionLevel 
+	
+		<invokeMethod: SetIPProtectionLevel>
+		
+	];
+	
+	protocol: #accessing method:
+	
+	[## setSocketOptionAt: optionLevel named: optionName value: optionValue
+	
+		<invokeMethod: SetSocketOption>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## accept
+	
+		<invokeMethod: Accept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## acceptAsync: socketEventArgs
+	
+		<invokeMethod: AcceptAsync>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## beginAcceptWithCallBack: callback state: state
+	
+		<invokeMethod: BeginAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## beginAcceptWithReceiverSize: receiverSize callBack: callback state: state
+	
+		<invokeMethod: BeginAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## beginAcceptWithSocket: acceptSocket receiverSize: receiverSize callBack: callback state: state
+	
+		<invokeMethod: BeginAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## beginConnectToRemoteEndPoint: remoteEndPoint callBack: callback state: state
+	
+		<invokeMethod: BeginConnect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## beginConnectTo: ipAddress port: port callBack: callback state: state
+	
+		<invokeMethod: BeginConnect>
+	
+	];
+	
+	protocol: #connection method:
+	
+	[## beginDisconnect: reuseSocket port: port callBack: callback state: state
+	
+		<invokeMethod: BeginDisconnect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## close
+	
+		<invokeMethod: Close>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## closeWithSecondsUntilTimeout: secondsUntilTimout
+	
+		<invokeMethod: Close>
+		
+	];
+
+	protocol: #connection method:
+	
+	[## connectTo: endPoint
+	
+		<invokeMethod: Connect>
+		
+	];
+
+	protocol: #connection method:
+	
+	[## connectTo: addressOrAddressArray port: port
+	
+		<invokeMethod: Connect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## disconnect
+	
+		<invokeMethod: Disconnect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## disconnectAsync
+	
+		<invokeMethod: DisconnectAsync>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## dispose
+	
+		<invokeMethod: Dispose>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## disposeIncludingManagedResources: boolFlag
+	
+		<invokeMethod: Dispose>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## endAcceptUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## endAcceptUsingBufferHandler: bufferHandler usingAsyncResult: asyncResult
+	
+		<invokeMethod: EndAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## endAcceptUsingBufferHandler: bufferHandler usingByteCountHandler: byteCountHandler usingAsyncResult: asyncResult
+	
+		<invokeMethod: EndAccept>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## endConnectUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndConnect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## endDisconnectUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndDisconnect>
+		
+	];
+	
+	protocol: #connection method:
+	
+	[## release
+	
+		self disposeIncludingManagedResources: true
+		
+	];
+	
+	protocol: #'initialize-release' method:
+	
+	[## shutdown: operationToBeShutdown
+	
+		<invokeMethod: Shutdown>
+
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginReceiveInto: buffers flags: socketFlags callBack: callback state: state
+	
+		<invokeMethod: BeginReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginReceiveInto: buffers flags: socketFlags handleError: errorHandler callBack: callback state: state
+	
+		<invokeMethod: BeginReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginReceiveInto: buffer offset: offset size: size flags: socketFlags callBack: callback state: state
+	
+		<invokeMethod: BeginReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginReceiveInto: buffer offset: offset size: size flags: socketFlags handleError: errorHandler callBack: callback state: state
+	
+		<invokeMethod: BeginReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginReceiveInto: buffer offset: offset size: size flags: socketFlags from: endPoint callBack: callback state: state
+	
+		<invokeMethod: BeginReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## asyncBeginReceiveInto: buffer offset: offset size: size flags: socketFlags from: endPoint callBack: callback state: state
+	
+		<invokeMethod: BeginReceiveMessageFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer flags: socketFlags callBack: callback state: state
+	
+		<invokeMethod: BeginSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer flags: socketFlags handleError: errorHandler callBack: callback state: state
+	
+		<invokeMethod: BeginSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer offset: offset size: size flags: socketFlags callBack: callback state: state
+	
+		<invokeMethod: BeginSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer offset: offset size: size flags: socketFlags handleError: errorHandler callBack: callback state: state
+	
+		<invokeMethod: BeginSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFileNamed: fileName callBack: callback state: state
+	
+		<invokeMethod: BeginSendFile>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFileNamed: fileName preBuffer: preBuffer postBuffer: postBuffer fileTransmissionOptions: flags callBack: callback state: state
+	
+		<invokeMethod: BeginSendFile>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer offset: offset size: size flags: socketFlags to: endPoint callBack: callback state: state
+	
+		<invokeMethod: BeginSendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## beginSendFrom: buffer offset: offset size: size flags: socketFlags to: endPoint callBack: callback state: state
+	
+		<invokeMethod: BeginSendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endReceiveUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endReceiveUsingAsyncResult: asyncResult handleError: errorHandler
+	
+		<invokeMethod: EndReceive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endReceiveUsingAsyncResult: asyncResult from: endPoint
+	
+		<invokeMethod: EndReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endReceiveUsingAsyncResult: asyncResult socketFlags: socketFlags from: endPoint handlePacketInformation: packetInformationHandler
+	
+		<invokeMethod: EndReceiveMessageFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endSendUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endSendUsingAsyncResult: asyncResult handleError: errorHandler
+	
+		<invokeMethod: EndSend>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endSendFileUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndSendFile>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## endSendToUsingAsyncResult: asyncResult
+	
+		<invokeMethod: EndSendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer socketFlags: socketFlags
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer socketFlags: socketFlags handleError: errorHandler
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer size: size socketFlags: socketFlags
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer offset: offset size: size socketFlags: socketFlags
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveInto: buffer offset: offset size: size socketFlags: socketFlags handleError: errorHandler
+	
+		<invokeMethod: Receive>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveAsync: socketAsyncEventArgs 
+	
+		<invokeMethod: ReceiveAsync>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveMessageInto: buffer offset: offset size: size socketFlags: socketFlags from: endPoint ipPacketInformationInto: block1
+	
+		<invokeMethod: ReceiveMessageFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveMessageFromAsync: socketAsyncEventArgs 
+	
+		<invokeMethod: ReceiveMessageFromAsync>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveInto: buffer from: endPoint
+	
+		<invokeMethod: ReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveInto: buffer socketFlags: socketFlags from: endPoint
+	
+		<invokeMethod: ReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveInto: buffer size: size socketFlags: socketFlags from: endPoint
+	
+		<invokeMethod: ReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveInto: buffer offset: offset size: size socketFlags: socketFlags from: endPoint
+	
+		<invokeMethod: ReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+
+	[## receiveInto: buffer from: endPoint
+	
+		<invokeMethod: ReceiveFrom>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## receiveFromAsync: socketEventArgs
+	
+		<invokeMethod: ReceiveFromAsync>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFile: fileName
+	
+		<invokeMethod: SendFile>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFile: fileName preBuffer: preBuffer postBuffer: postBuffer fileTransmissionOptions: flags
+	
+		<invokeMethod: SendFile>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer socketFlags: socketFlags
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer socketFlags: socketFlags handleError: errorHandler
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer size: size socketFlags: socketFlags
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer offset: offset size: size socketFlags: socketFlags
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer offset: offset size: size socketFlags: socketFlags handleError: errorHandler
+	
+		<invokeMethod: Send>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer to: endPoint
+	
+		<invokeMethod: SendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer socketFlags: socketFlags to: endPoint
+	
+		<invokeMethod: SendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer size: size socketFlags: socketFlags to: endPoint
+	
+		<invokeMethod: SendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendFrom: buffer offset: offset size: size socketFlags: socketFlags to: endPoint
+	
+		<invokeMethod: SendTo>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendAsync: socketAsyncEventArgs 
+	
+		<invokeMethod: SendAsync>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendToAsync: socketAsyncEventArgs 
+	
+		<invokeMethod: SendToAsync>
+		
+	];
+	
+	protocol: #'send-receive' method:
+	
+	[## sendPacketsAsync: socketAsyncEventArgs 
+	
+		<invokeMethod: SendPacketsAsync>
+		
+	];
+	
+	protocol: #testing method:
+	
+	[## pollWithTimeout: microSeconds for: mode
+	
+		<invokeMethod: Poll>
+		
+	];
+	
+	protocol: #utility method:
+	
+	[## duplicateAndClose
+	
+		<invokeMethod: DuplicateAndClose>
+		
+	]

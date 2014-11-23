@@ -1,0 +1,57 @@
+	"Class methods of System.Net.Sockets.Socket"
+	
+	protocol: #'instance creation' method:
+	
+	[## socketType: socketType protocolType: protocolType
+	
+		<invokeMethod: new>
+		
+	];
+	
+	protocol: #'instance creation' method:
+	
+	[## addressFamily: addressFamily socketType: socketType protocolType: protocolType
+	
+		<invokeMethod: new>
+		
+	];
+	
+	protocol: #'instance creation' method:
+
+	[## socketInformation: socketInformation
+	
+		<invokeMethod: new>
+		
+	];
+	
+	protocol: #connections method:
+	
+	[## asyncConnectToSocketType: socketType protocolType: protocolType socketAsyncEventArgs: socketAsyncEventArgs
+	
+		<invokeMethod: #ConnectAsync>
+		
+	];
+	
+	protocol: #connections method:
+	
+	[## asyncConnect: socketAsyncEventArgs
+	
+		<invokeMethod: #ConnectAsync>
+		
+	];
+	
+	protocol: #connections method:
+	
+	[## asynCancelConnectionRequest: socketAsyncEventArgs 
+	
+		<invokeMethod: #CancelConnectAsync>
+		
+	];
+	
+	protocol: #waiting method:
+	
+	[## selectCheckRead: readSocketList checkWrite: writeSocketList checkError: errorSocketList timeout: microseconds
+	
+		<invokeMethod: Select>
+		
+	]

@@ -1,0 +1,8 @@
+	"Class methods of ExamplePrimitives"
+	
+	protocol: #'instance creation' method:
+	
+	[## withName: name
+	
+		<invokeMethod: new>
+	]

@@ -1,0 +1,9 @@
+	"Class methods of System.Net.IPEndPoint"
+	
+	protocol: #'instance creation' method: 
+	
+	[## address: ipAddress port: port
+	
+		<invokeMethod: new>
+		
+	]

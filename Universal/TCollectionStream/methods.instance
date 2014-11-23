@@ -18,7 +18,7 @@
 	
 	[## initialize
 
-		self contents: #() position: 0
+		self contents: (self newCollection: 0) position: 0
 	];
 
 	protocol: #'operational state' method:
@@ -33,6 +33,14 @@
 	[## setToEnd
 	
 		self position: self size
+	];
+	
+	protocol: #private method:
+	
+	[## newCollection: size 
+	
+		^Array new: size
+		
 	];
 	
 	protocol: #testing method:

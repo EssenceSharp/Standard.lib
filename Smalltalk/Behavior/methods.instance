@@ -9,6 +9,14 @@
 		^self
 	];
 	
+	protocol: #compiling method:
+	
+	[## recompileAll
+	
+		<invokeMethod: recompileAll>
+		
+	];
+	
 	protocol: #constraints method:
 	
 	[## activate
@@ -180,6 +188,14 @@
 		<primitive: #newWithValue: domain: Behavior>
 
 		^self new
+	];
+	
+	protocol: #'Smalltalk interoperability' method:
+	
+	[## compileAll
+	
+		self recompileAll
+		
 	];
 	
 	protocol: #testing method:

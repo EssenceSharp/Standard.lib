@@ -1,0 +1,25 @@
+	"Instance methods of System.Net.IPAddress"
+	
+	protocol: #converting method:
+	
+	[## asByteArray
+	
+		<invokeMethod: GetAddressBytes>
+		
+	];
+	
+	protocol: #converting method:
+	
+	[## asIPv4
+	
+		<invokeMethod: MapToIPv4>
+		
+	];
+	
+	protocol: #converting method:
+	
+	[## asIPv6
+	
+		<invokeMethod: MapToIPv6>
+		
+	]
